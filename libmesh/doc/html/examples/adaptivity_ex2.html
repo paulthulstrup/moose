@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>libMesh - A C++ Finite Element Library</title>
+  <meta name="author" content="libMesh development team">
+  <link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../doxygen_stylesheet.css">
+</head>
+
+<body>
+  <nav id="fixedbar">
+    <ul id="fixednav">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../support.html">About Us</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="https://github.com/libMesh/libmesh/graphs/contributors">Developers</a></li>
+      <li><a href="../installation.html">Installation</a></li>
+      <li><a href="../examples.html">Examples</a></li>
+     <li><a href="../doxygen/index.html">Documentation</a></li>
+    </ul>
+  </nav>
+
+  <div id="w">
+    <header id="logo"><a href="../index.html"><span id="logobg">SomeWebsiteLogo</span></a></header>
+
+    <nav id="navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../support.html">About Us</a></li>
+        <li><a href="../publications.html">Publications</a></li>
+        <li><a href="https://github.com/libMesh/libmesh/graphs/contributors">Developers</a></li>
+        <li><a href="../installation.html">Installation</a></li>
+        <li><a href="../examples.html">Examples</a></li>
+        <li><a href="../doxygen/index.html">Documentation</a></li>
+      </ul>
+    </nav>
+
+<div id="content">
+
+<br> <h1> Link to the source code for this example: </h1>
+<a href="https://github.com/libMesh/libmesh/tree/master/examples/adaptivity/adaptivity_ex2" target="_blank">Open adaptivity_ex2 in new tab.</a>
+<a name="output"></a> 
+<br><br><br> <h1> The console output of the program: </h1> 
+<pre>
+***************************************************************
+* Running Example adaptivity_ex2:
+*   example-opt -n_timesteps 25 -n_refinements 5 -output_freq 10 -init_timestep 0 
+***************************************************************
+ 
+Usage:
+	 /Users/petejw/projects/libmesh_git/build/examples/adaptivity/adaptivity_ex2/.libs/example-opt -init_timestep 0
+OR
+	 /Users/petejw/projects/libmesh_git/build/examples/adaptivity/adaptivity_ex2/.libs/example-opt -read_solution -init_timestep 26
+
+Running: /Users/petejw/projects/libmesh_git/build/examples/adaptivity/adaptivity_ex2/.libs/example-opt -n_timesteps 25 -n_refinements 5 -output_freq 10 -init_timestep 0
+
+ Mesh Information:
+  elem_dimensions()={2}
+  spatial_dimension()=2
+  n_nodes()=6273
+    n_local_nodes()=6273
+  n_elem()=13650
+    n_local_elem()=13650
+    n_active_elem()=10240
+  n_subdomains()=2
+  n_partitions()=1
+  n_processors()=1
+  n_threads()=1
+  processor_id()=0
+
+ EquationSystems
+  n_systems()=1
+   System #0, "Convection-Diffusion"
+    Type "TransientLinearImplicit"
+    Variables="u" 
+    Finite Element Types="LAGRANGE", "JACOBI_20_00" 
+    Infinite Element Mapping="CARTESIAN" 
+    Approximation Orders="FIRST", "THIRD" 
+    n_dofs()=6273
+    n_local_dofs()=6273
+    n_constrained_dofs()=0
+    n_local_constrained_dofs()=0
+    n_vectors()=3
+    n_matrices()=1
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 7.57038
+      Average Off-Processor Bandwidth <= 0
+      Maximum  On-Processor Bandwidth <= 9
+      Maximum Off-Processor Bandwidth <= 0
+    DofMap Constraints
+      Number of DoF Constraints = 0
+
+ Solving time step  0, time=0.0250...
+H1 norm = 1.58843
+  Refining the mesh...
+H1 norm = 1.58839
+ Solving time step  1, time=0.0500...
+H1 norm = 1.46061
+  Refining the mesh...
+H1 norm = 1.45992
+ Solving time step  2, time=0.0750...
+H1 norm = 1.35107
+  Refining the mesh...
+H1 norm = 1.35069
+ Solving time step  3, time=0.1000...
+H1 norm = 1.25698
+  Refining the mesh...
+H1 norm = 1.25635
+ Solving time step  4, time=0.1250...
+H1 norm = 1.17458
+  Refining the mesh...
+H1 norm = 1.1744
+ Solving time step  5, time=0.1500...
+H1 norm = 1.10264
+  Refining the mesh...
+H1 norm = 1.10224
+ Solving time step  6, time=0.1750...
+H1 norm = 1.03868
+  Refining the mesh...
+H1 norm = 1.03853
+ Solving time step  7, time=0.2000...
+H1 norm = 0.981978
+  Refining the mesh...
+H1 norm = 0.981584
+ Solving time step  8, time=0.2250...
+H1 norm = 0.930848
+  Refining the mesh...
+H1 norm = 0.930668
+ Solving time step  9, time=0.2500...
+H1 norm = 0.884889
+  Refining the mesh...
+H1 norm = 0.884744
+ Solving time step 10, time=0.2750...
+H1 norm = 0.84331
+  Refining the mesh...
+H1 norm = 0.843131
+ Solving time step 11, time=0.3000...
+H1 norm = 0.805394
+  Refining the mesh...
+H1 norm = 0.805264
+ Solving time step 12, time=0.3250...
+H1 norm = 0.770793
+  Refining the mesh...
+H1 norm = 0.7707
+ Solving time step 13, time=0.3500...
+H1 norm = 0.739086
+  Refining the mesh...
+H1 norm = 0.738904
+ Solving time step 14, time=0.3750...
+H1 norm = 0.709764
+  Refining the mesh...
+H1 norm = 0.709687
+ Solving time step 15, time=0.4000...
+H1 norm = 0.682786
+  Refining the mesh...
+H1 norm = 0.68269
+ Solving time step 16, time=0.4250...
+H1 norm = 0.657767
+  Refining the mesh...
+H1 norm = 0.657729
+ Solving time step 17, time=0.4500...
+H1 norm = 0.634598
+  Refining the mesh...
+H1 norm = 0.634502
+ Solving time step 18, time=0.4750...
+H1 norm = 0.61295
+  Refining the mesh...
+H1 norm = 0.612906
+ Solving time step 19, time=0.5000...
+H1 norm = 0.592783
+  Refining the mesh...
+H1 norm = 0.592698
+ Solving time step 20, time=0.5250...
+H1 norm = 0.573854
+  Refining the mesh...
+H1 norm = 0.573819
+ Solving time step 21, time=0.5500...
+H1 norm = 0.556154
+  Refining the mesh...
+H1 norm = 0.55611
+ Solving time step 22, time=0.5750...
+H1 norm = 0.539527
+  Refining the mesh...
+H1 norm = 0.539462
+ Solving time step 23, time=0.6000...
+H1 norm = 0.523854
+  Refining the mesh...
+H1 norm = 0.523811
+ Solving time step 24, time=0.6250...
+H1 norm = 0.509112
+  Refining the mesh...
+H1 norm = 0.509057
+Final H1 norm = 0.509057
+
+
+ -------------------------------------------------------------------------------------------------------------------
+| Time:           Wed Apr 13 09:21:57 2016                                                                          |
+| OS:             Darwin                                                                                            |
+| HostName:       peterson-laptop.local                                                                             |
+| OS Release:     15.0.0                                                                                            |
+| OS Version:     Darwin Kernel Version 15.0.0: Sat Sep 19 15:53:46 PDT 2015; root:xnu-3247.10.11~1/RELEASE_X86_64  |
+| Machine:        x86_64                                                                                            |
+| Username:       petejw                                                                                            |
+| Configuration:  ../configure  'INSTALL=/usr/bin/install -C'                                                       |
+|  '--with-methods=opt dbg'                                                                                         |
+|  '--prefix=/Users/petejw/projects/libmesh_git/installed'                                                          |
+|  '--enable-perflog'                                                                                               |
+|  '--enable-tracefiles'                                                                                            |
+|  '--disable-blocked-storage'                                                                                      |
+|  '--enable-default-comm-world'                                                                                    |
+|  '--enable-tecio'                                                                                                 |
+|  '--enable-unique-ptr'                                                                                            |
+|  '--enable-ifem'                                                                                                  |
+|  'PETSC_DIR=/opt/moose/petsc/mpich_petsc-3.6.1/clang-opt-superlu'                                                 |
+|  'SLEPC_DIR=/opt/petejw/slepc/3.6.1'                                                                              |
+|  'CPPFLAGS= '                                                                                                     |
+|  'LIBS= '                                                                                                         |
+|  'CPPFLAGS=  '                                                                                                    |
+|  'LIBS=  '                                                                                                        |
+|  '--disable-netcdf-4'                                                                                             |
+|  '--disable-testsets'                                                                                             |
+|  'CXX=mpicxx'                                                                                                     |
+|  'CC=mpicc'                                                                                                       |
+|  'F77=mpif77'                                                                                                     |
+|  'FC=mpif90'                                                                                                      |
+|  'CPPFLAGS=   '                                                                                                   |
+|  'LIBS=   '                                                                                                       |
+ -------------------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------------
+| libMesh Performance: Alive time=2.35919, Active time=1.83515                                                    |
+ -----------------------------------------------------------------------------------------------------------------
+| Event                              nCalls     Total Time  Avg Time    Total Time  Avg Time    % of Active Time  |
+|                                               w/o Sub     w/o Sub     With Sub    With Sub    w/o S    With S   |
+|-----------------------------------------------------------------------------------------------------------------|
+|                                                                                                                 |
+|                                                                                                                 |
+| DofMap                                                                                                          |
+|   add_neighbors_to_send_list()     26         0.0041      0.000158    0.0041      0.000158    0.22     0.22     |
+|   build_constraint_matrix()        29356      0.0127      0.000000    0.0127      0.000000    0.69     0.69     |
+|   build_sparsity()                 26         0.0272      0.001046    0.0326      0.001254    1.48     1.78     |
+|   cnstrn_elem_mat_vec()            29356      0.0107      0.000000    0.0107      0.000000    0.58     0.58     |
+|   create_dof_constraints()         26         0.0105      0.000404    0.0125      0.000480    0.57     0.68     |
+|   distribute_dofs()                26         0.0046      0.000178    0.0321      0.001234    0.25     1.75     |
+|   dof_indices()                    372429     0.0540      0.000000    0.0540      0.000000    2.94     2.94     |
+|   enforce_constraints_exactly()    75         0.0017      0.000023    0.0017      0.000023    0.09     0.09     |
+|   old_dof_indices()                145719     0.0294      0.000000    0.0294      0.000000    1.60     1.60     |
+|   prepare_send_list()              27         0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|   reinit()                         26         0.0275      0.001056    0.0275      0.001056    1.50     1.50     |
+|                                                                                                                 |
+| EquationSystems                                                                                                 |
+|   build_solution_vector()          4          0.0078      0.001941    0.0115      0.002873    0.42     0.63     |
+|   write()                          1          0.0010      0.000970    0.0033      0.003339    0.05     0.18     |
+|                                                                                                                 |
+| FE                                                                                                              |
+|   compute_shape_functions()        259914     0.0851      0.000000    0.0851      0.000000    4.64     4.64     |
+|   init_shape_functions()           180959     0.0928      0.000001    0.0928      0.000001    5.06     5.06     |
+|   inverse_map()                    358880     0.1183      0.000000    0.1183      0.000000    6.45     6.45     |
+|                                                                                                                 |
+| FEMap                                                                                                           |
+|   compute_affine_map()             259914     0.0876      0.000000    0.0876      0.000000    4.77     4.77     |
+|   compute_face_map()               130354     0.0924      0.000001    0.1995      0.000002    5.03     10.87    |
+|   init_face_shape_functions()      444        0.0002      0.000000    0.0002      0.000000    0.01     0.01     |
+|   init_reference_to_physical_map() 180959     0.0980      0.000001    0.0980      0.000001    5.34     5.34     |
+|                                                                                                                 |
+| GMVIO                                                                                                           |
+|   write_nodal_data()               4          0.0303      0.007587    0.0303      0.007587    1.65     1.65     |
+|                                                                                                                 |
+| GenericProjector                                                                                                |
+|   copy_dofs                        31749      0.0114      0.000000    0.0653      0.000002    0.62     3.56     |
+|   operator()                       76         0.0579      0.000762    0.3088      0.004064    3.16     16.83    |
+|   project_edges                    23674      0.0015      0.000000    0.0015      0.000000    0.08     0.08     |
+|   project_interior                 23674      0.0016      0.000000    0.0016      0.000000    0.09     0.09     |
+|   project_nodes                    23674      0.0153      0.000001    0.1445      0.000006    0.83     7.88     |
+|   project_sides                    23674      0.0016      0.000000    0.0016      0.000000    0.09     0.09     |
+|                                                                                                                 |
+| JumpErrorEstimator                                                                                              |
+|   estimate_error()                 25         0.4657      0.018627    1.0369      0.041477    25.37    56.50    |
+|                                                                                                                 |
+| Mesh                                                                                                            |
+|   contract()                       25         0.0050      0.000200    0.0078      0.000312    0.27     0.43     |
+|   find_neighbors()                 27         0.0797      0.002951    0.0797      0.002951    4.34     4.34     |
+|   renumber_nodes_and_elem()        79         0.0042      0.000053    0.0042      0.000053    0.23     0.23     |
+|   write()                          1          0.0001      0.000142    0.0067      0.006732    0.01     0.37     |
+|                                                                                                                 |
+| MeshCommunication                                                                                               |
+|   assign_global_indices()          1          0.0098      0.009781    0.0098      0.009785    0.53     0.53     |
+|                                                                                                                 |
+| MeshOutput                                                                                                      |
+|   write_equation_systems()         4          0.0001      0.000014    0.0419      0.010474    0.00     2.28     |
+|                                                                                                                 |
+| MeshRefinement                                                                                                  |
+|   _coarsen_elements()              50         0.0018      0.000036    0.0018      0.000036    0.10     0.10     |
+|   _refine_elements()               55         0.0182      0.000332    0.0316      0.000575    0.99     1.72     |
+|   add_node()                       47552      0.0091      0.000000    0.0091      0.000000    0.50     0.50     |
+|   make_coarsening_compatible()     63         0.0313      0.000496    0.0313      0.000496    1.70     1.70     |
+|   make_flags_parallel_consistent() 75         0.0043      0.000058    0.0043      0.000058    0.24     0.24     |
+|   make_refinement_compatible()     63         0.0014      0.000022    0.0014      0.000022    0.08     0.08     |
+|                                                                                                                 |
+| OldSolutionValue                                                                                                |
+|   Number eval_at_node()            44598      0.0032      0.000000    0.0032      0.000000    0.17     0.17     |
+|   check_old_context(c)             31749      0.0194      0.000001    0.0370      0.000001    1.06     2.01     |
+|   check_old_context(c,p)           6174       0.0038      0.000001    0.0071      0.000001    0.21     0.39     |
+|   eval_at_point()                  6174       0.0619      0.000010    0.1218      0.000020    3.37     6.64     |
+|   eval_old_dofs()                  31749      0.0112      0.000000    0.0510      0.000002    0.61     2.78     |
+|                                                                                                                 |
+| Parallel                                                                                                        |
+|   allgather()                      30         0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|   probe()                          8          0.0000      0.000001    0.0000      0.000001    0.00     0.00     |
+|   receive()                        4          0.0005      0.000127    0.0005      0.000127    0.03     0.03     |
+|   send()                           4          0.0005      0.000131    0.0005      0.000131    0.03     0.03     |
+|   send_receive()                   4          0.0000      0.000001    0.0000      0.000001    0.00     0.00     |
+|                                                                                                                 |
+| Parallel::Request                                                                                               |
+|   wait()                           4          0.0013      0.000332    0.0013      0.000332    0.07     0.07     |
+|                                                                                                                 |
+| Partitioner                                                                                                     |
+|   set_node_processor_ids()         1          0.0001      0.000053    0.0001      0.000053    0.00     0.00     |
+|   single_partition()               27         0.0011      0.000040    0.0011      0.000040    0.06     0.06     |
+|                                                                                                                 |
+| PetscLinearSolver                                                                                               |
+|   solve()                          50         0.0118      0.000236    0.0118      0.000236    0.64     0.64     |
+|                                                                                                                 |
+| System                                                                                                          |
+|   assemble()                       50         0.0900      0.001801    0.1772      0.003543    4.91     9.65     |
+|   calculate_norm()                 51         0.0406      0.000796    0.0887      0.001740    2.21     4.83     |
+|   project_fem_vector()             1          0.0003      0.000333    0.0344      0.034373    0.02     1.87     |
+|   project_vector(FunctionBase)     1          0.0000      0.000009    0.0344      0.034382    0.00     1.87     |
+|   project_vector(old,new)          75         0.0278      0.000371    0.3268      0.004357    1.52     17.81    |
+|                                                                                                                 |
+| TopologyMap                                                                                                     |
+|   init()                           55         0.0385      0.000700    0.0385      0.000700    2.10     2.10     |
+|                                                                                                                 |
+| XdrIO                                                                                                           |
+|   read()                           1          0.0006      0.000568    0.0006      0.000568    0.03     0.03     |
+|   write()                          1          0.0066      0.006590    0.0066      0.006590    0.36     0.36     |
+ -----------------------------------------------------------------------------------------------------------------
+| Totals:                            2243877    1.8352                                          100.00            |
+ -----------------------------------------------------------------------------------------------------------------
+
+ 
+***************************************************************
+* Done Running Example adaptivity_ex2:
+*   example-opt -n_timesteps 25 -n_refinements 5 -output_freq 10 -init_timestep 0 
+***************************************************************
+ 
+***** Finished first 25 steps, now read in saved solution and continue *****
+ 
+***************************************************************
+* Running Example adaptivity_ex2:
+*   example-opt -read_solution -n_timesteps 25 -output_freq 10 -init_timestep 25 
+***************************************************************
+ 
+Usage:
+	 /Users/petejw/projects/libmesh_git/build/examples/adaptivity/adaptivity_ex2/.libs/example-opt -init_timestep 0
+OR
+	 /Users/petejw/projects/libmesh_git/build/examples/adaptivity/adaptivity_ex2/.libs/example-opt -read_solution -init_timestep 26
+
+Running: /Users/petejw/projects/libmesh_git/build/examples/adaptivity/adaptivity_ex2/.libs/example-opt -read_solution -n_timesteps 25 -output_freq 10 -init_timestep 25
+
+ Mesh Information:
+  elem_dimensions()={2}
+  spatial_dimension()=2
+  n_nodes()=713
+    n_local_nodes()=713
+  n_elem()=1018
+    n_local_elem()=1018
+    n_active_elem()=766
+  n_subdomains()=2
+  n_partitions()=1
+  n_processors()=1
+  n_threads()=1
+  processor_id()=0
+
+Initial H1 norm = 0.509057
+
+ EquationSystems
+  n_systems()=1
+   System #0, "Convection-Diffusion"
+    Type "TransientLinearImplicit"
+    Variables="u" 
+    Finite Element Types="LAGRANGE", "JACOBI_20_00" 
+    Infinite Element Mapping="CARTESIAN" 
+    Approximation Orders="FIRST", "THIRD" 
+    n_dofs()=713
+    n_local_dofs()=713
+    n_constrained_dofs()=122
+    n_local_constrained_dofs()=122
+    n_vectors()=3
+    n_matrices()=1
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 9.10659
+      Average Off-Processor Bandwidth <= 0
+      Maximum  On-Processor Bandwidth <= 17
+      Maximum Off-Processor Bandwidth <= 0
+    DofMap Constraints
+      Number of DoF Constraints = 122
+      Average DoF Constraint Length= 2
+
+ Solving time step 25, time=0.6500...
+H1 norm = 0.495174
+  Refining the mesh...
+H1 norm = 0.495112
+ Solving time step 26, time=0.6750...
+H1 norm = 0.481983
+  Refining the mesh...
+H1 norm = 0.481907
+ Solving time step 27, time=0.7000...
+H1 norm = 0.46947
+  Refining the mesh...
+H1 norm = 0.469405
+ Solving time step 28, time=0.7250...
+H1 norm = 0.457612
+  Refining the mesh...
+H1 norm = 0.45754
+ Solving time step 29, time=0.7500...
+H1 norm = 0.446345
+  Refining the mesh...
+H1 norm = 0.446298
+ Solving time step 30, time=0.7750...
+H1 norm = 0.435654
+  Refining the mesh...
+H1 norm = 0.435614
+ Solving time step 31, time=0.8000...
+H1 norm = 0.425499
+  Refining the mesh...
+H1 norm = 0.425441
+ Solving time step 32, time=0.8250...
+H1 norm = 0.415779
+  Refining the mesh...
+H1 norm = 0.415738
+ Solving time step 33, time=0.8500...
+H1 norm = 0.406507
+  Refining the mesh...
+H1 norm = 0.406469
+ Solving time step 34, time=0.8750...
+H1 norm = 0.397619
+  Refining the mesh...
+H1 norm = 0.397581
+ Solving time step 35, time=0.9000...
+H1 norm = 0.389087
+  Refining the mesh...
+H1 norm = 0.389069
+ Solving time step 36, time=0.9250...
+H1 norm = 0.380921
+  Refining the mesh...
+H1 norm = 0.380885
+ Solving time step 37, time=0.9500...
+H1 norm = 0.373064
+  Refining the mesh...
+H1 norm = 0.373043
+ Solving time step 38, time=0.9750...
+H1 norm = 0.365554
+  Refining the mesh...
+H1 norm = 0.36553
+ Solving time step 39, time=1.0000...
+H1 norm = 0.358358
+  Refining the mesh...
+H1 norm = 0.358315
+ Solving time step 40, time=1.0250...
+H1 norm = 0.351439
+  Refining the mesh...
+H1 norm = 0.351413
+ Solving time step 41, time=1.0500...
+H1 norm = 0.34482
+  Refining the mesh...
+H1 norm = 0.344802
+ Solving time step 42, time=1.0750...
+H1 norm = 0.338466
+  Refining the mesh...
+H1 norm = 0.338451
+ Solving time step 43, time=1.1000...
+H1 norm = 0.332347
+  Refining the mesh...
+H1 norm = 0.332331
+ Solving time step 44, time=1.1250...
+H1 norm = 0.32644
+  Refining the mesh...
+H1 norm = 0.32642
+ Solving time step 45, time=1.1500...
+H1 norm = 0.320721
+  Refining the mesh...
+H1 norm = 0.320709
+ Solving time step 46, time=1.1750...
+H1 norm = 0.3152
+  Refining the mesh...
+H1 norm = 0.315188
+ Solving time step 47, time=1.2000...
+H1 norm = 0.309858
+  Refining the mesh...
+H1 norm = 0.309843
+ Solving time step 48, time=1.2250...
+H1 norm = 0.304687
+  Refining the mesh...
+H1 norm = 0.30468
+ Solving time step 49, time=1.2500...
+H1 norm = 0.2997
+  Refining the mesh...
+H1 norm = 0.299685
+
+ -------------------------------------------------------------------------------------------------------------------
+| Time:           Wed Apr 13 09:22:00 2016                                                                          |
+| OS:             Darwin                                                                                            |
+| HostName:       peterson-laptop.local                                                                             |
+| OS Release:     15.0.0                                                                                            |
+| OS Version:     Darwin Kernel Version 15.0.0: Sat Sep 19 15:53:46 PDT 2015; root:xnu-3247.10.11~1/RELEASE_X86_64  |
+| Machine:        x86_64                                                                                            |
+| Username:       petejw                                                                                            |
+| Configuration:  ../configure  'INSTALL=/usr/bin/install -C'                                                       |
+|  '--with-methods=opt dbg'                                                                                         |
+|  '--prefix=/Users/petejw/projects/libmesh_git/installed'                                                          |
+|  '--enable-perflog'                                                                                               |
+|  '--enable-tracefiles'                                                                                            |
+|  '--disable-blocked-storage'                                                                                      |
+|  '--enable-default-comm-world'                                                                                    |
+|  '--enable-tecio'                                                                                                 |
+|  '--enable-unique-ptr'                                                                                            |
+|  '--enable-ifem'                                                                                                  |
+|  'PETSC_DIR=/opt/moose/petsc/mpich_petsc-3.6.1/clang-opt-superlu'                                                 |
+|  'SLEPC_DIR=/opt/petejw/slepc/3.6.1'                                                                              |
+|  'CPPFLAGS= '                                                                                                     |
+|  'LIBS= '                                                                                                         |
+|  'CPPFLAGS=  '                                                                                                    |
+|  'LIBS=  '                                                                                                        |
+|  '--disable-netcdf-4'                                                                                             |
+|  '--disable-testsets'                                                                                             |
+|  'CXX=mpicxx'                                                                                                     |
+|  'CC=mpicc'                                                                                                       |
+|  'F77=mpif77'                                                                                                     |
+|  'FC=mpif90'                                                                                                      |
+|  'CPPFLAGS=   '                                                                                                   |
+|  'LIBS=   '                                                                                                       |
+ -------------------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------------
+| libMesh Performance: Alive time=3.30245, Active time=2.92512                                                    |
+ -----------------------------------------------------------------------------------------------------------------
+| Event                              nCalls     Total Time  Avg Time    Total Time  Avg Time    % of Active Time  |
+|                                               w/o Sub     w/o Sub     With Sub    With Sub    w/o S    With S   |
+|-----------------------------------------------------------------------------------------------------------------|
+|                                                                                                                 |
+|                                                                                                                 |
+| DofMap                                                                                                          |
+|   add_neighbors_to_send_list()     26         0.0066      0.000254    0.0066      0.000254    0.23     0.23     |
+|   build_constraint_matrix()        84344      0.0337      0.000000    0.0337      0.000000    1.15     1.15     |
+|   build_sparsity()                 26         0.0506      0.001944    0.0600      0.002306    1.73     2.05     |
+|   cnstrn_elem_mat_vec()            84344      0.0235      0.000000    0.0235      0.000000    0.80     0.80     |
+|   create_dof_constraints()         26         0.0192      0.000739    0.0233      0.000897    0.66     0.80     |
+|   distribute_dofs()                26         0.0065      0.000249    0.0399      0.001533    0.22     1.36     |
+|   dof_indices()                    716783     0.0963      0.000000    0.0963      0.000000    3.29     3.29     |
+|   enforce_constraints_exactly()    75         0.0030      0.000040    0.0030      0.000040    0.10     0.10     |
+|   old_dof_indices()                385185     0.0682      0.000000    0.0682      0.000000    2.33     2.33     |
+|   prepare_send_list()              27         0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|   reinit()                         26         0.0334      0.001284    0.0334      0.001284    1.14     1.14     |
+|                                                                                                                 |
+| EquationSystems                                                                                                 |
+|   build_solution_vector()          4          0.0026      0.000638    0.0038      0.000949    0.09     0.13     |
+|   read()                           1          0.0030      0.002980    0.0133      0.013304    0.10     0.45     |
+|   update()                         1          0.0000      0.000028    0.0000      0.000028    0.00     0.00     |
+|                                                                                                                 |
+| FE                                                                                                              |
+|   compute_shape_functions()        461384     0.1441      0.000000    0.1441      0.000000    4.93     4.93     |
+|   init_shape_functions()           296883     0.1565      0.000001    0.1565      0.000001    5.35     5.35     |
+|   inverse_map()                    579972     0.1652      0.000000    0.1652      0.000000    5.65     5.65     |
+|                                                                                                                 |
+| FEMap                                                                                                           |
+|   compute_affine_map()             461384     0.1518      0.000000    0.1518      0.000000    5.19     5.19     |
+|   compute_face_map()               207394     0.1235      0.000001    0.2762      0.000001    4.22     9.44     |
+|   init_face_shape_functions()      1445       0.0005      0.000000    0.0005      0.000000    0.02     0.02     |
+|   init_reference_to_physical_map() 296883     0.1447      0.000000    0.1447      0.000000    4.95     4.95     |
+|                                                                                                                 |
+| GMVIO                                                                                                           |
+|   write_nodal_data()               4          0.0147      0.003663    0.0147      0.003663    0.50     0.50     |
+|                                                                                                                 |
+| GenericProjector                                                                                                |
+|   copy_dofs                        118731     0.0352      0.000000    0.2242      0.000002    1.20     7.66     |
+|   operator()                       75         0.0854      0.001139    0.6532      0.008709    2.92     22.33    |
+|   project_edges                    9666       0.0006      0.000000    0.0006      0.000000    0.02     0.02     |
+|   project_interior                 9666       0.0006      0.000000    0.0006      0.000000    0.02     0.02     |
+|   project_nodes                    9666       0.0115      0.000001    0.2761      0.000029    0.39     9.44     |
+|   project_sides                    9666       0.0006      0.000000    0.0006      0.000000    0.02     0.02     |
+|                                                                                                                 |
+| JumpErrorEstimator                                                                                              |
+|   estimate_error()                 25         0.6994      0.027976    1.5380      0.061520    23.91    52.58    |
+|                                                                                                                 |
+| Mesh                                                                                                            |
+|   contract()                       25         0.0016      0.000062    0.0027      0.000109    0.05     0.09     |
+|   find_neighbors()                 26         0.0891      0.003426    0.0891      0.003426    3.05     3.05     |
+|   renumber_nodes_and_elem()        77         0.0030      0.000039    0.0030      0.000039    0.10     0.10     |
+|                                                                                                                 |
+| MeshCommunication                                                                                               |
+|   assign_global_indices()          1          0.0069      0.006935    0.0069      0.006941    0.24     0.24     |
+|                                                                                                                 |
+| MeshOutput                                                                                                      |
+|   write_equation_systems()         4          0.0000      0.000008    0.0185      0.004620    0.00     0.63     |
+|                                                                                                                 |
+| MeshRefinement                                                                                                  |
+|   _coarsen_elements()              50         0.0016      0.000033    0.0016      0.000033    0.06     0.06     |
+|   _refine_elements()               50         0.0105      0.000210    0.0131      0.000262    0.36     0.45     |
+|   add_node()                       9440       0.0019      0.000000    0.0019      0.000000    0.06     0.06     |
+|   make_coarsening_compatible()     68         0.0582      0.000856    0.0582      0.000856    1.99     1.99     |
+|   make_flags_parallel_consistent() 75         0.0084      0.000113    0.0084      0.000113    0.29     0.29     |
+|   make_refinement_compatible()     68         0.0033      0.000048    0.0033      0.000048    0.11     0.11     |
+|                                                                                                                 |
+| OldSolutionValue                                                                                                |
+|   Number eval_at_node()            31536      0.0022      0.000000    0.0022      0.000000    0.07     0.07     |
+|   check_old_context(c)             118731     0.0705      0.000001    0.1315      0.000001    2.41     4.49     |
+|   check_old_context(c,p)           14424      0.0080      0.000001    0.0148      0.000001    0.27     0.50     |
+|   eval_at_point()                  14424      0.1330      0.000009    0.2588      0.000018    4.55     8.85     |
+|   eval_old_dofs()                  118731     0.0386      0.000000    0.1794      0.000002    1.32     6.13     |
+|                                                                                                                 |
+| Parallel                                                                                                        |
+|   allgather()                      30         0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|   probe()                          4          0.0000      0.000003    0.0000      0.000003    0.00     0.00     |
+|   receive()                        4          0.0001      0.000014    0.0001      0.000014    0.00     0.00     |
+|   send()                           4          0.0000      0.000011    0.0000      0.000011    0.00     0.00     |
+|   send_receive()                   4          0.0000      0.000001    0.0000      0.000001    0.00     0.00     |
+|                                                                                                                 |
+| Parallel::Request                                                                                               |
+|   wait()                           4          0.0000      0.000003    0.0000      0.000003    0.00     0.00     |
+|                                                                                                                 |
+| Partitioner                                                                                                     |
+|   set_node_processor_ids()         1          0.0001      0.000091    0.0001      0.000091    0.00     0.00     |
+|   single_partition()               26         0.0014      0.000053    0.0014      0.000053    0.05     0.05     |
+|                                                                                                                 |
+| PetscLinearSolver                                                                                               |
+|   solve()                          50         0.0204      0.000409    0.0204      0.000409    0.70     0.70     |
+|                                                                                                                 |
+| System                                                                                                          |
+|   assemble()                       50         0.1877      0.003755    0.3666      0.007333    6.42     12.53    |
+|   calculate_norm()                 51         0.0863      0.001692    0.1882      0.003691    2.95     6.43     |
+|   project_vector(old,new)          75         0.0433      0.000577    0.7332      0.009776    1.48     25.07    |
+|                                                                                                                 |
+| TopologyMap                                                                                                     |
+|   init()                           50         0.0653      0.001306    0.0653      0.001306    2.23     2.23     |
+|                                                                                                                 |
+| XdrIO                                                                                                           |
+|   read()                           1          0.0029      0.002894    0.0029      0.002894    0.10     0.10     |
+ -----------------------------------------------------------------------------------------------------------------
+| Totals:                            4041822    2.9251                                          100.00            |
+ -----------------------------------------------------------------------------------------------------------------
+
+ 
+***************************************************************
+* Done Running Example adaptivity_ex2:
+*   example-opt -read_solution -n_timesteps 25 -output_freq 10 -init_timestep 25 
+***************************************************************
+</pre>
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(window).on('scroll',function() {
+    var scrolltop = $(this).scrollTop();
+
+    if(scrolltop >= 215) {
+      $('#fixedbar').fadeIn(250);
+    }
+
+    else if(scrolltop <= 210) {
+      $('#fixedbar').fadeOut(250);
+    }
+  });
+});
+</script>
+
+<!-- Google Analytics stuff -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24978333-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</body>
+</html>

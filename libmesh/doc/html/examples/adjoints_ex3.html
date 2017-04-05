@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>libMesh - A C++ Finite Element Library</title>
+  <meta name="author" content="libMesh development team">
+  <link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../doxygen_stylesheet.css">
+</head>
+
+<body>
+  <nav id="fixedbar">
+    <ul id="fixednav">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../support.html">About Us</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="https://github.com/libMesh/libmesh/graphs/contributors">Developers</a></li>
+      <li><a href="../installation.html">Installation</a></li>
+      <li><a href="../examples.html">Examples</a></li>
+     <li><a href="../doxygen/index.html">Documentation</a></li>
+    </ul>
+  </nav>
+
+  <div id="w">
+    <header id="logo"><a href="../index.html"><span id="logobg">SomeWebsiteLogo</span></a></header>
+
+    <nav id="navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../support.html">About Us</a></li>
+        <li><a href="../publications.html">Publications</a></li>
+        <li><a href="https://github.com/libMesh/libmesh/graphs/contributors">Developers</a></li>
+        <li><a href="../installation.html">Installation</a></li>
+        <li><a href="../examples.html">Examples</a></li>
+        <li><a href="../doxygen/index.html">Documentation</a></li>
+      </ul>
+    </nav>
+
+<div id="content">
+
+<br> <h1> Link to the source code for this example: </h1>
+<a href="https://github.com/libMesh/libmesh/tree/master/examples/adjoints/adjoints_ex3" target="_blank">Open adjoints_ex3 in new tab.</a>
+<a name="output"></a> 
+<br><br><br> <h1> The console output of the program: </h1> 
+<pre>
+***************************************************************
+* Running Example adjoints_ex3:
+*   example-opt  
+***************************************************************
+ 
+Started /Users/petejw/projects/libmesh_git/build/examples/adjoints/adjoints_ex3/.libs/example-opt
+Building mesh
+Making elements 2nd order
+Building system
+Initializing systems
+ Mesh Information:
+  elem_dimensions()={2}
+  spatial_dimension()=2
+  n_nodes()=99
+    n_local_nodes()=99
+  n_elem()=16
+    n_local_elem()=16
+    n_active_elem()=16
+  n_subdomains()=1
+  n_partitions()=1
+  n_processors()=1
+  n_threads()=1
+  processor_id()=0
+
+ EquationSystems
+  n_systems()=1
+   System #0, "CoupledSystem"
+    Type "Implicit"
+    Variables={ "u" "v" } "p" "C" 
+    Finite Element Types="LAGRANGE", "JACOBI_20_00" "LAGRANGE", "JACOBI_20_00" "LAGRANGE", "JACOBI_20_00" 
+    Infinite Element Mapping="CARTESIAN" "CARTESIAN" "CARTESIAN" 
+    Approximation Orders="SECOND", "THIRD" "FIRST", "THIRD" "SECOND", "THIRD" 
+    n_dofs()=331
+    n_local_dofs()=331
+    n_constrained_dofs()=138
+    n_local_constrained_dofs()=138
+    n_vectors()=1
+    n_matrices()=1
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 40.9698
+      Average Off-Processor Bandwidth <= 0
+      Maximum  On-Processor Bandwidth <= 71
+      Maximum Off-Processor Bandwidth <= 0
+    DofMap Constraints
+      Number of DoF Constraints = 138
+      Number of Heterogenous Constraints= 5
+      Average DoF Constraint Length= 0
+
+Starting adaptive loop
+
+Adaptive step 0
+Solving the forward problem
+We have 16 active elements and 193 active dofs.
+
+Assembling the System
+Nonlinear Residual: 1.96901
+Linear solve starting, tolerance 2.53935e-07
+Linear solve finished, step 26, residual 1.82973e-06
+Trying full Newton step
+  Current Residual: 0.0670908
+  Nonlinear step: |du|/|u| = 0.999766, |du| = 81.7355
+Assembling the System
+Nonlinear Residual: 0.0670908
+Linear solve starting, tolerance 7.45258e-06
+Linear solve finished, step 18, residual 3.53719e-07
+Trying full Newton step
+  Current Residual: 1.06915e-06
+  Nonlinear solver converged, step 1, residual 1.06915e-06
+  Nonlinear solver converged, step 1, residual reduction 5.4299e-07 < 5e-06
+  Nonlinear solver relative step size 0.00197724 > 5e-06
+The boundary QoI is 0.083342112283908601
+
+Solving the adjoint problem
+Adaptive step 1
+Solving the forward problem
+We have 22 active elements and 259 active dofs.
+
+Assembling the System
+Nonlinear Residual: 0.30764140603472079
+Linear solve starting, tolerance 1.6252688688582105e-06
+Linear solve finished, step 23, residual 2.5675677371584641e-06
+Trying full Newton step
+  Current Residual: 2.4742624354879299e-06
+  Nonlinear solver converged, step 0, residual 2.4742624354879299e-06
+  Nonlinear solver relative residual 8.0426834195676554e-06 > 5.0000000000000004e-06
+  Nonlinear solver relative step size 0.026756677559375015 > 5.0000000000000004e-06
+The boundary QoI is 0.082285469926828558
+
+Solving the adjoint problem
+Adaptive step 2
+Solving the forward problem
+We have 31 active elements and 366 active dofs.
+
+Assembling the System
+Nonlinear Residual: 0.30346378515293759
+Linear solve starting, tolerance 1.6476430614216898e-06
+Linear solve finished, step 29, residual 1.9948118865767694e-06
+Trying full Newton step
+  Current Residual: 1.2482465927873654e-05
+  Nonlinear step: |du|/|u| = 0.032631884247212889, |du| = 3.2085080229868606
+Assembling the System
+Nonlinear Residual: 1.2482465927873654e-05
+Linear solve starting, tolerance 0.040056187846945188
+Linear solve finished, step 5, residual 3.7745192265277882e-07
+Trying full Newton step
+  Current Residual: 3.5270642290091566e-07
+  Nonlinear solver converged, step 1, residual 3.5270642290091566e-07
+  Nonlinear solver converged, step 1, residual reduction 1.1622685808231157e-06 < 5.0000000000000004e-06
+  Nonlinear solver converged, step 1, relative step size 1.0818378614625637e-07 < 5.0000000000000004e-06
+The boundary QoI is 0.083397969533066649
+
+Solving the adjoint problem
+Adaptive step 3
+Solving the forward problem
+We have 43 active elements and 489 active dofs.
+
+Assembling the System
+Nonlinear Residual: 0.17715444505855465
+Linear solve starting, tolerance 2.8223960162824908e-06
+Linear solve finished, step 32, residual 3.0115132419954682e-06
+Trying full Newton step
+  Current Residual: 1.3140031741041044e-05
+  Nonlinear step: |du|/|u| = 0.010851284663203398, |du| = 1.1881136323565553
+Assembling the System
+Nonlinear Residual: 1.3140031741041044e-05
+Linear solve starting, tolerance 0.038051658462766133
+Linear solve finished, step 19, residual 2.8753290805554482e-07
+Trying full Newton step
+  Current Residual: 2.9813038188172841e-07
+  Nonlinear solver converged, step 1, residual 2.9813038188172841e-07
+  Nonlinear solver converged, step 1, residual reduction 1.6828840043115358e-06 < 5.0000000000000004e-06
+  Nonlinear solver converged, step 1, relative step size 4.3812202048034265e-06 < 5.0000000000000004e-06
+The boundary QoI is 0.083320955818497799
+
+Solving the adjoint problem
+Adaptive step 4
+Solving the forward problem
+We have 58 active elements and 665 active dofs.
+
+Assembling the System
+Nonlinear Residual: 0.39919146357636331
+Linear solve starting, tolerance 1.2525317939429149e-06
+Linear solve finished, step 23, residual 2.839106616742409e-06
+Trying full Newton step
+  Current Residual: 5.6151033018698336e-05
+  Nonlinear step: |du|/|u| = 0.026227435390334966, |du| = 3.6016237999137686
+Assembling the System
+Nonlinear Residual: 5.6151033018698336e-05
+Linear solve starting, tolerance 0.0089045556799195423
+Linear solve finished, step 24, residual 4.0210669628509374e-07
+Trying full Newton step
+  Current Residual: 4.5058576148296425e-07
+  Nonlinear solver converged, step 1, residual 4.5058576148296425e-07
+  Nonlinear solver converged, step 1, residual reduction 1.128745984310783e-06 < 5.0000000000000004e-06
+  Nonlinear solver converged, step 1, relative step size 1.810249215230675e-06 < 5.0000000000000004e-06
+The boundary QoI is 0.083235487523675558
+
+Solving the adjoint problem
+Adaptive step 5
+Solving the forward problem
+We have 76 active elements and 898 active dofs.
+
+Assembling the System
+Nonlinear Residual: 0.2694905635811049
+Linear solve starting, tolerance 1.8553525338913094e-06
+Linear solve finished, step 24, residual 5.6863821486782222e-06
+Trying full Newton step
+  Current Residual: 6.3943879089033129e-05
+  Nonlinear step: |du|/|u| = 0.026516033137707642, |du| = 4.0454321765239287
+Assembling the System
+Nonlinear Residual: 6.3943879089033129e-05
+Linear solve starting, tolerance 0.0078193567097144395
+Linear solve finished, step 39, residual 2.8305073809539721e-07
+Trying full Newton step
+  Current Residual: 3.6756254437316927e-07
+  Nonlinear solver converged, step 1, residual 3.6756254437316927e-07
+  Nonlinear solver converged, step 1, residual reduction 1.3639161961325929e-06 < 5.0000000000000004e-06
+  Nonlinear solver converged, step 1, relative step size 1.5391121888006663e-06 < 5.0000000000000004e-06
+The boundary QoI is 0.083295321131089131
+
+
+ -------------------------------------------------------------------------------------------------------------------
+| Time:           Wed Apr 13 10:21:33 2016                                                                          |
+| OS:             Darwin                                                                                            |
+| HostName:       peterson-laptop.local                                                                             |
+| OS Release:     15.0.0                                                                                            |
+| OS Version:     Darwin Kernel Version 15.0.0: Sat Sep 19 15:53:46 PDT 2015; root:xnu-3247.10.11~1/RELEASE_X86_64  |
+| Machine:        x86_64                                                                                            |
+| Username:       petejw                                                                                            |
+| Configuration:  ../configure  'INSTALL=/usr/bin/install -C'                                                       |
+|  '--with-methods=opt dbg'                                                                                         |
+|  '--prefix=/Users/petejw/projects/libmesh_git/installed'                                                          |
+|  '--enable-perflog'                                                                                               |
+|  '--enable-tracefiles'                                                                                            |
+|  '--disable-blocked-storage'                                                                                      |
+|  '--enable-default-comm-world'                                                                                    |
+|  '--enable-tecio'                                                                                                 |
+|  '--enable-unique-ptr'                                                                                            |
+|  '--enable-ifem'                                                                                                  |
+|  'PETSC_DIR=/opt/moose/petsc/mpich_petsc-3.6.1/clang-opt-superlu'                                                 |
+|  'SLEPC_DIR=/opt/petejw/slepc/3.6.1'                                                                              |
+|  'CPPFLAGS= '                                                                                                     |
+|  'LIBS= '                                                                                                         |
+|  'CPPFLAGS=  '                                                                                                    |
+|  'LIBS=  '                                                                                                        |
+|  '--disable-netcdf-4'                                                                                             |
+|  '--disable-testsets'                                                                                             |
+|  'CXX=mpicxx'                                                                                                     |
+|  'CC=mpicc'                                                                                                       |
+|  'F77=mpif77'                                                                                                     |
+|  'FC=mpif90'                                                                                                      |
+|  'CPPFLAGS=   '                                                                                                   |
+|  'LIBS=   '                                                                                                       |
+ -------------------------------------------------------------------------------------------------------------------
+ ----------------------------------------------------------------------------------------------------------------------
+| libMesh Performance: Alive time=1.60788, Active time=1.52959                                                         |
+ ----------------------------------------------------------------------------------------------------------------------
+| Event                                   nCalls     Total Time  Avg Time    Total Time  Avg Time    % of Active Time  |
+|                                                    w/o Sub     w/o Sub     With Sub    With Sub    w/o S    With S   |
+|----------------------------------------------------------------------------------------------------------------------|
+|                                                                                                                      |
+|                                                                                                                      |
+| AdjointResidualErrorEstimator                                                                                        |
+|   estimate_error()                      20         0.0012      0.000060    1.2349      0.061745    0.08     80.73    |
+|                                                                                                                      |
+| DofMap                                                                                                               |
+|   add_neighbors_to_send_list()          31         0.0006      0.000019    0.0006      0.000019    0.04     0.04     |
+|   build_constraint_matrix()             1450       0.0075      0.000005    0.0075      0.000005    0.49     0.49     |
+|   build_sparsity()                      6          0.0054      0.000898    0.0056      0.000931    0.35     0.37     |
+|   cnstrn_elem_mat_vec()                 470        0.0094      0.000020    0.0094      0.000020    0.61     0.61     |
+|   constrain_elem_matrix()               170        0.0031      0.000018    0.0031      0.000018    0.20     0.20     |
+|   constrain_elem_vector()               640        0.0013      0.000002    0.0013      0.000002    0.08     0.08     |
+|   create_dof_constraints()              31         0.0084      0.000270    0.0141      0.000454    0.55     0.92     |
+|   distribute_dofs()                     31         0.0012      0.000037    0.0033      0.000108    0.08     0.22     |
+|   dof_indices()                         145940     0.0427      0.000000    0.0427      0.000000    2.79     2.79     |
+|   enforce_adjoint_constraints_exactly() 10         0.0005      0.000045    0.0005      0.000045    0.03     0.03     |
+|   enforce_constraints_exactly()         28         0.0011      0.000038    0.0011      0.000038    0.07     0.07     |
+|   old_dof_indices()                     2760       0.0013      0.000000    0.0013      0.000000    0.09     0.09     |
+|   prepare_send_list()                   57         0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|   reinit()                              31         0.0022      0.000070    0.0022      0.000070    0.14     0.14     |
+|                                                                                                                      |
+| EquationSystems                                                                                                      |
+|   build_discontinuous_solution_vector() 25         0.0004      0.000017    0.0006      0.000024    0.03     0.04     |
+|   build_solution_vector()               11         0.0017      0.000151    0.0022      0.000199    0.11     0.14     |
+|                                                                                                                      |
+| FE                                                                                                                   |
+|   compute_shape_functions()             138632     0.1336      0.000001    0.1336      0.000001    8.73     8.73     |
+|   init_shape_functions()                18344      0.1097      0.000006    0.1097      0.000006    7.17     7.17     |
+|   inverse_map()                         27315      0.0194      0.000001    0.0194      0.000001    1.27     1.27     |
+|                                                                                                                      |
+| FEMSystem                                                                                                            |
+|   assemble_qoi()                        6          0.0028      0.000475    0.0135      0.002246    0.19     0.88     |
+|   assemble_qoi_derivative()             5          0.0027      0.000550    0.0124      0.002481    0.18     0.81     |
+|   assembly()                            11         0.0293      0.002662    0.0575      0.005227    1.91     3.76     |
+|   assembly(get_jacobian)                5          0.0098      0.001956    0.0199      0.003974    0.64     1.30     |
+|   assembly(get_residual)                11         0.0072      0.000656    0.0264      0.002399    0.47     1.73     |
+|                                                                                                                      |
+| FEMap                                                                                                                |
+|   compute_affine_map()                  138632     0.1076      0.000001    0.1076      0.000001    7.04     7.04     |
+|   compute_face_map()                    4052       0.0068      0.000002    0.0191      0.000005    0.45     1.25     |
+|   init_face_shape_functions()           626        0.0003      0.000001    0.0003      0.000001    0.02     0.02     |
+|   init_reference_to_physical_map()      18344      0.0885      0.000005    0.0885      0.000005    5.78     5.78     |
+|                                                                                                                      |
+| GMVIO                                                                                                                |
+|   write_nodal_data()                    11         0.0108      0.000984    0.0108      0.000984    0.71     0.71     |
+|                                                                                                                      |
+| GenericProjector                                                                                                     |
+|   copy_dofs                             1200       0.0005      0.000000    0.0023      0.000002    0.03     0.15     |
+|   operator()                            10         0.0022      0.000218    0.1083      0.010828    0.14     7.08     |
+|   project_edges                         640        0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|   project_interior                      640        0.0001      0.000000    0.0001      0.000000    0.00     0.00     |
+|   project_nodes                         640        0.0022      0.000003    0.1022      0.000160    0.14     6.68     |
+|   project_sides                         640        0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|                                                                                                                      |
+| ImplicitSystem                                                                                                       |
+|   adjoint_solve()                       5          0.0001      0.000022    0.0484      0.009684    0.01     3.17     |
+|                                                                                                                      |
+| Mesh                                                                                                                 |
+|   all_first_order()                     25         0.0012      0.000048    0.0012      0.000048    0.08     0.08     |
+|   all_second_order()                    1          0.0001      0.000071    0.0001      0.000071    0.00     0.00     |
+|   contract()                            5          0.0000      0.000003    0.0000      0.000007    0.00     0.00     |
+|   find_neighbors()                      57         0.0042      0.000074    0.0042      0.000074    0.28     0.28     |
+|   renumber_nodes_and_elem()             69         0.0001      0.000002    0.0001      0.000002    0.01     0.01     |
+|                                                                                                                      |
+| MeshOutput                                                                                                           |
+|   write_equation_systems()              11         0.0001      0.000008    0.0131      0.001191    0.01     0.86     |
+|                                                                                                                      |
+| MeshRefinement                                                                                                       |
+|   _coarsen_elements()                   10         0.0000      0.000002    0.0000      0.000002    0.00     0.00     |
+|   _refine_elements()                    10         0.0005      0.000048    0.0008      0.000076    0.03     0.05     |
+|   add_node()                            720        0.0002      0.000000    0.0002      0.000000    0.01     0.01     |
+|   make_coarsening_compatible()          10         0.0002      0.000022    0.0002      0.000022    0.01     0.01     |
+|   make_flags_parallel_consistent()      15         0.0001      0.000009    0.0001      0.000009    0.01     0.01     |
+|   make_refinement_compatible()          10         0.0000      0.000004    0.0000      0.000004    0.00     0.00     |
+|                                                                                                                      |
+| NewtonSolver                                                                                                         |
+|   solve()                               6          0.0014      0.000226    0.1183      0.019722    0.09     7.74     |
+|                                                                                                                      |
+| OldSolutionValue                                                                                                     |
+|   Number eval_at_node()                 4960       0.0004      0.000000    0.0004      0.000000    0.03     0.03     |
+|   check_old_context(c)                  1200       0.0007      0.000001    0.0013      0.000001    0.04     0.09     |
+|   check_old_context(c,p)                2656       0.0016      0.000001    0.0041      0.000002    0.10     0.27     |
+|   eval_at_point()                       2656       0.0487      0.000018    0.0989      0.000037    3.18     6.46     |
+|   eval_old_dofs()                       1200       0.0003      0.000000    0.0017      0.000001    0.02     0.11     |
+|                                                                                                                      |
+| Parallel                                                                                                             |
+|   allgather()                           31         0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|                                                                                                                      |
+| Partitioner                                                                                                          |
+|   set_node_processor_ids()              51         0.0008      0.000016    0.0008      0.000016    0.05     0.05     |
+|   single_partition()                    32         0.0001      0.000004    0.0001      0.000004    0.01     0.01     |
+|                                                                                                                      |
+| PatchRecoveryErrorEstimator                                                                                          |
+|   estimate_error()                      120        0.4999      0.004166    0.7391      0.006159    32.68    48.32    |
+|                                                                                                                      |
+| PetscLinearSolver                                                                                                    |
+|   solve()                               16         0.0480      0.003003    0.0480      0.003003    3.14     3.14     |
+|                                                                                                                      |
+| System                                                                                                               |
+|   project_vector(old,new)               10         0.0017      0.000167    0.1108      0.011079    0.11     7.24     |
+|                                                                                                                      |
+| TopologyMap                                                                                                          |
+|   init()                                10         0.0009      0.000085    0.0009      0.000085    0.06     0.06     |
+|                                                                                                                      |
+| WeightedPatchRecoveryErrorEstimator                                                                                  |
+|   estimate_error()                      40         0.2967      0.007417    0.4946      0.012364    19.40    32.33    |
+|                                                                                                                      |
+| XdrIO                                                                                                                |
+|   read()                                1          0.0002      0.000151    0.0002      0.000151    0.01     0.01     |
+ ----------------------------------------------------------------------------------------------------------------------
+| Totals:                                 515412     1.5296                                          100.00            |
+ ----------------------------------------------------------------------------------------------------------------------
+
+ 
+***************************************************************
+* Done Running Example adjoints_ex3:
+*   example-opt  
+***************************************************************
+</pre>
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(window).on('scroll',function() {
+    var scrolltop = $(this).scrollTop();
+
+    if(scrolltop >= 215) {
+      $('#fixedbar').fadeIn(250);
+    }
+
+    else if(scrolltop <= 210) {
+      $('#fixedbar').fadeOut(250);
+    }
+  });
+});
+</script>
+
+<!-- Google Analytics stuff -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24978333-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</body>
+</html>

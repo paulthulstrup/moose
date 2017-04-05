@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>libMesh - A C++ Finite Element Library</title>
+  <meta name="author" content="libMesh development team">
+  <link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../doxygen_stylesheet.css">
+</head>
+
+<body>
+  <nav id="fixedbar">
+    <ul id="fixednav">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../support.html">About Us</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="https://github.com/libMesh/libmesh/graphs/contributors">Developers</a></li>
+      <li><a href="../installation.html">Installation</a></li>
+      <li><a href="../examples.html">Examples</a></li>
+     <li><a href="../doxygen/index.html">Documentation</a></li>
+    </ul>
+  </nav>
+
+  <div id="w">
+    <header id="logo"><a href="../index.html"><span id="logobg">SomeWebsiteLogo</span></a></header>
+
+    <nav id="navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../support.html">About Us</a></li>
+        <li><a href="../publications.html">Publications</a></li>
+        <li><a href="https://github.com/libMesh/libmesh/graphs/contributors">Developers</a></li>
+        <li><a href="../installation.html">Installation</a></li>
+        <li><a href="../examples.html">Examples</a></li>
+        <li><a href="../doxygen/index.html">Documentation</a></li>
+      </ul>
+    </nav>
+
+<div id="content">
+
+<br> <h1> Link to the source code for this example: </h1>
+<a href="https://github.com/libMesh/libmesh/tree/master/examples/miscellaneous/miscellaneous_ex5" target="_blank">Open miscellaneous_ex5 in new tab.</a>
+<a name="output"></a> 
+<br><br><br> <h1> The console output of the program: </h1> 
+<pre>
+***************************************************************
+* Running Example miscellaneous_ex5:
+*   example-opt  
+***************************************************************
+ 
+  Beginning Solve 0
+Number of elements: 219
+ assembling elliptic dg system... done
+System has: 768 degrees of freedom.
+Linear solver converged at step: 21, final residual: 4.1012e-12
+L2-Error is: 0.00666744
+  Beginning Solve 1
+Number of elements: 827
+ assembling elliptic dg system... done
+System has: 2896 degrees of freedom.
+Linear solver converged at step: 30, final residual: 1.0506e-11
+L2-Error is: 0.00264921
+  Beginning Solve 2
+Number of elements: 3003
+ assembling elliptic dg system... done
+System has: 10512 degrees of freedom.
+Linear solver converged at step: 50, final residual: 2.03714e-11
+L2-Error is: 0.0016323
+
+ -------------------------------------------------------------------------------------------------------------------
+| Time:           Wed Apr 13 09:35:36 2016                                                                          |
+| OS:             Darwin                                                                                            |
+| HostName:       peterson-laptop.local                                                                             |
+| OS Release:     15.0.0                                                                                            |
+| OS Version:     Darwin Kernel Version 15.0.0: Sat Sep 19 15:53:46 PDT 2015; root:xnu-3247.10.11~1/RELEASE_X86_64  |
+| Machine:        x86_64                                                                                            |
+| Username:       petejw                                                                                            |
+| Configuration:  ../configure  'INSTALL=/usr/bin/install -C'                                                       |
+|  '--with-methods=opt dbg'                                                                                         |
+|  '--prefix=/Users/petejw/projects/libmesh_git/installed'                                                          |
+|  '--enable-perflog'                                                                                               |
+|  '--enable-tracefiles'                                                                                            |
+|  '--disable-blocked-storage'                                                                                      |
+|  '--enable-default-comm-world'                                                                                    |
+|  '--enable-tecio'                                                                                                 |
+|  '--enable-unique-ptr'                                                                                            |
+|  '--enable-ifem'                                                                                                  |
+|  'PETSC_DIR=/opt/moose/petsc/mpich_petsc-3.6.1/clang-opt-superlu'                                                 |
+|  'SLEPC_DIR=/opt/petejw/slepc/3.6.1'                                                                              |
+|  'CPPFLAGS= '                                                                                                     |
+|  'LIBS= '                                                                                                         |
+|  'CPPFLAGS=  '                                                                                                    |
+|  'LIBS=  '                                                                                                        |
+|  '--disable-netcdf-4'                                                                                             |
+|  '--disable-testsets'                                                                                             |
+|  'CXX=mpicxx'                                                                                                     |
+|  'CC=mpicc'                                                                                                       |
+|  'F77=mpif77'                                                                                                     |
+|  'FC=mpif90'                                                                                                      |
+|  'CPPFLAGS=   '                                                                                                   |
+|  'LIBS=   '                                                                                                       |
+ -------------------------------------------------------------------------------------------------------------------
+ ----------------------------------------------------------------------------------------------------------------------
+| libMesh Performance: Alive time=1.39053, Active time=1.30097                                                         |
+ ----------------------------------------------------------------------------------------------------------------------
+| Event                                   nCalls     Total Time  Avg Time    Total Time  Avg Time    % of Active Time  |
+|                                                    w/o Sub     w/o Sub     With Sub    With Sub    w/o S    With S   |
+|----------------------------------------------------------------------------------------------------------------------|
+|                                                                                                                      |
+|                                                                                                                      |
+| DofMap                                                                                                               |
+|   add_neighbors_to_send_list()          3          0.0008      0.000272    0.0008      0.000272    0.06     0.06     |
+|   build_sparsity()                      3          0.0644      0.021465    0.0857      0.028581    4.95     6.59     |
+|   create_dof_constraints()              3          0.0001      0.000037    0.0001      0.000037    0.01     0.01     |
+|   distribute_dofs()                     3          0.0007      0.000224    0.0040      0.001334    0.05     0.31     |
+|   dof_indices()                         119667     0.0223      0.000000    0.0223      0.000000    1.71     1.71     |
+|   old_dof_indices()                     10560      0.0027      0.000000    0.0027      0.000000    0.20     0.20     |
+|   prepare_send_list()                   4          0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|   reinit()                              3          0.0033      0.001109    0.0033      0.001109    0.26     0.26     |
+|                                                                                                                      |
+| EquationSystems                                                                                                      |
+|   build_discontinuous_solution_vector() 1          0.0019      0.001854    0.0025      0.002489    0.14     0.19     |
+|                                                                                                                      |
+| ExodusII_IO                                                                                                          |
+|   write_nodal_data_discontinuous()      1          0.0032      0.003224    0.0032      0.003224    0.25     0.25     |
+|                                                                                                                      |
+| FE                                                                                                                   |
+|   compute_shape_functions()             67980      0.0372      0.000001    0.0372      0.000001    2.86     2.86     |
+|   init_shape_functions()                57756      0.1458      0.000003    0.1458      0.000003    11.21    11.21    |
+|   inverse_map()                         100720     0.1113      0.000001    0.1113      0.000001    8.56     8.56     |
+|                                                                                                                      |
+| FEMap                                                                                                                |
+|   compute_affine_map()                  67980      0.0695      0.000001    0.0695      0.000001    5.34     5.34     |
+|   compute_face_map()                    19488      0.0083      0.000000    0.0083      0.000000    0.64     0.64     |
+|   init_face_shape_functions()           5          0.0000      0.000004    0.0000      0.000004    0.00     0.00     |
+|   init_reference_to_physical_map()      57756      0.2581      0.000004    0.2581      0.000004    19.84    19.84    |
+|                                                                                                                      |
+| GenericProjector                                                                                                     |
+|   copy_dofs                             352        0.0001      0.000000    0.0007      0.000002    0.01     0.05     |
+|   operator()                            2          0.0059      0.002933    0.7754      0.387701    0.45     59.60    |
+|   project_edges                         3000       0.0002      0.000000    0.0002      0.000000    0.02     0.02     |
+|   project_interior                      3000       0.0127      0.000004    0.7651      0.000255    0.97     58.81    |
+|   project_nodes                         3000       0.0004      0.000000    0.0004      0.000000    0.03     0.03     |
+|   project_sides                         3000       0.0002      0.000000    0.0002      0.000000    0.02     0.02     |
+|                                                                                                                      |
+| JumpErrorEstimator                                                                                                   |
+|   estimate_error()                      2          0.0262      0.013079    0.1023      0.051169    2.01     7.87     |
+|                                                                                                                      |
+| Mesh                                                                                                                 |
+|   contract()                            2          0.0001      0.000069    0.0003      0.000140    0.01     0.02     |
+|   find_neighbors()                      5          0.0130      0.002610    0.0130      0.002610    1.00     1.00     |
+|   renumber_nodes_and_elem()             12         0.0004      0.000037    0.0004      0.000037    0.03     0.03     |
+|                                                                                                                      |
+| MeshRefinement                                                                                                       |
+|   _coarsen_elements()                   4          0.0001      0.000033    0.0001      0.000033    0.01     0.01     |
+|   _refine_elements()                    6          0.0083      0.001387    0.0188      0.003137    0.64     1.45     |
+|   add_node()                            25536      0.0082      0.000000    0.0082      0.000000    0.63     0.63     |
+|   make_coarsening_compatible()          4          0.0014      0.000345    0.0014      0.000345    0.11     0.11     |
+|   make_flags_parallel_consistent()      6          0.0005      0.000078    0.0005      0.000078    0.04     0.04     |
+|   make_refinement_compatible()          4          0.0001      0.000030    0.0001      0.000030    0.01     0.01     |
+|                                                                                                                      |
+| OldSolutionValue                                                                                                     |
+|   check_old_context(c)                  352        0.0002      0.000001    0.0004      0.000001    0.02     0.03     |
+|   check_old_context(c,p)                25344      0.0167      0.000001    0.0462      0.000002    1.28     3.55     |
+|   eval_at_point()                       25344      0.3418      0.000013    0.7405      0.000029    26.27    56.92    |
+|   eval_old_dofs()                       352        0.0001      0.000000    0.0006      0.000002    0.01     0.04     |
+|                                                                                                                      |
+| Parallel                                                                                                             |
+|   allgather()                           3          0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|                                                                                                                      |
+| Partitioner                                                                                                          |
+|   set_node_processor_ids()              1          0.0000      0.000028    0.0000      0.000028    0.00     0.00     |
+|   single_partition()                    5          0.0002      0.000032    0.0002      0.000032    0.01     0.01     |
+|                                                                                                                      |
+| PetscLinearSolver                                                                                                    |
+|   solve()                               3          0.0383      0.012778    0.0383      0.012778    2.95     2.95     |
+|                                                                                                                      |
+| System                                                                                                               |
+|   assemble()                            3          0.0818      0.027271    0.2746      0.091548    6.29     21.11    |
+|   project_vector(old,new)               2          0.0024      0.001175    0.7789      0.389432    0.18     59.87    |
+|                                                                                                                      |
+| TopologyMap                                                                                                          |
+|   init()                                6          0.0120      0.002003    0.0120      0.002003    0.92     0.92     |
+|                                                                                                                      |
+| XdrIO                                                                                                                |
+|   read()                                1          0.0001      0.000115    0.0001      0.000115    0.01     0.01     |
+ ----------------------------------------------------------------------------------------------------------------------
+| Totals:                                 591284     1.3010                                          100.00            |
+ ----------------------------------------------------------------------------------------------------------------------
+
+ 
+***************************************************************
+* Done Running Example miscellaneous_ex5:
+*   example-opt  
+***************************************************************
+</pre>
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(window).on('scroll',function() {
+    var scrolltop = $(this).scrollTop();
+
+    if(scrolltop >= 215) {
+      $('#fixedbar').fadeIn(250);
+    }
+
+    else if(scrolltop <= 210) {
+      $('#fixedbar').fadeOut(250);
+    }
+  });
+});
+</script>
+
+<!-- Google Analytics stuff -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24978333-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</body>
+</html>

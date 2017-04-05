@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>libMesh - A C++ Finite Element Library</title>
+  <meta name="author" content="libMesh development team">
+  <link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../doxygen_stylesheet.css">
+</head>
+
+<body>
+  <nav id="fixedbar">
+    <ul id="fixednav">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../support.html">About Us</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="https://github.com/libMesh/libmesh/graphs/contributors">Developers</a></li>
+      <li><a href="../installation.html">Installation</a></li>
+      <li><a href="../examples.html">Examples</a></li>
+     <li><a href="../doxygen/index.html">Documentation</a></li>
+    </ul>
+  </nav>
+
+  <div id="w">
+    <header id="logo"><a href="../index.html"><span id="logobg">SomeWebsiteLogo</span></a></header>
+
+    <nav id="navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../support.html">About Us</a></li>
+        <li><a href="../publications.html">Publications</a></li>
+        <li><a href="https://github.com/libMesh/libmesh/graphs/contributors">Developers</a></li>
+        <li><a href="../installation.html">Installation</a></li>
+        <li><a href="../examples.html">Examples</a></li>
+        <li><a href="../doxygen/index.html">Documentation</a></li>
+      </ul>
+    </nav>
+
+<div id="content">
+
+<br> <h1> Link to the source code for this example: </h1>
+<a href="https://github.com/libMesh/libmesh/tree/master/examples/adaptivity/adaptivity_ex4" target="_blank">Open adaptivity_ex4 in new tab.</a>
+<a name="output"></a> 
+<br><br><br> <h1> The console output of the program: </h1> 
+<pre>
+  CXX      example_dbg-adaptivity_ex4.o
+  CXXLD    example-dbg
+***************************************************************
+* Running Example adaptivity_ex4:
+*   example-opt  
+***************************************************************
+ 
+ EquationSystems
+  n_systems()=1
+   System #0, "Biharmonic"
+    Type "LinearImplicit"
+    Variables="u" 
+    Finite Element Types="HERMITE", "JACOBI_20_00" 
+    Infinite Element Mapping="CARTESIAN" 
+    Approximation Orders="THIRD", "THIRD" 
+    n_dofs()=36
+    n_local_dofs()=36
+    n_constrained_dofs()=0
+    n_local_constrained_dofs()=0
+    n_vectors()=1
+    n_matrices()=1
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 21.7778
+      Average Off-Processor Bandwidth <= 0
+      Maximum  On-Processor Bandwidth <= 36
+      Maximum Off-Processor Bandwidth <= 0
+    DofMap Constraints
+      Number of DoF Constraints = 0
+
+ Mesh Information:
+  elem_dimensions()={2}
+  spatial_dimension()=2
+  n_nodes()=25
+    n_local_nodes()=25
+  n_elem()=4
+    n_local_elem()=4
+    n_active_elem()=4
+  n_subdomains()=1
+  n_partitions()=1
+  n_processors()=1
+  n_threads()=1
+  processor_id()=0
+
+ EquationSystems
+  n_systems()=1
+   System #0, "Biharmonic"
+    Type "LinearImplicit"
+    Variables="u" 
+    Finite Element Types="HERMITE", "JACOBI_20_00" 
+    Infinite Element Mapping="CARTESIAN" 
+    Approximation Orders="THIRD", "THIRD" 
+    n_dofs()=36
+    n_local_dofs()=36
+    n_constrained_dofs()=0
+    n_local_constrained_dofs()=0
+    n_vectors()=1
+    n_matrices()=1
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 21.7778
+      Average Off-Processor Bandwidth <= 0
+      Maximum  On-Processor Bandwidth <= 36
+      Maximum Off-Processor Bandwidth <= 0
+    DofMap Constraints
+      Number of DoF Constraints = 0
+
+Beginning Solve 0
+Linear solver converged at step: 5, final residual: 2.30574e-13
+L2-Norm is: 0.384025
+H1-Norm is: 1.98976
+H2-Norm is: 14.3417
+
+L2-Error is: 0.0335358
+H1-Error is: 0.267039
+H2-Error is: 3.51162
+
+  Refining the mesh...
+Mean Error: 4.54516e-13
+Error Variance: 5.31276e-26
+ Mesh Information:
+  elem_dimensions()={2}
+  spatial_dimension()=2
+  n_nodes()=41
+    n_local_nodes()=41
+  n_elem()=8
+    n_local_elem()=8
+    n_active_elem()=7
+  n_subdomains()=1
+  n_partitions()=1
+  n_processors()=1
+  n_threads()=1
+  processor_id()=0
+
+ EquationSystems
+  n_systems()=1
+   System #0, "Biharmonic"
+    Type "LinearImplicit"
+    Variables="u" 
+    Finite Element Types="HERMITE", "JACOBI_20_00" 
+    Infinite Element Mapping="CARTESIAN" 
+    Approximation Orders="THIRD", "THIRD" 
+    n_dofs()=56
+    n_local_dofs()=56
+    n_constrained_dofs()=8
+    n_local_constrained_dofs()=8
+    n_vectors()=1
+    n_matrices()=1
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 27.4286
+      Average Off-Processor Bandwidth <= 0
+      Maximum  On-Processor Bandwidth <= 52
+      Maximum Off-Processor Bandwidth <= 0
+    DofMap Constraints
+      Number of DoF Constraints = 8
+      Average DoF Constraint Length= 4
+
+Beginning Solve 1
+Linear solver converged at step: 5, final residual: 4.32422e-12
+L2-Norm is: 0.385688
+H1-Norm is: 1.99188
+H2-Norm is: 14.3773
+
+L2-Error is: 0.0312488
+H1-Error is: 0.251755
+H2-Error is: 3.36347
+
+  Refining the mesh...
+Mean Error: 0.904773
+Error Variance: 0.231378
+ Mesh Information:
+  elem_dimensions()={2}
+  spatial_dimension()=2
+  n_nodes()=69
+    n_local_nodes()=69
+  n_elem()=16
+    n_local_elem()=16
+    n_active_elem()=13
+  n_subdomains()=1
+  n_partitions()=1
+  n_processors()=1
+  n_threads()=1
+  processor_id()=0
+
+ EquationSystems
+  n_systems()=1
+   System #0, "Biharmonic"
+    Type "LinearImplicit"
+    Variables="u" 
+    Finite Element Types="HERMITE", "JACOBI_20_00" 
+    Infinite Element Mapping="CARTESIAN" 
+    Approximation Orders="THIRD", "THIRD" 
+    n_dofs()=88
+    n_local_dofs()=88
+    n_constrained_dofs()=8
+    n_local_constrained_dofs()=8
+    n_vectors()=1
+    n_matrices()=1
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 28
+      Average Off-Processor Bandwidth <= 0
+      Maximum  On-Processor Bandwidth <= 52
+      Maximum Off-Processor Bandwidth <= 0
+    DofMap Constraints
+      Number of DoF Constraints = 8
+      Average DoF Constraint Length= 4
+
+Beginning Solve 2
+Linear solver converged at step: 8, final residual: 4.96983e-12
+L2-Norm is: 0.39603
+H1-Norm is: 2.01114
+H2-Norm is: 14.5761
+
+L2-Error is: 0.020273
+H1-Error is: 0.166208
+H2-Error is: 2.36714
+
+  Refining the mesh...
+Mean Error: 1.07284
+Error Variance: 1.26032
+ Mesh Information:
+  elem_dimensions()={2}
+  spatial_dimension()=2
+  n_nodes()=125
+    n_local_nodes()=125
+  n_elem()=32
+    n_local_elem()=32
+    n_active_elem()=25
+  n_subdomains()=1
+  n_partitions()=1
+  n_processors()=1
+  n_threads()=1
+  processor_id()=0
+
+ EquationSystems
+  n_systems()=1
+   System #0, "Biharmonic"
+    Type "LinearImplicit"
+    Variables="u" 
+    Finite Element Types="HERMITE", "JACOBI_20_00" 
+    Infinite Element Mapping="CARTESIAN" 
+    Approximation Orders="THIRD", "THIRD" 
+    n_dofs()=152
+    n_local_dofs()=152
+    n_constrained_dofs()=32
+    n_local_constrained_dofs()=32
+    n_vectors()=1
+    n_matrices()=1
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 33.6842
+      Average Off-Processor Bandwidth <= 0
+      Maximum  On-Processor Bandwidth <= 60
+      Maximum Off-Processor Bandwidth <= 0
+    DofMap Constraints
+      Number of DoF Constraints = 32
+      Average DoF Constraint Length= 4
+
+Beginning Solve 3
+Linear solver converged at step: 12, final residual: 1.95735e-12
+L2-Norm is: 0.405284
+H1-Norm is: 2.03173
+H2-Norm is: 14.7515
+
+L2-Error is: 0.00185729
+H1-Error is: 0.0267654
+H2-Error is: 0.71977
+
+  Refining the mesh...
+Mean Error: 0.210827
+Error Variance: 0.0183284
+ Mesh Information:
+  elem_dimensions()={2}
+  spatial_dimension()=2
+  n_nodes()=249
+    n_local_nodes()=249
+  n_elem()=68
+    n_local_elem()=68
+    n_active_elem()=52
+  n_subdomains()=1
+  n_partitions()=1
+  n_processors()=1
+  n_threads()=1
+  processor_id()=0
+
+ EquationSystems
+  n_systems()=1
+   System #0, "Biharmonic"
+    Type "LinearImplicit"
+    Variables="u" 
+    Finite Element Types="HERMITE", "JACOBI_20_00" 
+    Infinite Element Mapping="CARTESIAN" 
+    Approximation Orders="THIRD", "THIRD" 
+    n_dofs()=292
+    n_local_dofs()=292
+    n_constrained_dofs()=72
+    n_local_constrained_dofs()=72
+    n_vectors()=1
+    n_matrices()=1
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 35.4521
+      Average Off-Processor Bandwidth <= 0
+      Maximum  On-Processor Bandwidth <= 76
+      Maximum Off-Processor Bandwidth <= 0
+    DofMap Constraints
+      Number of DoF Constraints = 72
+      Average DoF Constraint Length= 4
+
+Beginning Solve 4
+Linear solver converged at step: 23, final residual: 2.1448e-12
+L2-Norm is: 0.405907
+H1-Norm is: 2.03286
+H2-Norm is: 14.7613
+
+L2-Error is: 0.00113017
+H1-Error is: 0.016604
+H2-Error is: 0.482316
+
+  Refining the mesh...
+Mean Error: 0.108787
+Error Variance: 0.00898017
+ Mesh Information:
+  elem_dimensions()={2}
+  spatial_dimension()=2
+  n_nodes()=485
+    n_local_nodes()=485
+  n_elem()=140
+    n_local_elem()=140
+    n_active_elem()=106
+  n_subdomains()=1
+  n_partitions()=1
+  n_processors()=1
+  n_threads()=1
+  processor_id()=0
+
+ EquationSystems
+  n_systems()=1
+   System #0, "Biharmonic"
+    Type "LinearImplicit"
+    Variables="u" 
+    Finite Element Types="HERMITE", "JACOBI_20_00" 
+    Infinite Element Mapping="CARTESIAN" 
+    Approximation Orders="THIRD", "THIRD" 
+    n_dofs()=548
+    n_local_dofs()=548
+    n_constrained_dofs()=120
+    n_local_constrained_dofs()=120
+    n_vectors()=1
+    n_matrices()=1
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 36.7007
+      Average Off-Processor Bandwidth <= 0
+      Maximum  On-Processor Bandwidth <= 68
+      Maximum Off-Processor Bandwidth <= 0
+    DofMap Constraints
+      Number of DoF Constraints = 120
+      Average DoF Constraint Length= 4
+
+Beginning Solve 5
+Linear solver converged at step: 37, final residual: 2.04494e-11
+L2-Norm is: 0.406259
+H1-Norm is: 2.03204
+H2-Norm is: 14.7673
+
+L2-Error is: 0.000356962
+H1-Error is: 0.00613803
+H2-Error is: 0.227619
+
+  Refining the mesh...
+Mean Error: 0.0264705
+Error Variance: 0.00117171
+ Mesh Information:
+  elem_dimensions()={2}
+  spatial_dimension()=2
+  n_nodes()=957
+    n_local_nodes()=957
+  n_elem()=280
+    n_local_elem()=280
+    n_active_elem()=211
+  n_subdomains()=1
+  n_partitions()=1
+  n_processors()=1
+  n_threads()=1
+  processor_id()=0
+
+ EquationSystems
+  n_systems()=1
+   System #0, "Biharmonic"
+    Type "LinearImplicit"
+    Variables="u" 
+    Finite Element Types="HERMITE", "JACOBI_20_00" 
+    Infinite Element Mapping="CARTESIAN" 
+    Approximation Orders="THIRD", "THIRD" 
+    n_dofs()=1072
+    n_local_dofs()=1072
+    n_constrained_dofs()=304
+    n_local_constrained_dofs()=304
+    n_vectors()=1
+    n_matrices()=1
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 38.4776
+      Average Off-Processor Bandwidth <= 0
+      Maximum  On-Processor Bandwidth <= 76
+      Maximum Off-Processor Bandwidth <= 0
+    DofMap Constraints
+      Number of DoF Constraints = 304
+      Average DoF Constraint Length= 4
+
+Beginning Solve 6
+Linear solver converged at step: 294, final residual: 8.22354e-11
+L2-Norm is: 0.406309
+H1-Norm is: 2.03185
+H2-Norm is: 14.7684
+
+L2-Error is: 8.72883e-05
+H1-Error is: 0.00241104
+H2-Error is: 0.13224
+
+  Refining the mesh...
+Mean Error: 0.0109873
+Error Variance: 0.000156803
+ Mesh Information:
+  elem_dimensions()={2}
+  spatial_dimension()=2
+  n_nodes()=1885
+    n_local_nodes()=1885
+  n_elem()=560
+    n_local_elem()=560
+    n_active_elem()=421
+  n_subdomains()=1
+  n_partitions()=1
+  n_processors()=1
+  n_threads()=1
+  processor_id()=0
+
+ EquationSystems
+  n_systems()=1
+   System #0, "Biharmonic"
+    Type "LinearImplicit"
+    Variables="u" 
+    Finite Element Types="HERMITE", "JACOBI_20_00" 
+    Infinite Element Mapping="CARTESIAN" 
+    Approximation Orders="THIRD", "THIRD" 
+    n_dofs()=2088
+    n_local_dofs()=2088
+    n_constrained_dofs()=616
+    n_local_constrained_dofs()=616
+    n_vectors()=1
+    n_matrices()=1
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 38.9885
+      Average Off-Processor Bandwidth <= 0
+      Maximum  On-Processor Bandwidth <= 72
+      Maximum Off-Processor Bandwidth <= 0
+    DofMap Constraints
+      Number of DoF Constraints = 616
+      Average DoF Constraint Length= 4
+
+Beginning Solve 7
+Linear solver converged at step: 1000, final residual: 2.62662e-07
+L2-Norm is: 0.406333
+H1-Norm is: 2.03181
+H2-Norm is: 14.7688
+
+L2-Error is: 5.02524e-05
+H1-Error is: 0.00140302
+H2-Error is: 0.082078
+
+
+ -------------------------------------------------------------------------------------------------------------------
+| Time:           Wed Apr 13 09:22:42 2016                                                                          |
+| OS:             Darwin                                                                                            |
+| HostName:       peterson-laptop.local                                                                             |
+| OS Release:     15.0.0                                                                                            |
+| OS Version:     Darwin Kernel Version 15.0.0: Sat Sep 19 15:53:46 PDT 2015; root:xnu-3247.10.11~1/RELEASE_X86_64  |
+| Machine:        x86_64                                                                                            |
+| Username:       petejw                                                                                            |
+| Configuration:  ../configure  'INSTALL=/usr/bin/install -C'                                                       |
+|  '--with-methods=opt dbg'                                                                                         |
+|  '--prefix=/Users/petejw/projects/libmesh_git/installed'                                                          |
+|  '--enable-perflog'                                                                                               |
+|  '--enable-tracefiles'                                                                                            |
+|  '--disable-blocked-storage'                                                                                      |
+|  '--enable-default-comm-world'                                                                                    |
+|  '--enable-tecio'                                                                                                 |
+|  '--enable-unique-ptr'                                                                                            |
+|  '--enable-ifem'                                                                                                  |
+|  'PETSC_DIR=/opt/moose/petsc/mpich_petsc-3.6.1/clang-opt-superlu'                                                 |
+|  'SLEPC_DIR=/opt/petejw/slepc/3.6.1'                                                                              |
+|  'CPPFLAGS= '                                                                                                     |
+|  'LIBS= '                                                                                                         |
+|  'CPPFLAGS=  '                                                                                                    |
+|  'LIBS=  '                                                                                                        |
+|  '--disable-netcdf-4'                                                                                             |
+|  '--disable-testsets'                                                                                             |
+|  'CXX=mpicxx'                                                                                                     |
+|  'CC=mpicc'                                                                                                       |
+|  'F77=mpif77'                                                                                                     |
+|  'FC=mpif90'                                                                                                      |
+|  'CPPFLAGS=   '                                                                                                   |
+|  'LIBS=   '                                                                                                       |
+ -------------------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------------
+| libMesh Performance: Alive time=2.98852, Active time=2.94658                                                    |
+ -----------------------------------------------------------------------------------------------------------------
+| Event                              nCalls     Total Time  Avg Time    Total Time  Avg Time    % of Active Time  |
+|                                               w/o Sub     w/o Sub     With Sub    With Sub    w/o S    With S   |
+|-----------------------------------------------------------------------------------------------------------------|
+|                                                                                                                 |
+|                                                                                                                 |
+| DofMap                                                                                                          |
+|   add_neighbors_to_send_list()     8          0.0004      0.000049    0.0004      0.000049    0.01     0.01     |
+|   build_constraint_matrix()        835        0.0027      0.000003    0.0027      0.000003    0.09     0.09     |
+|   build_sparsity()                 8          0.0089      0.001106    0.0093      0.001157    0.30     0.31     |
+|   cnstrn_elem_mat_vec()            835        0.0046      0.000005    0.0046      0.000005    0.16     0.16     |
+|   create_dof_constraints()         8          0.0203      0.002532    0.2634      0.032923    0.69     8.94     |
+|   distribute_dofs()                8          0.0005      0.000061    0.0020      0.000256    0.02     0.07     |
+|   dof_indices()                    9115       0.0034      0.000000    0.0034      0.000000    0.12     0.12     |
+|   enforce_constraints_exactly()    7          0.0005      0.000065    0.0005      0.000065    0.02     0.02     |
+|   old_dof_indices()                3617       0.0015      0.000000    0.0015      0.000000    0.05     0.05     |
+|   prepare_send_list()              9          0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|   reinit()                         8          0.0016      0.000195    0.0016      0.000195    0.05     0.05     |
+|                                                                                                                 |
+| EquationSystems                                                                                                 |
+|   build_solution_vector()          1          0.0584      0.058436    0.0586      0.058589    1.98     1.99     |
+|                                                                                                                 |
+| ErrorVector                                                                                                     |
+|   mean()                           14         0.0000      0.000001    0.0000      0.000001    0.00     0.00     |
+|   variance()                       7          0.0000      0.000001    0.0000      0.000001    0.00     0.00     |
+|                                                                                                                 |
+| ExodusII_IO                                                                                                     |
+|   write_nodal_data()               1          0.0017      0.001678    0.0017      0.001678    0.06     0.06     |
+|                                                                                                                 |
+| FE                                                                                                              |
+|   compute_shape_functions()        12104      0.3042      0.000025    0.3042      0.000025    10.32    10.32    |
+|   init_shape_functions()           12104      2.0802      0.000172    2.0802      0.000172    70.60    70.60    |
+|   inverse_map()                    31968      0.0210      0.000001    0.0210      0.000001    0.71     0.71     |
+|                                                                                                                 |
+| FEMap                                                                                                           |
+|   compute_affine_map()             14507      0.0156      0.000001    0.0156      0.000001    0.53     0.53     |
+|   compute_face_map()               3134       0.0062      0.000002    0.0158      0.000005    0.21     0.54     |
+|   init_face_shape_functions()      3134       0.0015      0.000000    0.0015      0.000000    0.05     0.05     |
+|   init_reference_to_physical_map() 12104      0.0429      0.000004    0.0429      0.000004    1.46     1.46     |
+|                                                                                                                 |
+| GenericProjector                                                                                                |
+|   copy_dofs                        279        0.0002      0.000001    0.0008      0.000003    0.01     0.03     |
+|   operator()                       7          0.0018      0.000251    1.1120      0.158863    0.06     37.74    |
+|   project_edges                    556        0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|   project_interior                 556        0.0001      0.000000    0.0001      0.000000    0.00     0.00     |
+|   project_nodes                    556        0.0041      0.000007    1.1079      0.001993    0.14     37.60    |
+|   project_sides                    556        0.0006      0.000001    0.0006      0.000001    0.02     0.02     |
+|                                                                                                                 |
+| JumpErrorEstimator                                                                                              |
+|   estimate_error()                 7          0.0135      0.001923    1.1196      0.159941    0.46     38.00    |
+|                                                                                                                 |
+| Mesh                                                                                                            |
+|   all_second_order()               1          0.0000      0.000036    0.0000      0.000036    0.00     0.00     |
+|   contract()                       7          0.0001      0.000007    0.0001      0.000014    0.00     0.00     |
+|   find_neighbors()                 9          0.0020      0.000219    0.0020      0.000219    0.07     0.07     |
+|   renumber_nodes_and_elem()        25         0.0001      0.000005    0.0001      0.000005    0.00     0.00     |
+|                                                                                                                 |
+| MeshOutput                                                                                                      |
+|   write_equation_systems()         1          0.0000      0.000013    0.0603      0.060281    0.00     2.05     |
+|                                                                                                                 |
+| MeshRefinement                                                                                                  |
+|   _coarsen_elements()              14         0.0000      0.000002    0.0000      0.000002    0.00     0.00     |
+|   _refine_elements()               14         0.0022      0.000157    0.0039      0.000275    0.07     0.13     |
+|   add_node()                       5004       0.0012      0.000000    0.0012      0.000000    0.04     0.04     |
+|   make_coarsening_compatible()     15         0.0006      0.000039    0.0006      0.000039    0.02     0.02     |
+|   make_flags_parallel_consistent() 21         0.0003      0.000013    0.0003      0.000013    0.01     0.01     |
+|   make_refinement_compatible()     15         0.0001      0.000005    0.0001      0.000005    0.00     0.00     |
+|                                                                                                                 |
+| MeshTools::Generation                                                                                           |
+|   build_cube()                     1          0.0000      0.000037    0.0000      0.000037    0.00     0.00     |
+|                                                                                                                 |
+| OldSolutionValue                                                                                                |
+|   Gradient eval_at_node()          2224       0.0005      0.000000    0.0005      0.000000    0.02     0.02     |
+|   Number eval_at_node()            2224       0.0002      0.000000    0.0002      0.000000    0.01     0.01     |
+|   check_old_context(c)             279        0.0002      0.000001    0.0005      0.000002    0.01     0.02     |
+|   check_old_context(c,p)           7440       0.0045      0.000001    0.0102      0.000001    0.15     0.35     |
+|   eval_at_point()                  7440       0.1817      0.000024    1.1022      0.000148    6.17     37.40    |
+|   eval_old_dofs()                  279        0.0001      0.000000    0.0006      0.000002    0.00     0.02     |
+|                                                                                                                 |
+| Parallel                                                                                                        |
+|   allgather()                      8          0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|                                                                                                                 |
+| Partitioner                                                                                                     |
+|   single_partition()               9          0.0001      0.000009    0.0001      0.000009    0.00     0.00     |
+|                                                                                                                 |
+| PetscLinearSolver                                                                                               |
+|   solve()                          8          0.1392      0.017394    0.1392      0.017394    4.72     4.72     |
+|                                                                                                                 |
+| System                                                                                                          |
+|   assemble()                       8          0.0124      0.001545    0.1201      0.015007    0.42     4.07     |
+|   project_vector(old,new)          7          0.0013      0.000192    1.1143      0.159188    0.05     37.82    |
+|                                                                                                                 |
+| TopologyMap                                                                                                     |
+|   init()                           14         0.0037      0.000262    0.0037      0.000262    0.12     0.12     |
+ -----------------------------------------------------------------------------------------------------------------
+| Totals:                            131120     2.9466                                          100.00            |
+ -----------------------------------------------------------------------------------------------------------------
+
+ 
+***************************************************************
+* Done Running Example adaptivity_ex4:
+*   example-opt  
+***************************************************************
+</pre>
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(window).on('scroll',function() {
+    var scrolltop = $(this).scrollTop();
+
+    if(scrolltop >= 215) {
+      $('#fixedbar').fadeIn(250);
+    }
+
+    else if(scrolltop <= 210) {
+      $('#fixedbar').fadeOut(250);
+    }
+  });
+});
+</script>
+
+<!-- Google Analytics stuff -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24978333-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</body>
+</html>

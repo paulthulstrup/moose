@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>libMesh - A C++ Finite Element Library</title>
+  <meta name="author" content="libMesh development team">
+  <link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../doxygen_stylesheet.css">
+</head>
+
+<body>
+  <nav id="fixedbar">
+    <ul id="fixednav">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../support.html">About Us</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="https://github.com/libMesh/libmesh/graphs/contributors">Developers</a></li>
+      <li><a href="../installation.html">Installation</a></li>
+      <li><a href="../examples.html">Examples</a></li>
+     <li><a href="../doxygen/index.html">Documentation</a></li>
+    </ul>
+  </nav>
+
+  <div id="w">
+    <header id="logo"><a href="../index.html"><span id="logobg">SomeWebsiteLogo</span></a></header>
+
+    <nav id="navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../support.html">About Us</a></li>
+        <li><a href="../publications.html">Publications</a></li>
+        <li><a href="https://github.com/libMesh/libmesh/graphs/contributors">Developers</a></li>
+        <li><a href="../installation.html">Installation</a></li>
+        <li><a href="../examples.html">Examples</a></li>
+        <li><a href="../doxygen/index.html">Documentation</a></li>
+      </ul>
+    </nav>
+
+<div id="content">
+
+<br> <h1> Link to the source code for this example: </h1>
+<a href="https://github.com/libMesh/libmesh/tree/master/examples/miscellaneous/miscellaneous_ex3" target="_blank">Open miscellaneous_ex3 in new tab.</a>
+<a name="output"></a> 
+<br><br><br> <h1> The console output of the program: </h1> 
+<pre>
+  CXX      example_dbg-miscellaneous_ex3.o
+  CXXLD    example-dbg
+***************************************************************
+* Running Example miscellaneous_ex3:
+*   example-opt -r 3 -o FIRST 
+***************************************************************
+ 
+Running /Users/petejw/projects/libmesh_git/build/examples/miscellaneous/miscellaneous_ex3/.libs/example-opt -r 3 -o FIRST
+
+ Mesh Information:
+  elem_dimensions()={2}
+  spatial_dimension()=2
+  n_nodes()=225
+    n_local_nodes()=225
+  n_elem()=255
+    n_local_elem()=255
+    n_active_elem()=192
+  n_subdomains()=1
+  n_partitions()=1
+  n_processors()=1
+  n_threads()=1
+  processor_id()=0
+
+ EquationSystems
+  n_systems()=1
+   System #0, "Laplace-Young"
+    Type "NonlinearImplicit"
+    Variables="u" 
+    Finite Element Types="LAGRANGE", "JACOBI_20_00" 
+    Infinite Element Mapping="CARTESIAN" 
+    Approximation Orders="FIRST", "THIRD" 
+    n_dofs()=225
+    n_local_dofs()=225
+    n_constrained_dofs()=0
+    n_local_constrained_dofs()=0
+    n_vectors()=1
+    n_matrices()=1
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 8.11111
+      Average Off-Processor Bandwidth <= 0
+      Maximum  On-Processor Bandwidth <= 9
+      Maximum Off-Processor Bandwidth <= 0
+    DofMap Constraints
+      Number of DoF Constraints = 0
+
+  NL step  0, |residual|_2 = 2.000000e-01
+  NL step  1, |residual|_2 = 4.432961e-03
+  NL step  2, |residual|_2 = 8.980807e-06
+  NL step  3, |residual|_2 = 1.264767e-10
+Laplace-Young system solved at nonlinear iteration 3 , final nonlinear residual norm: 1.264767e-10
+
+ -------------------------------------------------------------------------------------------------------------------
+| Time:           Wed Apr 13 09:34:24 2016                                                                          |
+| OS:             Darwin                                                                                            |
+| HostName:       peterson-laptop.local                                                                             |
+| OS Release:     15.0.0                                                                                            |
+| OS Version:     Darwin Kernel Version 15.0.0: Sat Sep 19 15:53:46 PDT 2015; root:xnu-3247.10.11~1/RELEASE_X86_64  |
+| Machine:        x86_64                                                                                            |
+| Username:       petejw                                                                                            |
+| Configuration:  ../configure  'INSTALL=/usr/bin/install -C'                                                       |
+|  '--with-methods=opt dbg'                                                                                         |
+|  '--prefix=/Users/petejw/projects/libmesh_git/installed'                                                          |
+|  '--enable-perflog'                                                                                               |
+|  '--enable-tracefiles'                                                                                            |
+|  '--disable-blocked-storage'                                                                                      |
+|  '--enable-default-comm-world'                                                                                    |
+|  '--enable-tecio'                                                                                                 |
+|  '--enable-unique-ptr'                                                                                            |
+|  '--enable-ifem'                                                                                                  |
+|  'PETSC_DIR=/opt/moose/petsc/mpich_petsc-3.6.1/clang-opt-superlu'                                                 |
+|  'SLEPC_DIR=/opt/petejw/slepc/3.6.1'                                                                              |
+|  'CPPFLAGS= '                                                                                                     |
+|  'LIBS= '                                                                                                         |
+|  'CPPFLAGS=  '                                                                                                    |
+|  'LIBS=  '                                                                                                        |
+|  '--disable-netcdf-4'                                                                                             |
+|  '--disable-testsets'                                                                                             |
+|  'CXX=mpicxx'                                                                                                     |
+|  'CC=mpicc'                                                                                                       |
+|  'F77=mpif77'                                                                                                     |
+|  'FC=mpif90'                                                                                                      |
+|  'CPPFLAGS=   '                                                                                                   |
+|  'LIBS=   '                                                                                                       |
+ -------------------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------------
+| libMesh Performance: Alive time=0.022636, Active time=0.015233                                                  |
+ -----------------------------------------------------------------------------------------------------------------
+| Event                              nCalls     Total Time  Avg Time    Total Time  Avg Time    % of Active Time  |
+|                                               w/o Sub     w/o Sub     With Sub    With Sub    w/o S    With S   |
+|-----------------------------------------------------------------------------------------------------------------|
+|                                                                                                                 |
+|                                                                                                                 |
+| DofMap                                                                                                          |
+|   add_neighbors_to_send_list()     1          0.0000      0.000038    0.0000      0.000038    0.25     0.25     |
+|   build_sparsity()                 1          0.0002      0.000233    0.0003      0.000276    1.53     1.81     |
+|   create_dof_constraints()         1          0.0000      0.000042    0.0000      0.000042    0.28     0.28     |
+|   distribute_dofs()                1          0.0001      0.000053    0.0002      0.000228    0.35     1.50     |
+|   dof_indices()                    1728       0.0003      0.000000    0.0003      0.000000    1.86     1.86     |
+|   prepare_send_list()              2          0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|   reinit()                         1          0.0002      0.000175    0.0002      0.000175    1.15     1.15     |
+|                                                                                                                 |
+| EquationSystems                                                                                                 |
+|   build_solution_vector()          1          0.0001      0.000119    0.0002      0.000163    0.78     1.07     |
+|                                                                                                                 |
+| ExodusII_IO                                                                                                     |
+|   write_nodal_data()               1          0.0006      0.000624    0.0006      0.000624    4.10     4.10     |
+|                                                                                                                 |
+| FE                                                                                                              |
+|   compute_shape_functions()        1600       0.0015      0.000001    0.0015      0.000001    9.65     9.65     |
+|   init_shape_functions()           263        0.0001      0.000000    0.0001      0.000000    0.51     0.51     |
+|   inverse_map()                    768        0.0003      0.000000    0.0003      0.000000    2.15     2.15     |
+|                                                                                                                 |
+| FEMap                                                                                                           |
+|   compute_affine_map()             1600       0.0009      0.000001    0.0009      0.000001    5.78     5.78     |
+|   compute_face_map()               256        0.0003      0.000001    0.0007      0.000003    1.89     4.42     |
+|   init_face_shape_functions()      4          0.0000      0.000001    0.0000      0.000001    0.04     0.04     |
+|   init_reference_to_physical_map() 263        0.0003      0.000001    0.0003      0.000001    1.86     1.86     |
+|                                                                                                                 |
+| Mesh                                                                                                            |
+|   find_neighbors()                 2          0.0005      0.000233    0.0005      0.000233    3.07     3.07     |
+|                                                                                                                 |
+| MeshOutput                                                                                                      |
+|   write_equation_systems()         1          0.0000      0.000011    0.0008      0.000798    0.07     5.24     |
+|                                                                                                                 |
+| MeshRefinement                                                                                                  |
+|   _refine_elements()               3          0.0003      0.000095    0.0006      0.000199    1.86     3.93     |
+|   add_node()                       1008       0.0002      0.000000    0.0002      0.000000    1.56     1.56     |
+|                                                                                                                 |
+| Parallel                                                                                                        |
+|   allgather()                      1          0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|                                                                                                                 |
+| Partitioner                                                                                                     |
+|   single_partition()               2          0.0000      0.000005    0.0000      0.000005    0.07     0.07     |
+|                                                                                                                 |
+| PetscNonlinearSolver                                                                                            |
+|   jacobian()                       3          0.0013      0.000444    0.0025      0.000818    8.75     16.11    |
+|   postcheck()                      3          0.0000      0.000001    0.0000      0.000001    0.02     0.02     |
+|   residual()                       4          0.0019      0.000478    0.0048      0.001203    12.56    31.58    |
+|   solve()                          1          0.0008      0.000820    0.0081      0.008087    5.38     53.09    |
+|                                                                                                                 |
+| System                                                                                                          |
+|   solve()                          1          0.0052      0.005188    0.0133      0.013275    34.06    87.15    |
+|                                                                                                                 |
+| TopologyMap                                                                                                     |
+|   init()                           3          0.0001      0.000022    0.0001      0.000022    0.44     0.44     |
+ -----------------------------------------------------------------------------------------------------------------
+| Totals:                            7523       0.0152                                          100.00            |
+ -----------------------------------------------------------------------------------------------------------------
+
+ 
+***************************************************************
+* Done Running Example miscellaneous_ex3:
+*   example-opt -r 3 -o FIRST 
+***************************************************************
+</pre>
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(window).on('scroll',function() {
+    var scrolltop = $(this).scrollTop();
+
+    if(scrolltop >= 215) {
+      $('#fixedbar').fadeIn(250);
+    }
+
+    else if(scrolltop <= 210) {
+      $('#fixedbar').fadeOut(250);
+    }
+  });
+});
+</script>
+
+<!-- Google Analytics stuff -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24978333-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</body>
+</html>

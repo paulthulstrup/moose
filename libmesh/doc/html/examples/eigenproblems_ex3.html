@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>libMesh - A C++ Finite Element Library</title>
+  <meta name="author" content="libMesh development team">
+  <link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../doxygen_stylesheet.css">
+</head>
+
+<body>
+  <nav id="fixedbar">
+    <ul id="fixednav">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../support.html">About Us</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="https://github.com/libMesh/libmesh/graphs/contributors">Developers</a></li>
+      <li><a href="../installation.html">Installation</a></li>
+      <li><a href="../examples.html">Examples</a></li>
+     <li><a href="../doxygen/index.html">Documentation</a></li>
+    </ul>
+  </nav>
+
+  <div id="w">
+    <header id="logo"><a href="../index.html"><span id="logobg">SomeWebsiteLogo</span></a></header>
+
+    <nav id="navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../support.html">About Us</a></li>
+        <li><a href="../publications.html">Publications</a></li>
+        <li><a href="https://github.com/libMesh/libmesh/graphs/contributors">Developers</a></li>
+        <li><a href="../installation.html">Installation</a></li>
+        <li><a href="../examples.html">Examples</a></li>
+        <li><a href="../doxygen/index.html">Documentation</a></li>
+      </ul>
+    </nav>
+
+<div id="content">
+
+<br> <h1> Link to the source code for this example: </h1>
+<a href="https://github.com/libMesh/libmesh/tree/master/examples/eigenproblems/eigenproblems_ex3" target="_blank">Open eigenproblems_ex3 in new tab.</a>
+<a name="output"></a> 
+<br><br><br> <h1> The console output of the program: </h1> 
+<pre>
+***************************************************************
+* Running Example eigenproblems_ex3:
+*   example-opt -n_evals 5 -mesh_name drum1 -plotting_index 2 -st_ksp_type gmres -st_pc_type bjacobi -st_sub_pc_type ilu -st_type sinvert
+***************************************************************
+ 
+Running /Users/petejw/projects/libmesh_git/build/examples/eigenproblems/eigenproblems_ex3/.libs/example-opt -n_evals 5 -mesh_name drum1 -plotting_index 2 -st_ksp_type gmres -st_pc_type bjacobi -st_sub_pc_type ilu -st_type sinvert
+
+ Mesh Information:
+  elem_dimensions()={2}
+  spatial_dimension()=2
+  n_nodes()=1157
+    n_local_nodes()=1157
+  n_elem()=536
+    n_local_elem()=536
+    n_active_elem()=536
+  n_subdomains()=1
+  n_partitions()=1
+  n_processors()=1
+  n_threads()=1
+  processor_id()=0
+
+ EquationSystems
+  n_systems()=1
+   System #0, "Eigensystem"
+    Type "Eigen"
+    Variables="p" 
+    Finite Element Types="LAGRANGE", "JACOBI_20_00"
+    Infinite Element Mapping="CARTESIAN"
+    Approximation Orders="SECOND", "THIRD"
+    n_dofs()=1157
+    n_local_dofs()=1157
+    n_constrained_dofs()=168
+    n_local_constrained_dofs()=168
+    n_vectors()=0
+    n_matrices()=2
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 10.9464
+      Average Off-Processor Bandwidth <= 0
+      Maximum  On-Processor Bandwidth <= 22
+      Maximum Off-Processor Bandwidth <= 0
+    DofMap Constraints
+      Number of DoF Constraints = 168
+      Average DoF Constraint Length= 0
+
+Number of converged eigenpairs: 5
+
+
+ -------------------------------------------------------------------------------------------------------------------
+| Time:           Wed Apr 13 12:56:58 2016                                                                          |
+| OS:             Darwin                                                                                            |
+| HostName:       peterson-laptop.local                                                                             |
+| OS Release:     15.0.0                                                                                            |
+| OS Version:     Darwin Kernel Version 15.0.0: Sat Sep 19 15:53:46 PDT 2015; root:xnu-3247.10.11~1/RELEASE_X86_64  |
+| Machine:        x86_64                                                                                            |
+| Username:       petejw                                                                                            |
+| Configuration:  ../configure  'INSTALL=/usr/bin/install -C'                                                       |
+|  '--with-methods=opt dbg'                                                                                         |
+|  '--prefix=/Users/petejw/projects/libmesh_git/installed'                                                          |
+|  '--enable-perflog'                                                                                               |
+|  '--enable-tracefiles'                                                                                            |
+|  '--disable-blocked-storage'                                                                                      |
+|  '--enable-tecio'                                                                                                 |
+|  '--enable-unique-ptr'                                                                                            |
+|  '--enable-ifem'                                                                                                  |
+|  '--disable-strict-lgpl'                                                                                          |
+|  '--with-vtk-include=/opt/moose/vtk-6.3/include/vtk-6.3'                                                          |
+|  '--with-vtk-lib=/opt/moose/vtk-6.3/lib'                                                                          |
+|  'CXX=mpicxx'                                                                                                     |
+|  'CC=mpicc'                                                                                                       |
+|  'FC=mpif90'                                                                                                      |
+|  'F77=mpif77'                                                                                                     |
+|  'PETSC_DIR=/opt/moose/petsc/mpich_petsc-3.6.1/clang-opt-superlu'                                                 |
+|  'SLEPC_DIR=/opt/petejw/slepc/3.6.1'                                                                              |
+ -------------------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------------
+| libMesh Performance: Alive time=0.163811, Active time=0.15643                                                   |
+ -----------------------------------------------------------------------------------------------------------------
+| Event                              nCalls     Total Time  Avg Time    Total Time  Avg Time    % of Active Time  |
+|                                               w/o Sub     w/o Sub     With Sub    With Sub    w/o S    With S   |
+|-----------------------------------------------------------------------------------------------------------------|
+|                                                                                                                 |
+|                                                                                                                 |
+| CondensedEigenSystem                                                                                            |
+|   get_eigenpair()                  5          0.0069      0.001384    0.0069      0.001384    4.42     4.42     |
+|   solve()                          1          0.0005      0.000543    0.1431      0.143131    0.35     91.50    |
+|                                                                                                                 |
+| DofMap                                                                                                          |
+|   add_neighbors_to_send_list()     1          0.0001      0.000104    0.0001      0.000104    0.07     0.07     |
+|   build_sparsity()                 1          0.0010      0.001010    0.0012      0.001162    0.65     0.74     |
+|   create_dof_constraints()         1          0.0010      0.001043    0.0016      0.001645    0.67     1.05     |
+|   distribute_dofs()                1          0.0001      0.000135    0.0007      0.000699    0.09     0.45     |
+|   dof_indices()                    2144       0.0004      0.000000    0.0004      0.000000    0.24     0.24     |
+|   prepare_send_list()              2          0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|   reinit()                         1          0.0006      0.000563    0.0006      0.000563    0.36     0.36     |
+|                                                                                                                 |
+| EquationSystems                                                                                                 |
+|   build_solution_vector()          1          0.0004      0.000367    0.0005      0.000503    0.23     0.32     |
+|                                                                                                                 |
+| ExodusII_IO                                                                                                     |
+|   write_nodal_data()               1          0.0013      0.001309    0.0013      0.001309    0.84     0.84     |
+|                                                                                                                 |
+| FE                                                                                                              |
+|   compute_shape_functions()        620        0.0005      0.000001    0.0005      0.000001    0.35     0.35     |
+|   init_shape_functions()           85         0.0000      0.000000    0.0000      0.000000    0.01     0.01     |
+|   inverse_map()                    252        0.0001      0.000000    0.0001      0.000000    0.06     0.06     |
+|                                                                                                                 |
+| FEMap                                                                                                           |
+|   compute_affine_map()             620        0.0003      0.000001    0.0003      0.000001    0.21     0.21     |
+|   compute_face_map()               84         0.0001      0.000001    0.0002      0.000002    0.06     0.13     |
+|   init_face_shape_functions()      84         0.0000      0.000000    0.0000      0.000000    0.02     0.02     |
+|   init_reference_to_physical_map() 85         0.0001      0.000001    0.0001      0.000001    0.04     0.04     |
+|                                                                                                                 |
+| Mesh                                                                                                            |
+|   find_neighbors()                 1          0.0006      0.000643    0.0006      0.000643    0.41     0.41     |
+|   renumber_nodes_and_elem()        2          0.0000      0.000015    0.0000      0.000015    0.02     0.02     |
+|                                                                                                                 |
+| MeshOutput                                                                                                      |
+|   write_equation_systems()         1          0.0000      0.000013    0.0018      0.001825    0.01     1.17     |
+|                                                                                                                 |
+| NameBasedIO                                                                                                     |
+|   read()                           1          0.0006      0.000614    0.0006      0.000614    0.39     0.39     |
+|                                                                                                                 |
+| Parallel                                                                                                        |
+|   allgather()                      1          0.0000      0.000001    0.0000      0.000001    0.00     0.00     |
+|                                                                                                                 |
+| Partitioner                                                                                                     |
+|   single_partition()               1          0.0000      0.000023    0.0000      0.000023    0.01     0.01     |
+|                                                                                                                 |
+| SlepcEigenSolver                                                                                                |
+|   solve_generalized()              1          0.1400      0.140043    0.1400      0.140043    89.52    89.52    |
+|                                                                                                                 |
+| System                                                                                                          |
+|   assemble()                       1          0.0015      0.001502    0.0025      0.002544    0.96     1.63     |
+ -----------------------------------------------------------------------------------------------------------------
+| Totals:                            3998       0.1564                                          100.00            |
+ -----------------------------------------------------------------------------------------------------------------
+
+ 
+***************************************************************
+* Done Running Example eigenproblems_ex3:
+*   example-opt -n_evals 5 -mesh_name drum1 -plotting_index 2 -st_ksp_type gmres -st_pc_type bjacobi -st_sub_pc_type ilu -st_type sinvert
+***************************************************************
+***************************************************************
+* Running Example eigenproblems_ex3:
+*   example-opt -n_evals 5 -mesh_name drum2 -plotting_index 2 -st_ksp_type gmres -st_pc_type bjacobi -st_sub_pc_type ilu -st_type sinvert
+***************************************************************
+ 
+Running /Users/petejw/projects/libmesh_git/build/examples/eigenproblems/eigenproblems_ex3/.libs/example-opt -n_evals 5 -mesh_name drum2 -plotting_index 2 -st_ksp_type gmres -st_pc_type bjacobi -st_sub_pc_type ilu -st_type sinvert
+
+ Mesh Information:
+  elem_dimensions()={2}
+  spatial_dimension()=2
+  n_nodes()=1189
+    n_local_nodes()=1189
+  n_elem()=552
+    n_local_elem()=552
+    n_active_elem()=552
+  n_subdomains()=1
+  n_partitions()=1
+  n_processors()=1
+  n_threads()=1
+  processor_id()=0
+
+ EquationSystems
+  n_systems()=1
+   System #0, "Eigensystem"
+    Type "Eigen"
+    Variables="p" 
+    Finite Element Types="LAGRANGE", "JACOBI_20_00"
+    Infinite Element Mapping="CARTESIAN"
+    Approximation Orders="SECOND", "THIRD"
+    n_dofs()=1189
+    n_local_dofs()=1189
+    n_constrained_dofs()=168
+    n_local_constrained_dofs()=168
+    n_vectors()=0
+    n_matrices()=2
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 10.9613
+      Average Off-Processor Bandwidth <= 0
+      Maximum  On-Processor Bandwidth <= 22
+      Maximum Off-Processor Bandwidth <= 0
+    DofMap Constraints
+      Number of DoF Constraints = 168
+      Average DoF Constraint Length= 0
+
+Number of converged eigenpairs: 5
+
+
+ -------------------------------------------------------------------------------------------------------------------
+| Time:           Wed Apr 13 12:56:58 2016                                                                          |
+| OS:             Darwin                                                                                            |
+| HostName:       peterson-laptop.local                                                                             |
+| OS Release:     15.0.0                                                                                            |
+| OS Version:     Darwin Kernel Version 15.0.0: Sat Sep 19 15:53:46 PDT 2015; root:xnu-3247.10.11~1/RELEASE_X86_64  |
+| Machine:        x86_64                                                                                            |
+| Username:       petejw                                                                                            |
+| Configuration:  ../configure  'INSTALL=/usr/bin/install -C'                                                       |
+|  '--with-methods=opt dbg'                                                                                         |
+|  '--prefix=/Users/petejw/projects/libmesh_git/installed'                                                          |
+|  '--enable-perflog'                                                                                               |
+|  '--enable-tracefiles'                                                                                            |
+|  '--disable-blocked-storage'                                                                                      |
+|  '--enable-tecio'                                                                                                 |
+|  '--enable-unique-ptr'                                                                                            |
+|  '--enable-ifem'                                                                                                  |
+|  '--disable-strict-lgpl'                                                                                          |
+|  '--with-vtk-include=/opt/moose/vtk-6.3/include/vtk-6.3'                                                          |
+|  '--with-vtk-lib=/opt/moose/vtk-6.3/lib'                                                                          |
+|  'CXX=mpicxx'                                                                                                     |
+|  'CC=mpicc'                                                                                                       |
+|  'FC=mpif90'                                                                                                      |
+|  'F77=mpif77'                                                                                                     |
+|  'PETSC_DIR=/opt/moose/petsc/mpich_petsc-3.6.1/clang-opt-superlu'                                                 |
+|  'SLEPC_DIR=/opt/petejw/slepc/3.6.1'                                                                              |
+ -------------------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------------
+| libMesh Performance: Alive time=0.169801, Active time=0.162712                                                  |
+ -----------------------------------------------------------------------------------------------------------------
+| Event                              nCalls     Total Time  Avg Time    Total Time  Avg Time    % of Active Time  |
+|                                               w/o Sub     w/o Sub     With Sub    With Sub    w/o S    With S   |
+|-----------------------------------------------------------------------------------------------------------------|
+|                                                                                                                 |
+|                                                                                                                 |
+| CondensedEigenSystem                                                                                            |
+|   get_eigenpair()                  5          0.0080      0.001595    0.0080      0.001595    4.90     4.90     |
+|   solve()                          1          0.0006      0.000552    0.1485      0.148527    0.34     91.28    |
+|                                                                                                                 |
+| DofMap                                                                                                          |
+|   add_neighbors_to_send_list()     1          0.0001      0.000096    0.0001      0.000096    0.06     0.06     |
+|   build_sparsity()                 1          0.0010      0.000994    0.0011      0.001139    0.61     0.70     |
+|   create_dof_constraints()         1          0.0009      0.000946    0.0015      0.001489    0.58     0.92     |
+|   distribute_dofs()                1          0.0001      0.000127    0.0007      0.000674    0.08     0.41     |
+|   dof_indices()                    2208       0.0004      0.000000    0.0004      0.000000    0.24     0.24     |
+|   prepare_send_list()              2          0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|   reinit()                         1          0.0005      0.000547    0.0005      0.000547    0.34     0.34     |
+|                                                                                                                 |
+| EquationSystems                                                                                                 |
+|   build_solution_vector()          1          0.0004      0.000426    0.0006      0.000574    0.26     0.35     |
+|                                                                                                                 |
+| ExodusII_IO                                                                                                     |
+|   write_nodal_data()               1          0.0013      0.001270    0.0013      0.001270    0.78     0.78     |
+|                                                                                                                 |
+| FE                                                                                                              |
+|   compute_shape_functions()        636        0.0006      0.000001    0.0006      0.000001    0.34     0.34     |
+|   init_shape_functions()           85         0.0000      0.000000    0.0000      0.000000    0.01     0.01     |
+|   inverse_map()                    252        0.0001      0.000000    0.0001      0.000000    0.06     0.06     |
+|                                                                                                                 |
+| FEMap                                                                                                           |
+|   compute_affine_map()             636        0.0003      0.000001    0.0003      0.000001    0.20     0.20     |
+|   compute_face_map()               84         0.0001      0.000001    0.0002      0.000002    0.05     0.12     |
+|   init_face_shape_functions()      84         0.0000      0.000000    0.0000      0.000000    0.02     0.02     |
+|   init_reference_to_physical_map() 85         0.0001      0.000001    0.0001      0.000001    0.04     0.04     |
+|                                                                                                                 |
+| Mesh                                                                                                            |
+|   find_neighbors()                 1          0.0006      0.000634    0.0006      0.000634    0.39     0.39     |
+|   renumber_nodes_and_elem()        2          0.0000      0.000015    0.0000      0.000015    0.02     0.02     |
+|                                                                                                                 |
+| MeshOutput                                                                                                      |
+|   write_equation_systems()         1          0.0000      0.000014    0.0019      0.001858    0.01     1.14     |
+|                                                                                                                 |
+| NameBasedIO                                                                                                     |
+|   read()                           1          0.0006      0.000566    0.0006      0.000566    0.35     0.35     |
+|                                                                                                                 |
+| Parallel                                                                                                        |
+|   allgather()                      1          0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|                                                                                                                 |
+| Partitioner                                                                                                     |
+|   single_partition()               1          0.0000      0.000022    0.0000      0.000022    0.01     0.01     |
+|                                                                                                                 |
+| SlepcEigenSolver                                                                                                |
+|   solve_generalized()              1          0.1455      0.145479    0.1455      0.145479    89.41    89.41    |
+|                                                                                                                 |
+| System                                                                                                          |
+|   assemble()                       1          0.0015      0.001484    0.0025      0.002495    0.91     1.53     |
+ -----------------------------------------------------------------------------------------------------------------
+| Totals:                            4094       0.1627                                          100.00            |
+ -----------------------------------------------------------------------------------------------------------------
+
+ 
+***************************************************************
+* Done Running Example eigenproblems_ex3:
+*   example-opt -n_evals 5 -mesh_name drum2 -plotting_index 2 -st_ksp_type gmres -st_pc_type bjacobi -st_sub_pc_type ilu -st_type sinvert
+***************************************************************
+</pre>
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(window).on('scroll',function() {
+    var scrolltop = $(this).scrollTop();
+
+    if(scrolltop >= 215) {
+      $('#fixedbar').fadeIn(250);
+    }
+
+    else if(scrolltop <= 210) {
+      $('#fixedbar').fadeOut(250);
+    }
+  });
+});
+</script>
+
+<!-- Google Analytics stuff -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24978333-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>libMesh - A C++ Finite Element Library</title>
+  <meta name="author" content="libMesh development team">
+  <link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../doxygen_stylesheet.css">
+</head>
+
+<body>
+  <nav id="fixedbar">
+    <ul id="fixednav">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../support.html">About Us</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="https://github.com/libMesh/libmesh/graphs/contributors">Developers</a></li>
+      <li><a href="../installation.html">Installation</a></li>
+      <li><a href="../examples.html">Examples</a></li>
+     <li><a href="../doxygen/index.html">Documentation</a></li>
+    </ul>
+  </nav>
+
+  <div id="w">
+    <header id="logo"><a href="../index.html"><span id="logobg">SomeWebsiteLogo</span></a></header>
+
+    <nav id="navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../support.html">About Us</a></li>
+        <li><a href="../publications.html">Publications</a></li>
+        <li><a href="https://github.com/libMesh/libmesh/graphs/contributors">Developers</a></li>
+        <li><a href="../installation.html">Installation</a></li>
+        <li><a href="../examples.html">Examples</a></li>
+        <li><a href="../doxygen/index.html">Documentation</a></li>
+      </ul>
+    </nav>
+
+<div id="content">
+
+<br> <h1> Link to the source code for this example: </h1>
+<a href="https://github.com/libMesh/libmesh/tree/master/examples/fem_system/fem_system_ex1" target="_blank">Open fem_system_ex1 in new tab.</a>
+<a name="output"></a> 
+<br><br><br> <h1> The console output of the program: </h1> 
+<pre>
+  CXX      example_dbg-fem_system_ex1.o
+  CXXLD    example-dbg
+***************************************************************
+* Running Example fem_system_ex1:
+*   example-opt  
+***************************************************************
+ 
+ Mesh Information:
+  elem_dimensions()={2}
+  spatial_dimension()=2
+  n_nodes()=1681
+    n_local_nodes()=1681
+  n_elem()=400
+    n_local_elem()=400
+    n_active_elem()=400
+  n_subdomains()=1
+  n_partitions()=1
+  n_processors()=1
+  n_threads()=1
+  processor_id()=0
+
+ EquationSystems
+  n_systems()=1
+   System #0, "Navier-Stokes"
+    Type "Implicit"
+    Variables={ "u" "v" } "p" 
+    Finite Element Types="LAGRANGE", "JACOBI_20_00" "LAGRANGE", "JACOBI_20_00" 
+    Infinite Element Mapping="CARTESIAN" "CARTESIAN" 
+    Approximation Orders="SECOND", "THIRD" "FIRST", "THIRD" 
+    n_dofs()=3803
+    n_local_dofs()=3803
+    n_constrained_dofs()=320
+    n_local_constrained_dofs()=320
+    n_vectors()=2
+    n_matrices()=1
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 38.9716
+      Average Off-Processor Bandwidth <= 0
+      Maximum  On-Processor Bandwidth <= 59
+      Maximum Off-Processor Bandwidth <= 0
+    DofMap Constraints
+      Number of DoF Constraints = 320
+      Number of Heterogenous Constraints= 41
+      Average DoF Constraint Length= 0
+
+
+
+Solving time step 0, time = 0
+Assembling the System
+Nonlinear Residual: 8.91374
+Linear solve starting, tolerance 0.001
+Linear solve finished, step 23, residual 0.148405
+Trying full Newton step
+  Current Residual: 0.151381
+  Nonlinear step: |du|/|u| = 0.99946, |du| = 194.712
+Assembling the System
+Nonlinear Residual: 0.151381
+Linear solve starting, tolerance 0.000151381
+Linear solve finished, step 324, residual 8.33816e-05
+Trying full Newton step
+  Current Residual: 0.000532267
+  Nonlinear solver converged, step 1, residual reduction 5.9713e-05 < 0.001
+  Nonlinear solver relative step size 0.0541853 > 0.001
+u(1/3,1/3) = (-0.121174, 0.0709801, 0)
+
+
+Solving time step 1, time = 0.005
+Assembling the System
+Nonlinear Residual: 0.000532267
+Linear solve starting, tolerance 5.32267e-07
+Linear solve finished, step 1072, residual 1.04563e-08
+Trying full Newton step
+  Current Residual: 3.6894e-09
+  Nonlinear solver converged, step 0, residual reduction 4.139e-10 < 0.001
+  Nonlinear solver converged, step 0, relative step size 0.000768437 < 0.001
+u(1/3,1/3) = (-0.12115, 0.0709841, 0)
+
+
+Solving time step 2, time = 0.01
+Assembling the System
+Nonlinear Residual: 3.6894e-09
+Linear solve starting, tolerance 3.6894e-12
+Linear solve finished, step 2988, residual 4.94884e-20
+Trying full Newton step
+  Current Residual: 3.70259e-15
+  Nonlinear solver converged, step 0, residual reduction 4.1538e-16 < 0.001
+  Nonlinear solver converged, step 0, relative step size 7.2649e-08 < 0.001
+u(1/3,1/3) = (-0.12115, 0.0709841, 0)
+
+
+Solving time step 3, time = 0.015
+Assembling the System
+Nonlinear Residual: 3.70259e-15
+Linear solve starting, tolerance 1e-12
+Linear solve finished, step 2387, residual 6.75488e-26
+Trying full Newton step
+  Current Residual: 2.86976e-15
+  Nonlinear solver converged, step 0, residual reduction 3.21948e-16 < 0.001
+  Nonlinear solver converged, step 0, relative step size 2.57965e-15 < 0.001
+u(1/3,1/3) = (-0.12115, 0.0709841, 0)
+
+
+Solving time step 4, time = 0.02
+Assembling the System
+Nonlinear Residual: 2.86976e-15
+Linear solve starting, tolerance 1e-12
+Linear solve finished, step 2264, residual 3.88067e-26
+Trying full Newton step
+  Current Residual: 3.00722e-15
+  Nonlinear solver converged, step 0, residual reduction 3.37368e-16 < 0.001
+u(1/3,1/3) = (-0.12115, 0.0709841, 0)
+
+
+Solving time step 5, time = 0.025
+Assembling the System
+Nonlinear Residual: 3.00722e-15
+Linear solve starting, tolerance 1e-12
+Linear solve finished, step 1587, residual 3.93109e-26
+Trying full Newton step
+  Current Residual: 3.00354e-15
+  Nonlinear solver converged, step 0, residual reduction 3.36956e-16 < 0.001
+  Nonlinear solver converged, step 0, relative step size 1.52755e-15 < 0.001
+u(1/3,1/3) = (-0.12115, 0.0709841, 0)
+
+
+Solving time step 6, time = 0.03
+Assembling the System
+Nonlinear Residual: 3.00354e-15
+Linear solve starting, tolerance 1e-12
+Linear solve finished, step 1500, residual 4.08942e-26
+Trying full Newton step
+  Current Residual: 2.89034e-15
+  Nonlinear solver converged, step 0, residual reduction 3.24256e-16 < 0.001
+  Nonlinear solver converged, step 0, relative step size 2.15553e-14 < 0.001
+u(1/3,1/3) = (-0.12115, 0.0709841, 0)
+
+
+Solving time step 7, time = 0.035
+Assembling the System
+Nonlinear Residual: 2.89034e-15
+Linear solve starting, tolerance 1e-12
+Linear solve finished, step 1618, residual 4.15309e-26
+Trying full Newton step
+  Current Residual: 2.76649e-15
+  Nonlinear solver converged, step 0, residual reduction 3.10363e-16 < 0.001
+  Nonlinear solver converged, step 0, relative step size 2.50199e-16 < 0.001
+u(1/3,1/3) = (-0.12115, 0.0709841, 0)
+
+
+Solving time step 8, time = 0.04
+Assembling the System
+Nonlinear Residual: 2.76649e-15
+Linear solve starting, tolerance 1e-12
+Linear solve finished, step 2396, residual 8.42985e-26
+Trying full Newton step
+  Current Residual: 2.86854e-15
+  Nonlinear solver converged, step 0, residual reduction 3.21811e-16 < 0.001
+u(1/3,1/3) = (-0.12115, 0.0709841, 0)
+
+
+Solving time step 9, time = 0.045
+Assembling the System
+Nonlinear Residual: 2.86854e-15
+Linear solve starting, tolerance 1e-12
+Linear solve finished, step 2846, residual 5.20961e-26
+Trying full Newton step
+  Current Residual: 2.69779e-15
+  Nonlinear solver converged, step 0, residual reduction 3.02656e-16 < 0.001
+  Nonlinear solver converged, step 0, relative step size 1.50625e-14 < 0.001
+u(1/3,1/3) = (-0.12115, 0.0709841, 0)
+
+
+Solving time step 10, time = 0.05
+Assembling the System
+Nonlinear Residual: 2.69779e-15
+Linear solve starting, tolerance 1e-12
+Linear solve finished, step 2429, residual 6.72758e-26
+Trying full Newton step
+  Current Residual: 2.78119e-15
+  Nonlinear solver converged, step 0, residual reduction 3.12011e-16 < 0.001
+u(1/3,1/3) = (-0.12115, 0.0709841, 0)
+
+
+Solving time step 11, time = 0.055
+Assembling the System
+Nonlinear Residual: 2.78119e-15
+Linear solve starting, tolerance 1e-12
+Linear solve finished, step 2819, residual 6.70115e-26
+Trying full Newton step
+  Current Residual: 2.93064e-15
+  Nonlinear solver converged, step 0, residual reduction 3.28778e-16 < 0.001
+u(1/3,1/3) = (-0.12115, 0.0709841, 0)
+
+
+Solving time step 12, time = 0.06
+Assembling the System
+Nonlinear Residual: 2.93064e-15
+Linear solve starting, tolerance 1e-12
+Linear solve finished, step 2658, residual 5.47546e-26
+Trying full Newton step
+  Current Residual: 2.79907e-15
+  Nonlinear solver converged, step 0, residual reduction 3.14017e-16 < 0.001
+  Nonlinear solver converged, step 0, relative step size 5.5229e-14 < 0.001
+u(1/3,1/3) = (-0.12115, 0.0709841, 0)
+
+
+Solving time step 13, time = 0.065
+Assembling the System
+Nonlinear Residual: 2.79907e-15
+Linear solve starting, tolerance 1e-12
+Linear solve finished, step 2359, residual 3.64948e-26
+Trying full Newton step
+  Current Residual: 2.64323e-15
+  Nonlinear solver converged, step 0, residual reduction 2.96534e-16 < 0.001
+  Nonlinear solver converged, step 0, relative step size 9.49509e-15 < 0.001
+u(1/3,1/3) = (-0.12115, 0.0709841, 0)
+
+
+Solving time step 14, time = 0.07
+Assembling the System
+Nonlinear Residual: 2.64323e-15
+Linear solve starting, tolerance 1e-12
+Linear solve finished, step 2327, residual 3.48849e-26
+Trying full Newton step
+  Current Residual: 2.70471e-15
+  Nonlinear solver converged, step 0, residual reduction 3.03432e-16 < 0.001
+u(1/3,1/3) = (-0.12115, 0.0709841, 0)
+
+ -------------------------------------------------------------------------------------------------------------------
+| Time:           Wed Apr 13 10:05:31 2016                                                                          |
+| OS:             Darwin                                                                                            |
+| HostName:       peterson-laptop.local                                                                             |
+| OS Release:     15.0.0                                                                                            |
+| OS Version:     Darwin Kernel Version 15.0.0: Sat Sep 19 15:53:46 PDT 2015; root:xnu-3247.10.11~1/RELEASE_X86_64  |
+| Machine:        x86_64                                                                                            |
+| Username:       petejw                                                                                            |
+| Configuration:  ../configure  'INSTALL=/usr/bin/install -C'                                                       |
+|  '--with-methods=opt dbg'                                                                                         |
+|  '--prefix=/Users/petejw/projects/libmesh_git/installed'                                                          |
+|  '--enable-perflog'                                                                                               |
+|  '--enable-tracefiles'                                                                                            |
+|  '--disable-blocked-storage'                                                                                      |
+|  '--enable-default-comm-world'                                                                                    |
+|  '--enable-tecio'                                                                                                 |
+|  '--enable-unique-ptr'                                                                                            |
+|  '--enable-ifem'                                                                                                  |
+|  'PETSC_DIR=/opt/moose/petsc/mpich_petsc-3.6.1/clang-opt-superlu'                                                 |
+|  'SLEPC_DIR=/opt/petejw/slepc/3.6.1'                                                                              |
+|  'CPPFLAGS= '                                                                                                     |
+|  'LIBS= '                                                                                                         |
+|  'CPPFLAGS=  '                                                                                                    |
+|  'LIBS=  '                                                                                                        |
+|  '--disable-netcdf-4'                                                                                             |
+|  '--disable-testsets'                                                                                             |
+|  'CXX=mpicxx'                                                                                                     |
+|  'CC=mpicc'                                                                                                       |
+|  'F77=mpif77'                                                                                                     |
+|  'FC=mpif90'                                                                                                      |
+|  'CPPFLAGS=   '                                                                                                   |
+|  'LIBS=   '                                                                                                       |
+ -------------------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------------
+| libMesh Performance: Alive time=9.1685, Active time=8.86613                                                     |
+ -----------------------------------------------------------------------------------------------------------------
+| Event                              nCalls     Total Time  Avg Time    Total Time  Avg Time    % of Active Time  |
+|                                               w/o Sub     w/o Sub     With Sub    With Sub    w/o S    With S   |
+|-----------------------------------------------------------------------------------------------------------------|
+|                                                                                                                 |
+|                                                                                                                 |
+| DofMap                                                                                                          |
+|   add_neighbors_to_send_list()     1          0.0003      0.000258    0.0003      0.000258    0.00     0.00     |
+|   build_constraint_matrix()        12800      0.0105      0.000001    0.0105      0.000001    0.12     0.12     |
+|   build_sparsity()                 1          0.0034      0.003420    0.0037      0.003671    0.04     0.04     |
+|   cnstrn_elem_mat_vec()            6400       0.0129      0.000002    0.0129      0.000002    0.15     0.15     |
+|   constrain_elem_vector()          6400       0.0026      0.000000    0.0026      0.000000    0.03     0.03     |
+|   create_dof_constraints()         1          0.0032      0.003233    0.0055      0.005495    0.04     0.06     |
+|   distribute_dofs()                1          0.0004      0.000352    0.0016      0.001600    0.00     0.02     |
+|   dof_indices()                    71230      0.0193      0.000000    0.0193      0.000000    0.22     0.22     |
+|   enforce_constraints_exactly()    46         0.0021      0.000046    0.0021      0.000046    0.02     0.02     |
+|   prepare_send_list()              2          0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|   reinit()                         1          0.0012      0.001248    0.0012      0.001248    0.01     0.01     |
+|                                                                                                                 |
+| EquationSystems                                                                                                 |
+|   build_solution_vector()          15         0.0128      0.000852    0.0179      0.001194    0.14     0.20     |
+|                                                                                                                 |
+| ExodusII_IO                                                                                                     |
+|   write_nodal_data()               15         0.0219      0.001463    0.0219      0.001463    0.25     0.25     |
+|                                                                                                                 |
+| FE                                                                                                              |
+|   compute_shape_functions()        82174      0.1159      0.000001    0.1159      0.000001    1.31     1.31     |
+|   init_shape_functions()           5438       0.0038      0.000001    0.0038      0.000001    0.04     0.04     |
+|   inverse_map()                    20748      0.0145      0.000001    0.0145      0.000001    0.16     0.16     |
+|                                                                                                                 |
+| FEMSystem                                                                                                       |
+|   assembly()                       16         0.2215      0.013841    0.3639      0.022743    2.50     4.10     |
+|   assembly(get_residual)           16         0.0721      0.004506    0.2041      0.012757    0.81     2.30     |
+|                                                                                                                 |
+| FEMap                                                                                                           |
+|   compute_affine_map()             82174      0.0606      0.000001    0.0606      0.000001    0.68     0.68     |
+|   compute_face_map()               5280       0.0073      0.000001    0.0197      0.000004    0.08     0.22     |
+|   init_face_shape_functions()      224        0.0002      0.000001    0.0002      0.000001    0.00     0.00     |
+|   init_reference_to_physical_map() 5438       0.0118      0.000002    0.0118      0.000002    0.13     0.13     |
+|                                                                                                                 |
+| Mesh                                                                                                            |
+|   find_neighbors()                 1          0.0013      0.001301    0.0013      0.001301    0.01     0.01     |
+|   renumber_nodes_and_elem()        2          0.0001      0.000028    0.0001      0.000028    0.00     0.00     |
+|                                                                                                                 |
+| MeshOutput                                                                                                      |
+|   write_equation_systems()         15         0.0001      0.000009    0.0400      0.002667    0.00     0.45     |
+|                                                                                                                 |
+| MeshTools::Generation                                                                                           |
+|   build_cube()                     1          0.0006      0.000579    0.0006      0.000579    0.01     0.01     |
+|                                                                                                                 |
+| NewtonSolver                                                                                                    |
+|   solve()                          15         0.0031      0.000206    8.8350      0.588999    0.03     99.65    |
+|                                                                                                                 |
+| Parallel                                                                                                        |
+|   allgather()                      1          0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|                                                                                                                 |
+| Partitioner                                                                                                     |
+|   single_partition()               1          0.0001      0.000067    0.0001      0.000067    0.00     0.00     |
+|                                                                                                                 |
+| PetscLinearSolver                                                                                               |
+|   solve()                          16         8.2618      0.516360    8.2618      0.516360    93.18    93.18    |
+|                                                                                                                 |
+| PointLocatorTree                                                                                                |
+|   init(no master)                  1          0.0002      0.000228    0.0002      0.000228    0.00     0.00     |
+|   operator()                       30         0.0007      0.000025    0.0024      0.000079    0.01     0.03     |
+ -----------------------------------------------------------------------------------------------------------------
+| Totals:                            298504     8.8661                                          100.00            |
+ -----------------------------------------------------------------------------------------------------------------
+
+ 
+***************************************************************
+* Done Running Example fem_system_ex1:
+*   example-opt  
+***************************************************************
+</pre>
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(window).on('scroll',function() {
+    var scrolltop = $(this).scrollTop();
+
+    if(scrolltop >= 215) {
+      $('#fixedbar').fadeIn(250);
+    }
+
+    else if(scrolltop <= 210) {
+      $('#fixedbar').fadeOut(250);
+    }
+  });
+});
+</script>
+
+<!-- Google Analytics stuff -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24978333-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</body>
+</html>

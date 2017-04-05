@@ -1,0 +1,13 @@
+approx_order = FIRST
+fe_family = LAGRANGE
+
+young_modulus = 1.
+poisson_ratio = 0.3
+
+contact_penalty = 10.0
+
+nonlinear_abs_tol = 1.e-12
+nonlinear_rel_tol = 1.e-3
+nonlinear_max_its = 5
+
+gap_function_tol = 1.e-8

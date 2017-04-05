@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>libMesh - A C++ Finite Element Library</title>
+  <meta name="author" content="libMesh development team">
+  <link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../doxygen_stylesheet.css">
+</head>
+
+<body>
+  <nav id="fixedbar">
+    <ul id="fixednav">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../support.html">About Us</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="https://github.com/libMesh/libmesh/graphs/contributors">Developers</a></li>
+      <li><a href="../installation.html">Installation</a></li>
+      <li><a href="../examples.html">Examples</a></li>
+     <li><a href="../doxygen/index.html">Documentation</a></li>
+    </ul>
+  </nav>
+
+  <div id="w">
+    <header id="logo"><a href="../index.html"><span id="logobg">SomeWebsiteLogo</span></a></header>
+
+    <nav id="navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../support.html">About Us</a></li>
+        <li><a href="../publications.html">Publications</a></li>
+        <li><a href="https://github.com/libMesh/libmesh/graphs/contributors">Developers</a></li>
+        <li><a href="../installation.html">Installation</a></li>
+        <li><a href="../examples.html">Examples</a></li>
+        <li><a href="../doxygen/index.html">Documentation</a></li>
+      </ul>
+    </nav>
+
+<div id="content">
+
+<br> <h1> Link to the source code for this example: </h1>
+<a href="https://github.com/libMesh/libmesh/tree/master/examples/miscellaneous/miscellaneous_ex8" target="_blank">Open miscellaneous_ex8 in new tab.</a>
+<a name="output"></a> 
+<br><br><br> <h1> The console output of the program: </h1> 
+<pre>
+  CXX      example_dbg-miscellaneous_ex8.o
+  CXXLD    example-dbg
+***************************************************************
+* Running Example miscellaneous_ex8:
+*   example-opt  
+***************************************************************
+ 
+*** Warning, This code is untested, experimental, or likely to see future API changes: ../../../include/libmesh/radial_basis_interpolation.h, line 79, compiled Apr 13 2016 at 09:36:22 ***
+Generating 100 point cloud...done
+bounding box is 
+(x,y,z)=(    0.08,     0.09,     0.01)
+(x,y,z)=(    9.95,     9.97,     9.91)
+*** Warning, This code is untested, experimental, or likely to see future API changes: ./include/libmesh/radial_basis_functions.h, line 83, compiled Apr 12 2016 at 11:09:35 ***
+bounding box is 
+(x,y,z)=(    0.08,     0.09,     0.01)
+(x,y,z)=(    9.95,     9.97,     9.91)
+r_bbox = 17.1184
+rbf(r_bbox/2) = 0.1875
+MeshfreeInterpolation
+ n_source_points()=100
+ n_field_variables()=2
+  variables = u v 
+Generating 10 point cloud...done
+*** Warning, This code is untested, experimental, or likely to see future API changes: ../src/solution_transfer/meshfree_interpolation.C, line 198, compiled Apr 12 2016 at 11:09:33 ***
+*** Warning, This code is untested, experimental, or likely to see future API changes: ../src/solution_transfer/radial_basis_interpolation.C, line 157, compiled Apr 12 2016 at 11:09:35 ***
+
+At target point (x,y,z)=(    0.53,     2.24,      6.3)
+ u_interp_idi=20713.1, u_interp_rbi=8977.98, u_exact=9949.69
+ v_interp_idi=350.222, v_interp_rbi=259.769, v_exact=255.345
+
+At target point (x,y,z)=(    3.66,        4,     4.44)
+ u_interp_idi=2698.1, u_interp_rbi=2106.61, u_exact=2030.53
+ v_interp_idi=124.168, v_interp_rbi=116.807, v_exact=116.924
+
+At target point (x,y,z)=(     3.7,     2.85,     0.16)
+ u_interp_idi=253.154, u_interp_rbi=292.814, u_exact=116.628
+ v_interp_idi=31.3622, v_interp_rbi=24.2392, v_exact=21.8166
+
+At target point (x,y,z)=(    8.98,     1.55,     1.33)
+ u_interp_idi=728.414, u_interp_rbi=705.168, u_exact=734.084
+ v_interp_idi=83.5756, v_interp_rbi=89.0966, v_exact=85.3955
+
+At target point (x,y,z)=(    5.57,     5.76,     1.78)
+ u_interp_idi=1382.5, u_interp_rbi=1353.83, u_exact=1291.43
+ v_interp_idi=65.1599, v_interp_rbi=70.27, v_exact=69.8423
+
+At target point (x,y,z)=(    2.66,     3.57,     7.11)
+ u_interp_idi=25472.4, u_interp_rbi=17564.4, u_exact=18351
+ v_interp_idi=435.815, v_interp_rbi=378.935, v_exact=379.246
+
+At target point (x,y,z)=(    8.78,     6.14,     8.19)
+ u_interp_idi=27900, u_interp_rbi=43205.5, u_exact=38946.6
+ v_interp_idi=518.244, v_interp_rbi=690.884, v_exact=664.141
+
+At target point (x,y,z)=(    7.37,     1.33,     5.91)
+ u_interp_idi=10862.5, u_interp_rbi=5929.76, u_exact=7613.48
+ v_interp_idi=288.757, v_interp_rbi=256.035, v_exact=262.511
+
+At target point (x,y,z)=(     7.2,     7.62,     6.33)
+ u_interp_idi=12611.1, u_interp_rbi=13529.2, u_exact=13907.6
+ v_interp_idi=330.917, v_interp_rbi=360.014, v_exact=363.541
+
+At target point (x,y,z)=(    1.97,     0.31,     5.88)
+ u_interp_idi=6607.46, u_interp_rbi=8356.27, u_exact=7036.54
+ v_interp_idi=171.785, v_interp_rbi=213.176, v_exact=207.274
+bounding box is 
+(x,y,z)=(      -1,        0,        0)
+(x,y,z)=(       0,        1,        1)
+bounding box is 
+(x,y,z)=(      -1,        0,        0)
+(x,y,z)=(       0,        1,        1)
+r_bbox = 1.73205
+rbf(r_bbox/2) = 0.1875
+
+ -------------------------------------------------------------------------------------------------------------------
+| Time:           Wed Apr 13 09:36:30 2016                                                                          |
+| OS:             Darwin                                                                                            |
+| HostName:       peterson-laptop.local                                                                             |
+| OS Release:     15.0.0                                                                                            |
+| OS Version:     Darwin Kernel Version 15.0.0: Sat Sep 19 15:53:46 PDT 2015; root:xnu-3247.10.11~1/RELEASE_X86_64  |
+| Machine:        x86_64                                                                                            |
+| Username:       petejw                                                                                            |
+| Configuration:  ../configure  'INSTALL=/usr/bin/install -C'                                                       |
+|  '--with-methods=opt dbg'                                                                                         |
+|  '--prefix=/Users/petejw/projects/libmesh_git/installed'                                                          |
+|  '--enable-perflog'                                                                                               |
+|  '--enable-tracefiles'                                                                                            |
+|  '--disable-blocked-storage'                                                                                      |
+|  '--enable-default-comm-world'                                                                                    |
+|  '--enable-tecio'                                                                                                 |
+|  '--enable-unique-ptr'                                                                                            |
+|  '--enable-ifem'                                                                                                  |
+|  'PETSC_DIR=/opt/moose/petsc/mpich_petsc-3.6.1/clang-opt-superlu'                                                 |
+|  'SLEPC_DIR=/opt/petejw/slepc/3.6.1'                                                                              |
+|  'CPPFLAGS= '                                                                                                     |
+|  'LIBS= '                                                                                                         |
+|  'CPPFLAGS=  '                                                                                                    |
+|  'LIBS=  '                                                                                                        |
+|  '--disable-netcdf-4'                                                                                             |
+|  '--disable-testsets'                                                                                             |
+|  'CXX=mpicxx'                                                                                                     |
+|  'CC=mpicc'                                                                                                       |
+|  'F77=mpif77'                                                                                                     |
+|  'FC=mpif90'                                                                                                      |
+|  'CPPFLAGS=   '                                                                                                   |
+|  'LIBS=   '                                                                                                       |
+ -------------------------------------------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------------------------------------
+| libMesh Performance: Alive time=3.03922, Active time=3.0068                                                 |
+ -------------------------------------------------------------------------------------------------------------
+| Event                          nCalls     Total Time  Avg Time    Total Time  Avg Time    % of Active Time  |
+|                                           w/o Sub     w/o Sub     With Sub    With Sub    w/o S    With S   |
+|-------------------------------------------------------------------------------------------------------------|
+|                                                                                                             |
+|                                                                                                             |
+| DofMap                                                                                                      |
+|   add_neighbors_to_send_list() 2          0.0012      0.000612    0.0012      0.000612    0.04     0.04     |
+|   create_dof_constraints()     2          0.0005      0.000249    0.0005      0.000249    0.02     0.02     |
+|   distribute_dofs()            2          0.0011      0.000552    0.0064      0.003211    0.04     0.21     |
+|   dof_indices()                43344      0.0060      0.000000    0.0060      0.000000    0.20     0.20     |
+|   prepare_send_list()          4          0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|   reinit()                     2          0.0053      0.002658    0.0053      0.002658    0.18     0.18     |
+|                                                                                                             |
+| EquationSystems                                                                                             |
+|   build_solution_vector()      3          0.0070      0.002322    0.0101      0.003373    0.23     0.34     |
+|                                                                                                             |
+| GenericProjector                                                                                            |
+|   operator()                   3          0.0228      0.007603    0.5302      0.176723    0.76     17.63    |
+|   project_edges                14448      0.0009      0.000000    0.0009      0.000000    0.03     0.03     |
+|   project_interior             14448      0.0009      0.000000    0.0009      0.000000    0.03     0.03     |
+|   project_nodes                14448      0.0237      0.000002    0.4933      0.000034    0.79     16.41    |
+|   project_sides                14448      0.0009      0.000000    0.0009      0.000000    0.03     0.03     |
+|                                                                                                             |
+| InverseDistanceInterpolation<>                                                                              |
+|   construct_kd_tree()          4          0.0014      0.000350    0.0014      0.000350    0.05     0.05     |
+|   interpolate_field_data()     16873      0.0186      0.000001    0.0186      0.000001    0.62     0.62     |
+|                                                                                                             |
+| Mesh                                                                                                        |
+|   find_neighbors()             2          0.0122      0.006116    0.0122      0.006116    0.41     0.41     |
+|   renumber_nodes_and_elem()    4          0.0004      0.000088    0.0004      0.000088    0.01     0.01     |
+|                                                                                                             |
+| MeshOutput                                                                                                  |
+|   write_equation_systems()     3          0.0000      0.000013    0.0581      0.019368    0.00     1.93     |
+|                                                                                                             |
+| MeshfreeInterpolation                                                                                       |
+|   gather_remote_data()         4          0.0000      0.000002    0.0000      0.000002    0.00     0.00     |
+|                                                                                                             |
+| NameBasedIO                                                                                                 |
+|   read()                       2          0.0424      0.021175    0.0424      0.021175    1.41     1.41     |
+|                                                                                                             |
+| Parallel                                                                                                    |
+|   allgather()                  2          0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|                                                                                                             |
+| Partitioner                                                                                                 |
+|   single_partition()           2          0.0002      0.000102    0.0002      0.000102    0.01     0.01     |
+|                                                                                                             |
+| RadialBasisInterpolation<>                                                                                  |
+|   interpolate_field_data()     16873      0.4475      0.000027    0.4475      0.000027    14.88    14.88    |
+|   prepare_for_use()            2          2.3654      1.182719    2.3654      1.182719    78.67    78.67    |
+|                                                                                                             |
+| System                                                                                                      |
+|   project_fem_vector()         3          0.0004      0.000142    0.5306      0.176866    0.01     17.65    |
+|   project_vector(FunctionBase) 3          0.0000      0.000002    0.5306      0.176868    0.00     17.65    |
+|                                                                                                             |
+| TecplotIO                                                                                                   |
+|   write_nodal_data()           3          0.0479      0.015981    0.0479      0.015981    1.59     1.59     |
+ -------------------------------------------------------------------------------------------------------------
+| Totals:                        134934     3.0068                                          100.00            |
+ -------------------------------------------------------------------------------------------------------------
+
+ 
+***************************************************************
+* Done Running Example miscellaneous_ex8:
+*   example-opt  
+***************************************************************
+</pre>
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(window).on('scroll',function() {
+    var scrolltop = $(this).scrollTop();
+
+    if(scrolltop >= 215) {
+      $('#fixedbar').fadeIn(250);
+    }
+
+    else if(scrolltop <= 210) {
+      $('#fixedbar').fadeOut(250);
+    }
+  });
+});
+</script>
+
+<!-- Google Analytics stuff -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24978333-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</body>
+</html>

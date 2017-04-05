@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>libMesh - A C++ Finite Element Library</title>
+  <meta name="author" content="libMesh development team">
+  <link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../doxygen_stylesheet.css">
+</head>
+
+<body>
+  <nav id="fixedbar">
+    <ul id="fixednav">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../support.html">About Us</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="https://github.com/libMesh/libmesh/graphs/contributors">Developers</a></li>
+      <li><a href="../installation.html">Installation</a></li>
+      <li><a href="../examples.html">Examples</a></li>
+     <li><a href="../doxygen/index.html">Documentation</a></li>
+    </ul>
+  </nav>
+
+  <div id="w">
+    <header id="logo"><a href="../index.html"><span id="logobg">SomeWebsiteLogo</span></a></header>
+
+    <nav id="navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../support.html">About Us</a></li>
+        <li><a href="../publications.html">Publications</a></li>
+        <li><a href="https://github.com/libMesh/libmesh/graphs/contributors">Developers</a></li>
+        <li><a href="../installation.html">Installation</a></li>
+        <li><a href="../examples.html">Examples</a></li>
+        <li><a href="../doxygen/index.html">Documentation</a></li>
+      </ul>
+    </nav>
+
+<div id="content">
+
+<br> <h1> Link to the source code for this example: </h1>
+<a href="https://github.com/libMesh/libmesh/tree/master/examples/reduced_basis/reduced_basis_ex6" target="_blank">Open reduced_basis_ex6 in new tab.</a>
+<a name="output"></a> 
+<br><br><br> <h1> The console output of the program: </h1> 
+<pre>
+***************************************************************
+* Running Example reduced_basis_ex6:
+*   example-opt -online_mode 0
+***************************************************************
+ 
+*** Warning, This code is untested, experimental, or likely to see future API changes: ../src/reduced_basis/rb_parametrized.C, line 42, compiled Apr 12 2016 at 11:09:26 ***
+ EquationSystems
+  n_systems()=3
+   System #0, "EIM"
+    Type "RBConstruction"
+    Variables="L2_proj_var"
+    Finite Element Types="LAGRANGE", "JACOBI_20_00" 
+    Infinite Element Mapping="CARTESIAN" 
+    Approximation Orders="FIRST", "THIRD" 
+    n_dofs()=6171
+    n_local_dofs()=6171
+    n_constrained_dofs()=0
+    n_local_constrained_dofs()=0
+    n_vectors()=1
+    n_matrices()=1
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 23.515
+      Average Off-Processor Bandwidth <= 0
+      Maximum  On-Processor Bandwidth <= 27
+      Maximum Off-Processor Bandwidth <= 0
+    DofMap Constraints
+      Number of DoF Constraints = 0
+   System #2, "EIM_explicit_sys"
+    Type "Explicit"
+    Variables={ "x_comp_of_G" "y_comp_of_G" "z_comp_of_G" }
+    Finite Element Types="LAGRANGE", "JACOBI_20_00"
+    Infinite Element Mapping="CARTESIAN"
+    Approximation Orders="FIRST", "THIRD"
+    n_dofs()=18513
+    n_local_dofs()=18513
+    n_constrained_dofs()=0
+    n_local_constrained_dofs()=0
+    n_vectors()=1
+    n_matrices()=0
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 0
+      Average Off-Processor Bandwidth <= 0
+      Maximum  On-Processor Bandwidth <= 0
+      Maximum Off-Processor Bandwidth <= 0
+    DofMap Constraints
+      Number of DoF Constraints = 0
+   System #1, "RB"
+    Type "RBConstruction"
+    Variables="u" 
+    Finite Element Types="LAGRANGE", "JACOBI_20_00" 
+    Infinite Element Mapping="CARTESIAN" 
+    Approximation Orders="FIRST", "THIRD" 
+    n_dofs()=6171
+    n_local_dofs()=6171
+    n_constrained_dofs()=242
+    n_local_constrained_dofs()=242
+    n_vectors()=1
+    n_matrices()=1
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 23.515
+      Average Off-Processor Bandwidth <= 0
+      Maximum  On-Processor Bandwidth <= 27
+      Maximum Off-Processor Bandwidth <= 0
+    DofMap Constraints
+      Number of DoF Constraints = 242
+      Average DoF Constraint Length= 0
+
+ Mesh Information:
+  elem_dimensions()={3}
+  spatial_dimension()=3
+  n_nodes()=6171
+    n_local_nodes()=6171
+  n_elem()=5000
+    n_local_elem()=5000
+    n_active_elem()=5000
+  n_subdomains()=1
+  n_partitions()=1
+  n_processors()=1
+  n_threads()=1
+  processor_id()=0
+
+Initializing training parameters with deterministic training set...
+Parameter curvature: log scaling = 0
+
+
+RBConstruction parameters:
+system name: EIM
+Nmax: 20
+Greedy relative error tolerance: 0.001
+Greedy absolute error tolerance: 1e-12
+Do we normalize RB error bound in greedy? 0
+Aq operators attached: 0
+Fq functions attached: 0
+n_outputs: 0
+Number of parameters: 1
+Parameter curvature: Min = 0.1, Max = 1.0472
+n_training_samples: 25
+quiet mode? 1
+
+
+RBEIMConstruction parameters:
+best fit type: projection
+
+Assembling inner product matrix
+*** Warning, This code is untested, experimental, or likely to see future API changes: ../src/systems/dg_fem_context.C, line 35, compiled Apr 12 2016 at 11:10:02 ***
+Initializing parametrized functions in training set...
+Completed solve for training sample 1 of 25
+Completed solve for training sample 2 of 25
+Completed solve for training sample 3 of 25
+Completed solve for training sample 4 of 25
+Completed solve for training sample 5 of 25
+Completed solve for training sample 6 of 25
+Completed solve for training sample 7 of 25
+Completed solve for training sample 8 of 25
+Completed solve for training sample 9 of 25
+Completed solve for training sample 10 of 25
+Completed solve for training sample 11 of 25
+Completed solve for training sample 12 of 25
+Completed solve for training sample 13 of 25
+Completed solve for training sample 14 of 25
+Completed solve for training sample 15 of 25
+Completed solve for training sample 16 of 25
+Completed solve for training sample 17 of 25
+Completed solve for training sample 18 of 25
+Completed solve for training sample 19 of 25
+Completed solve for training sample 20 of 25
+Completed solve for training sample 21 of 25
+Completed solve for training sample 22 of 25
+Completed solve for training sample 23 of 25
+Completed solve for training sample 24 of 25
+Completed solve for training sample 25 of 25
+Parametrized functions in training set initialized
+
+
+---- Performing Greedy basis enrichment ----
+
+---- Basis dimension: 0 ----
+Performing truth solve at parameter:
+curvature: 1.047200e+00
+
+Enriching the RB space
+Updating RB matrices
+
+---- Basis dimension: 1 ----
+Performing RB solves on training set
+Maximum error bound is 0.221031
+
+Performing truth solve at parameter:
+curvature: 1.000000e-01
+
+Enriching the RB space
+Updating RB matrices
+
+---- Basis dimension: 2 ----
+Performing RB solves on training set
+Maximum error bound is 0.0106172
+
+Performing truth solve at parameter:
+curvature: 6.130667e-01
+
+Enriching the RB space
+Updating RB matrices
+
+---- Basis dimension: 3 ----
+Performing RB solves on training set
+Maximum error bound is 0.000307645
+
+Performing truth solve at parameter:
+curvature: 2.973333e-01
+
+Enriching the RB space
+Updating RB matrices
+
+---- Basis dimension: 4 ----
+Performing RB solves on training set
+Maximum error bound is 1.19117e-05
+
+Relative error tolerance reached.
+Perform one more Greedy iteration for error bounds.
+Performing truth solve at parameter:
+curvature: 8.893333e-01
+
+Enriching the RB space
+Updating RB matrices
+
+---- Basis dimension: 4 ----
+Performing RB solves on training set
+Maximum error bound is 1.19117e-05
+
+Extra Greedy iteration finished.
+Initializing training parameters with random training set...
+Parameter Bi: log scaling = 0
+Parameter curvature: log scaling = 0
+Parameter kappa: log scaling = 0
+
+
+RBConstruction parameters:
+system name: RB
+Nmax: 15
+Greedy relative error tolerance: 0.001
+Greedy absolute error tolerance: 1e-12
+Do we normalize RB error bound in greedy? 0
+Aq operators attached: 7
+Fq functions attached: 2
+n_outputs: 0
+Number of parameters: 3
+Parameter Bi: Min = 0.001, Max = 0.01
+Parameter curvature: Min = 0.1, Max = 1.0472
+Parameter kappa: Min = 0.5, Max = 2
+n_training_samples: 1000
+quiet mode? 1
+
+Assembling inner product matrix
+Assembling affine operator 1 of 7
+Assembling affine operator 2 of 7
+Assembling affine operator 3 of 7
+Assembling affine operator 4 of 7
+Assembling affine operator 5 of 7
+Assembling affine operator 6 of 7
+Assembling affine operator 7 of 7
+Assembling affine vector 1 of 2
+Assembling affine vector 2 of 2
+
+---- Performing Greedy basis enrichment ----
+
+---- Basis dimension: 0 ----
+Performing RB solves on training set
+Maximum error bound is 0.599965
+
+Performing truth solve at parameter:
+Bi: 4.510476e-03
+curvature: 1.046651e+00
+kappa: 1.370318e+00
+
+Enriching the RB space
+Updating RB matrices
+Updating RB residual terms
+
+---- Basis dimension: 1 ----
+Performing RB solves on training set
+Maximum error bound is 0.0185118
+
+Performing truth solve at parameter:
+Bi: 1.271383e-03
+curvature: 1.159115e-01
+kappa: 6.923410e-01
+
+Enriching the RB space
+Updating RB matrices
+Updating RB residual terms
+
+---- Basis dimension: 2 ----
+Performing RB solves on training set
+Maximum error bound is 0.00562437
+
+Performing truth solve at parameter:
+Bi: 9.747614e-03
+curvature: 1.528375e-01
+kappa: 6.169769e-01
+
+Enriching the RB space
+Updating RB matrices
+Updating RB residual terms
+
+---- Basis dimension: 3 ----
+Performing RB solves on training set
+Maximum error bound is 0.000393721
+
+Relative error tolerance reached.
+
+ -------------------------------------------------------------------------------------------------------------------
+| Time:           Wed Apr 13 11:04:14 2016                                                                          |
+| OS:             Darwin                                                                                            |
+| HostName:       peterson-laptop.local                                                                             |
+| OS Release:     15.0.0                                                                                            |
+| OS Version:     Darwin Kernel Version 15.0.0: Sat Sep 19 15:53:46 PDT 2015; root:xnu-3247.10.11~1/RELEASE_X86_64  |
+| Machine:        x86_64                                                                                            |
+| Username:       petejw                                                                                            |
+| Configuration:  ../configure  'INSTALL=/usr/bin/install -C'                                                       |
+|  '--with-methods=opt dbg'                                                                                         |
+|  '--prefix=/Users/petejw/projects/libmesh_git/installed'                                                          |
+|  '--enable-perflog'                                                                                               |
+|  '--enable-tracefiles'                                                                                            |
+|  '--disable-blocked-storage'                                                                                      |
+|  '--enable-default-comm-world'                                                                                    |
+|  '--enable-tecio'                                                                                                 |
+|  '--enable-unique-ptr'                                                                                            |
+|  '--enable-ifem'                                                                                                  |
+|  'PETSC_DIR=/opt/moose/petsc/mpich_petsc-3.6.1/clang-opt-superlu'                                                 |
+|  'SLEPC_DIR=/opt/petejw/slepc/3.6.1'                                                                              |
+|  'CPPFLAGS= '                                                                                                     |
+|  'LIBS= '                                                                                                         |
+|  'CPPFLAGS=  '                                                                                                    |
+|  'LIBS=  '                                                                                                        |
+|  '--disable-netcdf-4'                                                                                             |
+|  '--disable-testsets'                                                                                             |
+|  'CXX=mpicxx'                                                                                                     |
+|  'CC=mpicc'                                                                                                       |
+|  'F77=mpif77'                                                                                                     |
+|  'FC=mpif90'                                                                                                      |
+|  'CPPFLAGS=   '                                                                                                   |
+|  'LIBS=   '                                                                                                       |
+ -------------------------------------------------------------------------------------------------------------------
+ ---------------------------------------------------------------------------------------------------------------------
+| libMesh Performance: Alive time=4.30326, Active time=4.09807                                                        |
+ ---------------------------------------------------------------------------------------------------------------------
+| Event                                  nCalls     Total Time  Avg Time    Total Time  Avg Time    % of Active Time  |
+|                                                   w/o Sub     w/o Sub     With Sub    With Sub    w/o S    With S   |
+|---------------------------------------------------------------------------------------------------------------------|
+|                                                                                                                     |
+|                                                                                                                     |
+| DofMap                                                                                                              |
+|   add_neighbors_to_send_list()         3          0.0047      0.001571    0.0047      0.001571    0.12     0.12     |
+|   build_constraint_matrix()            50000      0.0131      0.000000    0.0131      0.000000    0.32     0.32     |
+|   build_sparsity()                     2          0.0218      0.010882    0.0253      0.012644    0.53     0.62     |
+|   cnstrn_elem_mat_vec()                50000      0.0054      0.000000    0.0054      0.000000    0.13     0.13     |
+|   create_dof_constraints()             3          0.0078      0.002613    0.0092      0.003082    0.19     0.23     |
+|   distribute_dofs()                    3          0.0025      0.000828    0.0194      0.006472    0.06     0.47     |
+|   dof_indices()                        1305072    0.2894      0.000000    0.2894      0.000000    7.06     7.06     |
+|   prepare_send_list()                  6          0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|   reinit()                             3          0.0169      0.005643    0.0169      0.005643    0.41     0.41     |
+|                                                                                                                     |
+| FE                                                                                                                  |
+|   compute_shape_functions()            289200     0.5262      0.000002    0.5262      0.000002    12.84    12.84    |
+|   init_shape_functions()               24245      0.1008      0.000004    0.1008      0.000004    2.46     2.46     |
+|   inverse_map()                        48         0.0001      0.000002    0.0001      0.000002    0.00     0.00     |
+|                                                                                                                     |
+| FEMap                                                                                                               |
+|   compute_affine_map()                 289200     0.2346      0.000001    0.2346      0.000001    5.73     5.73     |
+|   compute_face_map()                   24200      0.0104      0.000000    0.0104      0.000000    0.25     0.25     |
+|   init_face_shape_functions()          11         0.0000      0.000004    0.0000      0.000004    0.00     0.00     |
+|   init_reference_to_physical_map()     24245      0.0965      0.000004    0.0965      0.000004    2.35     2.35     |
+|                                                                                                                     |
+| Mesh                                                                                                                |
+|   find_neighbors()                     1          0.0122      0.012228    0.0122      0.012228    0.30     0.30     |
+|   renumber_nodes_and_elem()            2          0.0003      0.000159    0.0003      0.000159    0.01     0.01     |
+|   write()                              1          0.0002      0.000174    0.0004      0.000380    0.00     0.01     |
+|                                                                                                                     |
+| MeshCommunication                                                                                                   |
+|   assign_global_indices()              2          0.1006      0.050298    0.1007      0.050335    2.45     2.46     |
+|                                                                                                                     |
+| MeshTools::Generation                                                                                               |
+|   build_cube()                         1          0.0029      0.002878    0.0029      0.002878    0.07     0.07     |
+|                                                                                                                     |
+| Parallel                                                                                                            |
+|   allgather()                          11         0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|   probe()                              16         0.0000      0.000001    0.0000      0.000001    0.00     0.00     |
+|   receive()                            8          0.0004      0.000048    0.0004      0.000048    0.01     0.01     |
+|   send()                               8          0.0000      0.000004    0.0000      0.000004    0.00     0.00     |
+|   send_receive()                       8          0.0001      0.000009    0.0001      0.000009    0.00     0.00     |
+|                                                                                                                     |
+| Parallel::Request                                                                                                   |
+|   wait()                               8          0.0000      0.000005    0.0000      0.000005    0.00     0.00     |
+|                                                                                                                     |
+| Partitioner                                                                                                         |
+|   single_partition()                   1          0.0002      0.000168    0.0002      0.000168    0.00     0.00     |
+|                                                                                                                     |
+| PetscLinearSolver                                                                                                   |
+|   solve()                              101        0.7202      0.007130    0.7202      0.007130    17.57    17.57    |
+|                                                                                                                     |
+| PointLocatorTree                                                                                                    |
+|   init(no master)                      1          0.0064      0.006376    0.0064      0.006376    0.16     0.16     |
+|   operator()                           24         0.0004      0.000015    0.0004      0.000017    0.01     0.01     |
+|                                                                                                                     |
+| RBConstruction                                                                                                      |
+|   add_scaled_matrix_and_vector()       11         0.2497      0.022696    1.0612      0.096472    6.09     25.90    |
+|   clear()                              3          0.0008      0.000260    0.0008      0.000260    0.02     0.02     |
+|   compute_Fq_representor_innerprods()  2          0.0005      0.000265    0.0483      0.024165    0.01     1.18     |
+|   compute_max_error_bound()            9          0.0078      0.000872    0.2452      0.027243    0.19     5.98     |
+|   enrich_RB_space()                    3          0.0014      0.000458    0.0014      0.000458    0.03     0.03     |
+|   train_reduced_basis()                2          0.0009      0.000467    1.1733      0.586669    0.02     28.63    |
+|   truth_assembly()                     3          0.0600      0.019989    0.0600      0.019997    1.46     1.46     |
+|   truth_solve()                        3          0.0008      0.000283    0.1282      0.042728    0.02     3.13     |
+|   update_RB_system_matrices()          3          0.0127      0.004218    0.0127      0.004218    0.31     0.31     |
+|   update_residual_terms()              3          0.0516      0.017199    0.5396      0.179857    1.26     13.17    |
+|                                                                                                                     |
+| RBEIMAssembly                                                                                                       |
+|   evaluate_basis_function              60000      0.0918      0.000002    0.2833      0.000005    2.24     6.91     |
+|                                                                                                                     |
+| RBEIMConstruction                                                                                                   |
+|   compute_best_fit_error()             125        0.0151      0.000121    0.0186      0.000148    0.37     0.45     |
+|   enrich_RB_space()                    5          0.0576      0.011523    0.1676      0.033527    1.41     4.09     |
+|   get_explicit_sys_subvector()         54         0.0107      0.000197    0.0107      0.000197    0.26     0.26     |
+|   init_dof_map_between_systems()       1          0.0037      0.003690    0.0089      0.008920    0.09     0.22     |
+|   set_explicit_sys_subvector()         129        0.0292      0.000226    0.0292      0.000226    0.71     0.71     |
+|   truth_solve()                        155        1.0840      0.006993    1.8320      0.011820    26.45    44.71    |
+|   update_RB_system_matrices()          5          0.0111      0.002226    0.0293      0.005854    0.27     0.71     |
+|                                                                                                                     |
+| RBEIMEvaluation                                                                                                     |
+|   legacy_write_offline_data_to_files() 1          0.0005      0.000511    0.0013      0.001325    0.01     0.03     |
+|   rb_solve()                           4007       0.0035      0.000001    0.0035      0.000001    0.08     0.08     |
+|                                                                                                                     |
+| RBEvaluation                                                                                                        |
+|   clear()                              3          0.0001      0.000021    0.0001      0.000021    0.00     0.00     |
+|   compute_residual_dual_norm()         4000       0.1994      0.000050    0.1994      0.000050    4.87     4.87     |
+|   legacy_write_offline_data_to_files() 2          0.0026      0.001324    0.0026      0.001324    0.06     0.06     |
+|   rb_solve()                           4000       0.0146      0.000004    0.2183      0.000055    0.36     5.33     |
+|   resize_data_structures()             2          0.0001      0.000027    0.0001      0.000027    0.00     0.00     |
+|   write_out_basis_functions()          2          0.0003      0.000152    0.1149      0.057456    0.01     2.80     |
+|   write_out_vectors()                  2          0.0135      0.006735    0.1146      0.057304    0.33     2.80     |
+|                                                                                                                     |
+| XdrIO                                                                                                               |
+|   write()                              1          0.0002      0.000206    0.0002      0.000206    0.01     0.01     |
+ ---------------------------------------------------------------------------------------------------------------------
+| Totals:                                2128970    4.0981                                          100.00            |
+ ---------------------------------------------------------------------------------------------------------------------
+
+ 
+***************************************************************
+* Done Running Example reduced_basis_ex6:
+*   example-opt -online_mode 0 
+***************************************************************
+***************************************************************
+* Running Example reduced_basis_ex6:
+*   example-opt -online_mode 1 
+***************************************************************
+ 
+*** Warning, This code is untested, experimental, or likely to see future API changes: ../src/reduced_basis/rb_parametrized.C, line 42, compiled Apr 12 2016 at 11:09:26 ***
+ EquationSystems
+  n_systems()=3
+   System #0, "EIM"
+    Type "RBConstruction"
+    Variables="L2_proj_var"
+    Finite Element Types="LAGRANGE", "JACOBI_20_00" 
+    Infinite Element Mapping="CARTESIAN" 
+    Approximation Orders="FIRST", "THIRD" 
+    n_dofs()=6171
+    n_local_dofs()=6171
+    n_constrained_dofs()=0
+    n_local_constrained_dofs()=0
+    n_vectors()=1
+    n_matrices()=1
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 23.515
+      Average Off-Processor Bandwidth <= 0
+      Maximum  On-Processor Bandwidth <= 27
+      Maximum Off-Processor Bandwidth <= 0
+    DofMap Constraints
+      Number of DoF Constraints = 0
+   System #2, "EIM_explicit_sys"
+    Type "Explicit"
+    Variables={ "x_comp_of_G" "y_comp_of_G" "z_comp_of_G" }
+    Finite Element Types="LAGRANGE", "JACOBI_20_00"
+    Infinite Element Mapping="CARTESIAN"
+    Approximation Orders="FIRST", "THIRD"
+    n_dofs()=18513
+    n_local_dofs()=18513
+    n_constrained_dofs()=0
+    n_local_constrained_dofs()=0
+    n_vectors()=1
+    n_matrices()=0
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 0
+      Average Off-Processor Bandwidth <= 0
+      Maximum  On-Processor Bandwidth <= 0
+      Maximum Off-Processor Bandwidth <= 0
+    DofMap Constraints
+      Number of DoF Constraints = 0
+   System #1, "RB"
+    Type "RBConstruction"
+    Variables="u" 
+    Finite Element Types="LAGRANGE", "JACOBI_20_00" 
+    Infinite Element Mapping="CARTESIAN" 
+    Approximation Orders="FIRST", "THIRD" 
+    n_dofs()=6171
+    n_local_dofs()=6171
+    n_constrained_dofs()=242
+    n_local_constrained_dofs()=242
+    n_vectors()=1
+    n_matrices()=1
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 23.515
+      Average Off-Processor Bandwidth <= 0
+      Maximum  On-Processor Bandwidth <= 27
+      Maximum Off-Processor Bandwidth <= 0
+    DofMap Constraints
+      Number of DoF Constraints = 242
+      Average DoF Constraint Length= 0
+
+ Mesh Information:
+  elem_dimensions()={3}
+  spatial_dimension()=3
+  n_nodes()=6171
+    n_local_nodes()=6171
+  n_elem()=5000
+    n_local_elem()=5000
+    n_active_elem()=5000
+  n_subdomains()=1
+  n_partitions()=1
+  n_processors()=1
+  n_threads()=1
+  processor_id()=0
+
+Bi: 5.000000e-03
+curvature: 1.047200e+00
+kappa: 1.300000e+00
+
+
+ -------------------------------------------------------------------------------------------------------------------
+| Time:           Wed Apr 13 11:04:15 2016                                                                          |
+| OS:             Darwin                                                                                            |
+| HostName:       peterson-laptop.local                                                                             |
+| OS Release:     15.0.0                                                                                            |
+| OS Version:     Darwin Kernel Version 15.0.0: Sat Sep 19 15:53:46 PDT 2015; root:xnu-3247.10.11~1/RELEASE_X86_64  |
+| Machine:        x86_64                                                                                            |
+| Username:       petejw                                                                                            |
+| Configuration:  ../configure  'INSTALL=/usr/bin/install -C'                                                       |
+|  '--with-methods=opt dbg'                                                                                         |
+|  '--prefix=/Users/petejw/projects/libmesh_git/installed'                                                          |
+|  '--enable-perflog'                                                                                               |
+|  '--enable-tracefiles'                                                                                            |
+|  '--disable-blocked-storage'                                                                                      |
+|  '--enable-default-comm-world'                                                                                    |
+|  '--enable-tecio'                                                                                                 |
+|  '--enable-unique-ptr'                                                                                            |
+|  '--enable-ifem'                                                                                                  |
+|  'PETSC_DIR=/opt/moose/petsc/mpich_petsc-3.6.1/clang-opt-superlu'                                                 |
+|  'SLEPC_DIR=/opt/petejw/slepc/3.6.1'                                                                              |
+|  'CPPFLAGS= '                                                                                                     |
+|  'LIBS= '                                                                                                         |
+|  'CPPFLAGS=  '                                                                                                    |
+|  'LIBS=  '                                                                                                        |
+|  '--disable-netcdf-4'                                                                                             |
+|  '--disable-testsets'                                                                                             |
+|  'CXX=mpicxx'                                                                                                     |
+|  'CC=mpicc'                                                                                                       |
+|  'F77=mpif77'                                                                                                     |
+|  'FC=mpif90'                                                                                                      |
+|  'CPPFLAGS=   '                                                                                                   |
+|  'LIBS=   '                                                                                                       |
+ -------------------------------------------------------------------------------------------------------------------
+ ----------------------------------------------------------------------------------------------------------------------
+| libMesh Performance: Alive time=0.230955, Active time=0.210045                                                       |
+ ----------------------------------------------------------------------------------------------------------------------
+| Event                                   nCalls     Total Time  Avg Time    Total Time  Avg Time    % of Active Time  |
+|                                                    w/o Sub     w/o Sub     With Sub    With Sub    w/o S    With S   |
+|----------------------------------------------------------------------------------------------------------------------|
+|                                                                                                                      |
+|                                                                                                                      |
+| DofMap                                                                                                               |
+|   add_neighbors_to_send_list()          3          0.0042      0.001410    0.0042      0.001410    2.01     2.01     |
+|   build_sparsity()                      2          0.0186      0.009307    0.0214      0.010701    8.86     10.19    |
+|   create_dof_constraints()              3          0.0077      0.002572    0.0091      0.003038    3.67     4.34     |
+|   distribute_dofs()                     3          0.0023      0.000752    0.0162      0.005395    1.07     7.71     |
+|   dof_indices()                         40000      0.0077      0.000000    0.0077      0.000000    3.67     3.67     |
+|   prepare_send_list()                   6          0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|   reinit()                              3          0.0139      0.004642    0.0139      0.004642    6.63     6.63     |
+|                                                                                                                      |
+| EquationSystems                                                                                                      |
+|   build_solution_vector()               1          0.0151      0.015129    0.0218      0.021839    7.20     10.40    |
+|                                                                                                                      |
+| ExodusII_IO                                                                                                          |
+|   write_nodal_data()                    1          0.0071      0.007143    0.0071      0.007143    3.40     3.40     |
+|                                                                                                                      |
+| Mesh                                                                                                                 |
+|   find_neighbors()                      2          0.0148      0.007391    0.0148      0.007391    7.04     7.04     |
+|   renumber_nodes_and_elem()             2          0.0003      0.000139    0.0003      0.000139    0.13     0.13     |
+|                                                                                                                      |
+| MeshCommunication                                                                                                    |
+|   assign_global_indices()               2          0.0998      0.049897    0.0999      0.049930    47.51    47.54    |
+|                                                                                                                      |
+| MeshOutput                                                                                                           |
+|   write_equation_systems()              1          0.0000      0.000025    0.0290      0.029007    0.01     13.81    |
+|                                                                                                                      |
+| MeshTools::Generation                                                                                                |
+|   build_cube()                          1          0.0019      0.001925    0.0019      0.001925    0.92     0.92     |
+|                                                                                                                      |
+| Parallel                                                                                                             |
+|   allgather()                           11         0.0000      0.000000    0.0000      0.000000    0.00     0.00     |
+|   probe()                               8          0.0000      0.000003    0.0000      0.000003    0.01     0.01     |
+|   receive()                             8          0.0001      0.000008    0.0001      0.000008    0.03     0.03     |
+|   send()                                8          0.0001      0.000009    0.0001      0.000009    0.04     0.04     |
+|   send_receive()                        8          0.0001      0.000007    0.0001      0.000007    0.03     0.03     |
+|                                                                                                                      |
+| Parallel::Request                                                                                                    |
+|   wait()                                8          0.0000      0.000003    0.0000      0.000003    0.01     0.01     |
+|                                                                                                                      |
+| Partitioner                                                                                                          |
+|   set_node_processor_ids()              1          0.0000      0.000017    0.0000      0.000017    0.01     0.01     |
+|   single_partition()                    2          0.0002      0.000107    0.0002      0.000107    0.10     0.10     |
+|                                                                                                                      |
+| RBConstruction                                                                                                       |
+|   clear()                               3          0.0001      0.000030    0.0001      0.000030    0.04     0.04     |
+|   load_rb_solution()                    1          0.0000      0.000023    0.0000      0.000023    0.01     0.01     |
+|                                                                                                                      |
+| RBEIMConstruction                                                                                                    |
+|   load_rb_solution()                    1          0.0001      0.000125    0.0001      0.000125    0.06     0.06     |
+|                                                                                                                      |
+| RBEIMEvaluation                                                                                                      |
+|   legacy_read_offline_data_from_files() 1          0.0001      0.000148    0.0005      0.000483    0.07     0.23     |
+|   rb_solve()                            1          0.0000      0.000029    0.0000      0.000029    0.01     0.01     |
+|                                                                                                                      |
+| RBEvaluation                                                                                                         |
+|   clear()                               3          0.0000      0.000007    0.0000      0.000007    0.01     0.01     |
+|   compute_residual_dual_norm()          1          0.0001      0.000108    0.0001      0.000108    0.05     0.05     |
+|   legacy_read_offline_data_from_files() 2          0.0003      0.000158    0.0003      0.000170    0.15     0.16     |
+|   rb_solve()                            1          0.0000      0.000012    0.0001      0.000149    0.01     0.07     |
+|   read_in_basis_functions()             2          0.0000      0.000008    0.1150      0.057518    0.01     54.77    |
+|   read_in_vectors_from_multiple_files() 2          0.0150      0.007485    0.1150      0.057509    7.13     54.76    |
+|   resize_data_structures()              2          0.0000      0.000012    0.0000      0.000012    0.01     0.01     |
+|                                                                                                                      |
+| XdrIO                                                                                                                |
+|   read()                                1          0.0002      0.000163    0.0002      0.000163    0.08     0.08     |
+ ----------------------------------------------------------------------------------------------------------------------
+| Totals:                                 40105      0.2100                                          100.00            |
+ ----------------------------------------------------------------------------------------------------------------------
+
+ 
+***************************************************************
+* Done Running Example reduced_basis_ex6:
+*   example-opt -online_mode 1 
+***************************************************************
+</pre>
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(window).on('scroll',function() {
+    var scrolltop = $(this).scrollTop();
+
+    if(scrolltop >= 215) {
+      $('#fixedbar').fadeIn(250);
+    }
+
+    else if(scrolltop <= 210) {
+      $('#fixedbar').fadeOut(250);
+    }
+  });
+});
+</script>
+
+<!-- Google Analytics stuff -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24978333-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</body>
+</html>

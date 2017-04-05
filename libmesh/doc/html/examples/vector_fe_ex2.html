@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>libMesh - A C++ Finite Element Library</title>
+  <meta name="author" content="libMesh development team">
+  <link rel="stylesheet" type="text/css" media="all" href="../styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../doxygen_stylesheet.css">
+</head>
+
+<body>
+  <nav id="fixedbar">
+    <ul id="fixednav">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../support.html">About Us</a></li>
+      <li><a href="../publications.html">Publications</a></li>
+      <li><a href="https://github.com/libMesh/libmesh/graphs/contributors">Developers</a></li>
+      <li><a href="../installation.html">Installation</a></li>
+      <li><a href="../examples.html">Examples</a></li>
+     <li><a href="../doxygen/index.html">Documentation</a></li>
+    </ul>
+  </nav>
+
+  <div id="w">
+    <header id="logo"><a href="../index.html"><span id="logobg">SomeWebsiteLogo</span></a></header>
+
+    <nav id="navigation">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../support.html">About Us</a></li>
+        <li><a href="../publications.html">Publications</a></li>
+        <li><a href="https://github.com/libMesh/libmesh/graphs/contributors">Developers</a></li>
+        <li><a href="../installation.html">Installation</a></li>
+        <li><a href="../examples.html">Examples</a></li>
+        <li><a href="../doxygen/index.html">Documentation</a></li>
+      </ul>
+    </nav>
+
+<div id="content">
+
+<br> <h1> Link to the source code for this example: </h1>
+<a href="https://github.com/libMesh/libmesh/tree/master/examples/vector_fe/vector_fe_ex2" target="_blank">Open vector_fe_ex2 in new tab.</a>
+<a name="output"></a> 
+<br><br><br> <h1> The console output of the program: </h1> 
+<pre>
+  CXX      example_dbg-vector_fe_ex2.o
+  CXXLD    example-dbg
+***************************************************************
+* Running Example vector_fe_ex2:
+*   example-opt  
+***************************************************************
+ 
+ Mesh Information:
+  elem_dimensions()={3}
+  spatial_dimension()=3
+  n_nodes()=216
+    n_local_nodes()=216
+  n_elem()=125
+    n_local_elem()=125
+    n_active_elem()=125
+  n_subdomains()=1
+  n_partitions()=1
+  n_processors()=1
+  n_threads()=1
+  processor_id()=0
+
+ EquationSystems
+  n_systems()=1
+   System #0, "Laplace"
+    Type "Implicit"
+    Variables="u" 
+    Finite Element Types="LAGRANGE_VEC", "JACOBI_20_00" 
+    Infinite Element Mapping="CARTESIAN" 
+    Approximation Orders="FIRST", "THIRD" 
+    n_dofs()=648
+    n_local_dofs()=648
+    n_constrained_dofs()=456
+    n_local_constrained_dofs()=456
+    n_vectors()=1
+    n_matrices()=1
+    DofMap Sparsity
+      Average  On-Processor Bandwidth <= 56.8889
+      Average Off-Processor Bandwidth <= 0
+      Maximum  On-Processor Bandwidth <= 81
+      Maximum Off-Processor Bandwidth <= 0
+    DofMap Constraints
+      Number of DoF Constraints = 456
+      Number of Heterogenous Constraints= 456
+      Average DoF Constraint Length= 0
+
+Assembling the System
+Nonlinear Residual: 4.00845
+Linear solve starting, tolerance 1e-12
+Linear solve finished, step 8, residual 3.873e-13
+Trying full Newton step
+  Current Residual: 4.26989e-13
+  Nonlinear solver converged, step 0, residual reduction 1.06522e-13 < 1e-12
+  Nonlinear solver relative step size 0.723571 > 1e-06
+L2-Error is: 0.142039
+H1-Error is: 0.902143
+
+ -------------------------------------------------------------------------------------------------------------------
+| Time:           Wed Apr 13 10:34:42 2016                                                                          |
+| OS:             Darwin                                                                                            |
+| HostName:       peterson-laptop.local                                                                             |
+| OS Release:     15.0.0                                                                                            |
+| OS Version:     Darwin Kernel Version 15.0.0: Sat Sep 19 15:53:46 PDT 2015; root:xnu-3247.10.11~1/RELEASE_X86_64  |
+| Machine:        x86_64                                                                                            |
+| Username:       petejw                                                                                            |
+| Configuration:  ../configure  'INSTALL=/usr/bin/install -C'                                                       |
+|  '--with-methods=opt dbg'                                                                                         |
+|  '--prefix=/Users/petejw/projects/libmesh_git/installed'                                                          |
+|  '--enable-perflog'                                                                                               |
+|  '--enable-tracefiles'                                                                                            |
+|  '--disable-blocked-storage'                                                                                      |
+|  '--enable-default-comm-world'                                                                                    |
+|  '--enable-tecio'                                                                                                 |
+|  '--enable-unique-ptr'                                                                                            |
+|  '--enable-ifem'                                                                                                  |
+|  'PETSC_DIR=/opt/moose/petsc/mpich_petsc-3.6.1/clang-opt-superlu'                                                 |
+|  'SLEPC_DIR=/opt/petejw/slepc/3.6.1'                                                                              |
+|  'CPPFLAGS= '                                                                                                     |
+|  'LIBS= '                                                                                                         |
+|  'CPPFLAGS=  '                                                                                                    |
+|  'LIBS=  '                                                                                                        |
+|  '--disable-netcdf-4'                                                                                             |
+|  '--disable-testsets'                                                                                             |
+|  'CXX=mpicxx'                                                                                                     |
+|  'CC=mpicc'                                                                                                       |
+|  'F77=mpif77'                                                                                                     |
+|  'FC=mpif90'                                                                                                      |
+|  'CPPFLAGS=   '                                                                                                   |
+|  'LIBS=   '                                                                                                       |
+ -------------------------------------------------------------------------------------------------------------------
+ -----------------------------------------------------------------------------------------------------------------
+| libMesh Performance: Alive time=0.073219, Active time=0.047946                                                  |
+ -----------------------------------------------------------------------------------------------------------------
+| Event                              nCalls     Total Time  Avg Time    Total Time  Avg Time    % of Active Time  |
+|                                               w/o Sub     w/o Sub     With Sub    With Sub    w/o S    With S   |
+|-----------------------------------------------------------------------------------------------------------------|
+|                                                                                                                 |
+|                                                                                                                 |
+| DofMap                                                                                                          |
+|   add_neighbors_to_send_list()     1          0.0001      0.000058    0.0001      0.000058    0.12     0.12     |
+|   build_constraint_matrix()        250        0.0008      0.000003    0.0008      0.000003    1.69     1.69     |
+|   build_sparsity()                 1          0.0014      0.001376    0.0015      0.001483    2.87     3.09     |
+|   cnstrn_elem_mat_vec()            125        0.0006      0.000005    0.0006      0.000005    1.35     1.35     |
+|   constrain_elem_vector()          125        0.0002      0.000001    0.0002      0.000001    0.33     0.33     |
+|   create_dof_constraints()         1          0.0008      0.000768    0.0009      0.000887    1.60     1.85     |
+|   distribute_dofs()                1          0.0001      0.000058    0.0003      0.000253    0.12     0.53     |
+|   dof_indices()                    1125       0.0005      0.000000    0.0005      0.000000    1.06     1.06     |
+|   enforce_constraints_exactly()    3          0.0002      0.000060    0.0002      0.000060    0.38     0.38     |
+|   prepare_send_list()              2          0.0000      0.000001    0.0000      0.000001    0.00     0.00     |
+|   reinit()                         1          0.0002      0.000194    0.0002      0.000194    0.40     0.40     |
+|                                                                                                                 |
+| EquationSystems                                                                                                 |
+|   build_solution_vector()          2          0.0005      0.000234    0.0006      0.000282    0.98     1.18     |
+|                                                                                                                 |
+| ExodusII_IO                                                                                                     |
+|   write_nodal_data()               1          0.0012      0.001204    0.0012      0.001204    2.51     2.51     |
+|                                                                                                                 |
+| FE                                                                                                              |
+|   compute_shape_functions()        675        0.0275      0.000041    0.0275      0.000041    57.35    57.35    |
+|   init_shape_functions()           303        0.0008      0.000003    0.0008      0.000003    1.61     1.61     |
+|                                                                                                                 |
+| FEMSystem                                                                                                       |
+|   assembly()                       1          0.0059      0.005927    0.0105      0.010526    12.36    21.95    |
+|   assembly(get_residual)           1          0.0012      0.001225    0.0045      0.004505    2.55     9.40     |
+|                                                                                                                 |
+| FEMap                                                                                                           |
+|   compute_affine_map()             675        0.0013      0.000002    0.0013      0.000002    2.66     2.66     |
+|   compute_face_map()               300        0.0002      0.000001    0.0002      0.000001    0.40     0.40     |
+|   init_face_shape_functions()      2          0.0000      0.000005    0.0000      0.000005    0.02     0.02     |
+|   init_reference_to_physical_map() 303        0.0014      0.000005    0.0014      0.000005    2.98     2.98     |
+|                                                                                                                 |
+| Mesh                                                                                                            |
+|   find_neighbors()                 1          0.0004      0.000363    0.0004      0.000363    0.76     0.76     |
+|   renumber_nodes_and_elem()        2          0.0000      0.000006    0.0000      0.000006    0.03     0.03     |
+|                                                                                                                 |
+| MeshOutput                                                                                                      |
+|   write_equation_systems()         2          0.0011      0.000568    0.0029      0.001452    2.37     6.06     |
+|                                                                                                                 |
+| MeshTools::Generation                                                                                           |
+|   build_cube()                     1          0.0001      0.000108    0.0001      0.000108    0.23     0.23     |
+|                                                                                                                 |
+| NewtonSolver                                                                                                    |
+|   solve()                          1          0.0002      0.000227    0.0168      0.016774    0.47     34.99    |
+|                                                                                                                 |
+| Parallel                                                                                                        |
+|   allgather()                      1          0.0000      0.000001    0.0000      0.000001    0.00     0.00     |
+|                                                                                                                 |
+| Partitioner                                                                                                     |
+|   single_partition()               1          0.0000      0.000011    0.0000      0.000011    0.02     0.02     |
+|                                                                                                                 |
+| PetscLinearSolver                                                                                               |
+|   solve()                          1          0.0013      0.001334    0.0013      0.001334    2.78     2.78     |
+ -----------------------------------------------------------------------------------------------------------------
+| Totals:                            3908       0.0479                                          100.00            |
+ -----------------------------------------------------------------------------------------------------------------
+
+ 
+***************************************************************
+* Done Running Example vector_fe_ex2:
+*   example-opt  
+***************************************************************
+</pre>
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(window).on('scroll',function() {
+    var scrolltop = $(this).scrollTop();
+
+    if(scrolltop >= 215) {
+      $('#fixedbar').fadeIn(250);
+    }
+
+    else if(scrolltop <= 210) {
+      $('#fixedbar').fadeOut(250);
+    }
+  });
+});
+</script>
+
+<!-- Google Analytics stuff -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24978333-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</body>
+</html>
