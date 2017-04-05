@@ -1,0 +1,156 @@
+template: website.html
+
+template_arguments:
+    title: MOOSE
+    logo: ../media/moose_logo_small.png
+    repo_url: https://github.com/idaholab/moose/
+
+markdown_extensions:
+    - toc
+    - smarty
+    - admonition
+    - extra
+    - markdown_include.include:
+          base_path: ..
+    - mdx_math:
+          enable_dollar_delimiter: True
+    - MooseDocs.extensions.MooseMarkdown:
+          package: True
+          executable: modules/combined/combined-opt
+          repo: https://github.com/idaholab/moose/blob/master
+          install: docs/content/documentation/systems
+          links:
+              Tests:
+                  - test/tests
+                  - modules/phase_field/tests
+                  - modules/tensor_mechanics/tests
+                  - modules/heat_conduction/tests
+              Examples:
+                  - examples
+                  - modules/phase_field/examples
+                  - modules/combined/examples
+              Tutorials:
+                  - tutorials
+                  - modules/tensor_mechanics/tutorials
+              Source:
+                  - modules/phase_field/include
+                  - modules/tensor_mechanics/include
+                  - modules/heat_conduction/include
+          locations:
+              - framework:
+                  doxygen: http://mooseframework.org/docs/doxygen/moose/
+                  paths:
+                      - framework/src
+                      - framework/include
+                  hide:
+                      - /AuxVariables/*/InitialCondition/
+                      - /Variables/*/InitialCondition/
+                      - /Bounds
+                      - /Adaptivity/Indicators
+                      - /AuxKernels
+                      - /AuxScalarKernels
+                      - /AuxVariables
+                      - /BCs
+                      - /Constraints
+                      - /Controls
+                      - /DGKernels
+                      - /Dampers
+                      - /Debug
+                      - /DeprecatedBlock
+                      - /DiracKernels
+                      - /Executioner
+                      - /Functions
+                      - /GlobalParams
+                      - /ICs
+                      - /InterfaceKernels
+                      - /Kernels
+                      - /Materials
+                      - /Mesh/Partitioner
+                      - /Mesh/MortarInterfaces
+                      - /MeshModifiers
+                      - /Modules
+                      - /MultiApps
+                      - /NodalKernels
+                      - /NodalNormals
+                      - /Outputs
+                      - /Postprocessors
+                      - /Preconditioning
+                      - /Problem
+                      - /ScalarKernels
+                      - /Transfers
+                      - /Variables
+                      - /VectorPostprocessors
+                      - /UserObjects
+              - phase_field:
+                  doxygen: http://mooseframework.org/docs/doxygen/modules/
+                  paths:
+                      - modules/phase_field/src
+                      - modules/phase_field/include
+                  hide:
+                      - /Kernels/PFFracIntVar # deprecated
+                      - /AuxVariables/*/InitialCondition
+                      - /Variables/*/InitialCondition
+                      - /Bounds
+                      - /AuxKernels
+                      - /AuxVariables
+                      - /BCs
+                      - /ICs
+                      - /Kernels
+                      - /Materials
+                      - /Mesh
+                      - /Modules
+                      - /Postprocessors
+                      - /UserObjects
+                      - /Variables
+                      - /VectorPostprocessors
+                      - /InterfaceKernels
+              - tensor_mechanics:
+                  doxygen: http://mooseframework.org/docs/doxygen/modules/
+                  paths:
+                      - modules/tensor_mechanics/src
+                      - modules/tensor_mechanics/include
+                  hide:
+                      - /AuxVariables/*/InitialCondition/
+                      - /Variables/*/InitialCondition/
+                      - /Bounds
+                      - /AuxKernels
+                      - /BCs
+                      - /Kernels
+                      - /Materials
+                      - /Modules
+                      - /Postprocessors
+                      - /ScalarKernels
+                      - /UserObjects
+                      - /VectorPostprocessors
+              - heat_conduction:
+                  doxygen: http://mooseframework.org/docs/doxygen/modules/
+                  paths:
+                      - modules/heat_conduction/src
+                      - modules/heat_conduction/include
+                  hide:
+                      - /AuxVariables/*/InitialCondition/
+                      - /Variables/*/InitialCondition/
+                      - /Bounds
+                      - /BCs
+                      - /Constraints
+                      - /DiracKernels
+                      - /Kernels
+                      - /Materials
+                      - /Modules
+                      - /Postprocessors
+                      - /UserObjects
+                      - /ThermalContact
+              - rdg:
+                  name: rDG
+                  doxygen: http://mooseframework.org/docs/doxygen/modules/
+                  paths:
+                      - modules/rdg/src
+                      - modules/rdg/include
+                  hide:
+                      - /AuxVariables/*/InitialCondition/
+                      - /Variables/*/InitialCondition/
+                      - /Bounds
+                      - /BCs
+                      - /DGKernels
+                      - /Materials
+                      - /UserObjects

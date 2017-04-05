@@ -1,0 +1,22 @@
+[Tests]
+  [./youngs_modulus_func_temp]
+    type = Exodiff
+    input = 'youngs_modulus_function_temp.i'
+    exodiff = 'youngs_modulus_function_temp_out.e'
+  [../]
+
+  [./SM_thermomechanics]
+    type = 'Exodiff'
+    input = 'thermo_mech_test.i'
+    exodiff = 'out.e'
+    scale_refine = 1
+  [../]
+
+  [./SM_thermomechanics_SMP]
+    type = 'Exodiff'
+    input = 'thermo_mech_smp_test.i'
+    exodiff = 'out_smp.e'
+    custom_cmp = 'thermo_mech_test.cmp'
+    max_parallel = 1
+  [../]
+[]

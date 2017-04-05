@@ -1,0 +1,9 @@
+Title: Material Properties
+ex08.i
+include/materials/ExampleMaterial.h
+src/materials/ExampleMaterial.C
+include/kernels/ExampleDiffusion.h
+src/kernels/ExampleDiffusion.C
+include/kernels/Convection.h
+src/kernels/Convection.C
+src/base/ExampleApp.C
