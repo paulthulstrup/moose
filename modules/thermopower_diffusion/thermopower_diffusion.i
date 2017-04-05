@@ -1,5 +1,5 @@
 [Mesh]
-  file = 'normal_L.msh'
+  file = './mesh/normal_L.msh'
 []
 
 [Variables]
