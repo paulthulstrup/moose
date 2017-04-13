@@ -9,6 +9,8 @@ import re
 import numpy as np
 import subprocess
 import csv
+import os.path
+import sys
 
 
 # FUNCTIONS
@@ -57,7 +59,6 @@ def writeMooseInput(alpha, beta, T_frige, V):
       
         
 # Run the Moose simulation 
-        ##### UPDATE HERE #######
 def runMoose():
     run_cmd = "sh ./run_sim_billiald.sh"
     subprocess.call(run_cmd, shell=True)
@@ -75,27 +76,49 @@ def clean_var(var):
     
     res = [float(i) for i in res]
     return res
+ 
+# Cretes the filename in which we will 
+def createFilename(Alpha, Beta, Exponent):
+    location = "./data/T_" + str(Exponent)
     
-# Creating file for storing the results
-def writeRawDataCSV(DV):
+    if len(Alpha)>1:
+        alpha_txt = "_alpha-" + str(min(Alpha)) + "-" + str(max(Alpha)) + "-step" + str(Alpha[1]-Alpha[0]) 
+    else:
+        alpha_txt = "_alpha-" + str(Alpha[0])
+        
+    if len(Beta)>1:
+        beta_txt = "_beta-" + str(min(Beta)) + "-" + str(max(Beta))
+    else:
+        beta_txt = "_beta-" + str(Beta[0])  
+      
+    filename = location + alpha_txt + beta_txt + ".csv"
     
-    filename = 'T_200.csv'
-     
-    line = ['id_raw','Alpha','Beta'] + map(str,DV)
-    for dv in DV: 
-        line.append(str(dv/(1E-9*(230.9))))
+    answer = "" 
     
-    with open(filename, 'a+') as csvfile:
-        linewriter = csv.writer(csvfile)
-        linewriter.writerow(line)  
-   
-   
-   
-def toCSV(Alpha, Beta, T_dv):  
+    if os.path.isfile(filename):       
+        print "WARNING: file already exists!"
+        while True:
+            answer = raw_input("Do you wish to continue? [y/n]: ")
+            
+            if answer == "n":
+                sys.exit(1)
+            elif answer == "y":
+                break
+            else:
+                print "Please enter either <y> or <n> only!"
+                print "\n"
+            
+    print "Starting simulation"
+    
+    return filename
+    
+
+         
+#Write in the csv file, here T_dv must be a list of array that ranges on 
+def toCSV(filename, Alpha, Beta, T_dv):  
     
     line =[Alpha] + [Beta] + T_dv
-    
-    filename = 'T_200.csv'
+
     with open(filename, 'a+') as csvfile:  
         wr = csv.writer(csvfile)
         wr.writerow(line)
@@ -104,37 +127,41 @@ def toCSV(Alpha, Beta, T_dv):
 
 # MAIN
 
-# Define the range of values for the simulation
+Exponent = 6
+to_csv = True
+T_fridge = 0.170
+DV = np.arange(100,1000,100)*1E-9*(230.9)
+#DV = [1000*1E-9*(230.9)] # for testing purpose
 
+
+# Define the range of values for the simulation
 Beta = [2/(2.44*1E-8)] # for testing purposes
 #Beta = np.arange(1,2/(2.44*1E-8), 100) # for research mode
 #Beta = np.logspace(0,1,100) # for full scan mode
 
-#Alpha = [1] # for testing purposes
-#Alpha = np.logspace(-1, 1, 10, endpoint=False) # for full scan mode
-Alpha = np.arange(0.1,25, 0.3) # for research mode
+Alpha = [1] # for testing purposes
+#Alpha = np.logspace(1, 2, 10, endpoint=False) # for full scan mode
+#Alpha = np.arange(30,100, 2.5) # for research mode
 
-#DV = [100*1E-9*(230.9)] # for testing purpose
-DV = np.arange(100,1000,100)*1E-9*(230.9) # for the curve
 
-T_fridge = 0.170
-
+# Here create the filename and verify it does not exist
+filename = createFilename(Alpha, Beta, Exponent)
+print "\n"
 
 # Loop through the simulation and simulate for all possible variations 
-for i in range(len(Alpha)):
+for alpha in Alpha:            
     
-    alpha = Alpha[i]    
-    
-    for j in range(len(Beta)):
-
-        beta = Beta[j]
-
+    for beta in Beta:
+        
         temp_res = []
-
+        print "Simluating:"
+        print " - Alpha = " + str(alpha)
+        print " - Beta = " + str(beta)
+        
         for dv in DV:
             
             writeMooseInput(alpha, beta, T_fridge, dv)
-                
+            
             runMoose()           
                 
             # Loads the data from the nbdcump function
@@ -162,15 +189,12 @@ for i in range(len(Alpha)):
             t_point = grid_T1[50,80]
             
             temp_res.append(t_point)
-            print "Sim done!"
             
         
         # Put temp_res into CSV file
-        toCSV(alpha, beta, temp_res)
-        print "Added, " + str(temp_res)
-        
-        
-
- 
-
+        if to_csv:
+            toCSV(filename, alpha, beta, temp_res)
+            print "Added, " + str(temp_res)
+            
+        print "\n"
 

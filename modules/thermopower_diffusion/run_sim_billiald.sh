@@ -6,3 +6,4 @@ clear
 
 /opt/moose/seacas/bin/ncdump billiald_thermopower_diffusion_out.e > out.txt
                                                          
+rm billiald_thermopower_diffusion_out.e-*
