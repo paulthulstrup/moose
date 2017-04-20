@@ -65,7 +65,7 @@
     type = DirichletBC
     variable = V
     boundary = 1
-    value =0.00020781
+    value =0.0002309
   [../]
 
   [./Vminus]
@@ -81,7 +81,7 @@
   [./GaAs]
     type = SheetParam
     length_scale = 1e-4 # in 100um
-    Alpha =1
+    Alpha =5
     Beta =81967213.1148
   [../]
 
@@ -120,4 +120,3 @@
   execute_on = 'timestep_end'
   exodus = true
 []
-
