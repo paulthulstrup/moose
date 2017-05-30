@@ -79,7 +79,7 @@ def clean_var(var):
  
 # Cretes the filename in which we will 
 def createFilename(Alpha, Beta, Exponent):
-    location = "./data/T_" + str(Exponent)
+    location = "./data/T_" + Exponent
     
     if len(Alpha)>1:
         alpha_txt = "_alpha-" + str(min(Alpha)) + "-" + str(max(Alpha)) + "-step" + str(Alpha[1]-Alpha[0]) 
@@ -127,11 +127,11 @@ def toCSV(filename, Alpha, Beta, T_dv):
 
 # MAIN
 
-Exponent = 3
-to_csv = False
-T_fridge = 0.170
-#DV = np.arange(100,1000,100)*1E-9*(230.9)
-DV = [1000*1E-9*(230.9)] # for testing purpose
+Exponent = "4_lowV"
+to_csv = True
+T_fridge = 0.050
+DV = np.arange(1,1,1)*1E-9*(230.9)
+#DV = [1000*1E-9*(230.9)] # for testing purpose
 
 
 # Define the range of values for the simulation
@@ -140,13 +140,12 @@ Beta = [2/(2.44*1E-8)] # for testing purposes
 #Beta = np.logspace(0,10,100) # for full scan mode
 
 #Alpha = [1] # for testing purposes
-Alpha = np.logspace(-1, 1, 100, endpoint=False) # for full scan mode
-#Alpha = np.arange(2,30, 5) # for research mode
+#Alpha = np.logspace(-1, 2, 20, endpoint=False) # for full scan mode
+Alpha = np.arange(0.1,0.7, 0.1) # for research mode
 
 
 # Here create the filename and verify it does not exist
 filename = createFilename(Alpha, Beta, Exponent)
-print "\n"
 
 # Loop through the simulation and simulate for all possible variations 
 for alpha in Alpha:            

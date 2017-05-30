@@ -33,6 +33,6 @@ Real ThermoPowerDiffusion::computeQpResidual() {
   // (-L/2_rho)_grad^2_T^2
 
   return _grad_u[_qp] * _grad_test[_i][_qp] +
-         _alpha[_qp] * _test[_i][_qp] * (pow(_u[_qp], 2) - pow(_fridge, 2)) -
+         _alpha[_qp] * _test[_i][_qp] * (pow(sqrt(std::abs(_u[_qp])), 4) - pow(sqrt(_fridge), 4)) -
          _beta[_qp] * _grad_V[_qp] * _grad_V[_qp] * _test[_i][_qp];
 }
