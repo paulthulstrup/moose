@@ -36,3 +36,9 @@ modules/thermopower_diffusion/syntax_dump_thermopower_diffusion-opt
 modules/thermopower_diffusion/thermopower_diffusion-opt
 modules/thermopower_diffusion/yaml_dump_thermopower_diffusion-opt
 modules/thermopower_diffusion/yaml_dump_thermopower_diffusion-opt_raw
+examples/ex01_inputfile/peacock_run_tmp_out.eframework/.libs/libmoose-opt.0.dylib
+framework/include/base/MooseRevision.h
+framework/libmoose-opt.0.dylib
+framework/src/utils/.libs/SystemInfo.x86_64-apple-darwin16.3.0.opt.o
+modules/thermopower_diffusion/billiald_thermopower_diffusion_out.e
+modules/thermopower_diffusion/out.txt
