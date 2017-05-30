@@ -7,7 +7,6 @@ modules/thermopower_diffusion/billiald_thermopower_diffusion_out.e-s006
 modules/thermopower_diffusion/billiald_thermopower_diffusion_out.e-s007
 modules/thermopower_diffusion/include/base/ThermopowerDiffusionRevision.h
 modules/thermopower_diffusion/lib/
-modules/thermopower_diffusion/peacock_run_tmp.i
 modules/thermopower_diffusion/peacock_run_tmp_mesh.e
 modules/thermopower_diffusion/peacock_run_tmp_mesh.i
 modules/thermopower_diffusion/peacock_run_tmp_out.e
@@ -16,7 +15,6 @@ modules/thermopower_diffusion/peacock_run_tmp_out.e-s003
 modules/thermopower_diffusion/peacock_run_tmp_out.e-s004
 modules/thermopower_diffusion/peacock_run_tmp_out.e-s005
 modules/thermopower_diffusion/peacock_run_tmp_out.e-s006
-modules/thermopower_diffusion/peacock_run_tmp_out.e-s007
 modules/thermopower_diffusion/src/.libs/
 modules/thermopower_diffusion/src/base/.libs/
 modules/thermopower_diffusion/src/base/ThermopowerDiffusionApp.x86_64-apple-darwin16.3.0.opt.lo
