@@ -5,6 +5,7 @@ modules/thermopower_diffusion/billiald_thermopower_diffusion_out.e-s004
 modules/thermopower_diffusion/billiald_thermopower_diffusion_out.e-s005
 modules/thermopower_diffusion/billiald_thermopower_diffusion_out.e-s006
 modules/thermopower_diffusion/billiald_thermopower_diffusion_out.e-s007
+modules/thermopower_diffusion/billiald_thermopower_diffusion_out.e-*
 modules/thermopower_diffusion/include/base/ThermopowerDiffusionRevision.h
 modules/thermopower_diffusion/lib/
 modules/thermopower_diffusion/peacock_run_tmp_mesh.e
