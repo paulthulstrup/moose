@@ -3,6 +3,6 @@
 #ifndef MOOSE_REVISION_H
 #define MOOSE_REVISION_H
 
-#define MOOSE_REVISION "git commit 47cbd2a on 2017-02-03"
+#define MOOSE_REVISION "git commit f5c612c on 2017-05-30"
 
 #endif // MOOSE_REVISION_H

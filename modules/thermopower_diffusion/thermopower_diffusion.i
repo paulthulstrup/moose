@@ -1,5 +1,5 @@
 [Mesh]
-  file = './mesh/normal_L.msh'
+  file = './mesh/diag_bar_1.msh'
 []
 
 [Variables]
@@ -29,7 +29,7 @@
     some_variable = V
     Alpha_n = sinking
     Beta_n = heating
-    fridge =0.36
+    fridge =0.0289
   [../]
 
   [./ThermalDiffusion]
@@ -42,8 +42,8 @@
   [./example_point_source]
     type = ExampleDirac
     variable = T
-    value =2.56
-    point = '0.1 0.1 0'
+    value =10
+    point = '0.25 0 0'
   [../]
 []
 
@@ -53,30 +53,26 @@
     type = DirichletBC
     variable = T
     boundary = 3
-    value =0.36
+    value =0.0289
   [../]
 
-  [./Vplus]
-    type = DirichletBC
-    variable = V
-    boundary = 4
-    value = 0
-  [../]
 
-  [./Vminus]
-    type = DirichletBC
-    variable = V
-    boundary = 5
-    value = 0
-  [../]
+ #[./THot]
+ #  type = DirichletBC
+ #  variable = T
+ #  boundary = 2
+ #  value =0.3089
+ # [../]
+
 []
+
 
 [Materials]
 
   [./GaAs]
     type = SheetParam
     length_scale = 1e-4 # in 100um
-    Alpha =100
+    Alpha =3.5
     Beta =0
   [../]
 
@@ -85,7 +81,7 @@
 
 [Adaptivity]
   marker = errorfrac
-  steps = 2
+  steps = 4
   [./Indicators]
     [./error]
       type = GradientJumpIndicator
