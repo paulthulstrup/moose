@@ -29,7 +29,7 @@
     some_variable = V
     Alpha_n = sinking
     Beta_n = heating
-    fridge =0.100
+    fridge =0.0289
   [../]
 
   [./ThermalDiffusion]
@@ -43,15 +43,29 @@
     type = DirichletBC
     variable = T
     boundary = 3
-    value =0.100
+    value =0.0289
   [../]
+
+  #[./T2]
+  #  type = DirichletBC
+  #  variable = T
+  #  boundary = 1
+  #  value =0.0289
+  #[../]
+  #
+  #
+  #[./T1]
+  #  type = DirichletBC
+  #  variable = T
+  #  boundary = 2
+  #  value =0.0289
+  #[../]
 
   [./Vplus]
     type = DirichletBC
     variable = V
     boundary = 1
-    #value =2.309e-06
-    value = 0.1
+    value =2.309e-05
   [../]
 
   [./Vminus]
@@ -67,33 +81,33 @@
   [./GaAs]
     type = SheetParam
     length_scale = 1e-4 # in 100um
-    Alpha =1
-    Beta =10000
+    Alpha =28.0
+    Beta =81967213.1148
   [../]
 
 []
 
 
-#[Adaptivity]
-#  marker = errorfrac
-#  steps = 6
-#  [./Indicators]
-#    [./error]
-#      type = GradientJumpIndicator
-#      variable = T
-#      outputs = none
-#    [../]
-#  [../]
-#  [./Markers]
-#    [./errorfrac]
-#      type = ErrorFractionMarker
-#      refine = 0.5
-#      coarsen = 0
-#      indicator = error
-#      outputs = none
-#    [../]
-#  [../]
-#[]
+[Adaptivity]
+  marker = errorfrac
+  steps = 6
+  [./Indicators]
+    [./error]
+      type = GradientJumpIndicator
+      variable = T
+      outputs = none
+    [../]
+  [../]
+  [./Markers]
+    [./errorfrac]
+      type = ErrorFractionMarker
+      refine = 0.5
+      coarsen = 0
+      indicator = error
+      outputs = none
+    [../]
+  [../]
+[]
 
 [Executioner]
   type = Steady
@@ -106,3 +120,4 @@
   execute_on = 'timestep_end'
   exodus = true
 []
+

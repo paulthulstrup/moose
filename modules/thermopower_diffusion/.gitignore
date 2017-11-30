@@ -1,0 +1,15 @@
+
+.libs/
+data/T_4_lowV_alpha-0.0001-0.0099-step0.0001_beta-81967213.1148.csv
+data/T_4_lowV_alpha-0.02-1.98-step0.04_beta-81967213.1148.csv
+data/T_4_lowV_alpha-0.1-0.69-step0.01_beta-81967213.1148.csv
+data/T_5_lowV_alpha-3.7-5.65-step0.05_beta-81967213.1148.csv
+data/T_6_alpha-28.0-29.9-step0.1_beta-81967213.1148.csv
+thermopower_diffusion_out.e
+thermopower_diffusion_out.e-s002
+thermopower_diffusion_out.e-s003
+thermopower_diffusion_out.e-s004
+thermopower_diffusion_out.e-s005
+thermopower_diffusion_out.e-s006
+thermopower_diffusion_out.e-s007
+
