@@ -8,6 +8,11 @@ thermopower_diffusion_out.e-s004
 thermopower_diffusion_out.e-s005
 thermopower_diffusion_out.e-s006
 thermopower_diffusion_out.e-s007
+thermopower_diffusion_out.e-s008
+thermopower_diffusion_out.e-s009
+thermopower_diffusion_out.e-s0010
+thermopower_diffusion_out.e-s0011
+thermopower_diffusion_out.e-s0012
 billiald_thermopower_diffusion_out.e
 billiald_thermopower_diffusion_out.e-s002
 billiald_thermopower_diffusion_out.e-s003
@@ -15,6 +20,12 @@ billiald_thermopower_diffusion_out.e-s004
 billiald_thermopower_diffusion_out.e-s005
 billiald_thermopower_diffusion_out.e-s006
 billiald_thermopower_diffusion_out.e-s007
+billiald_thermopower_diffusion_out.e-s008
+billiald_thermopower_diffusion_out.e-s009
+billiald_thermopower_diffusion_out.e-s0010
+billiald_thermopower_diffusion_out.e-s0011
+billiald_thermopower_diffusion_out.e-s0012
+billiald_thermopower_diffusion_out.e-s0013
 thermopower_diffusion-opt
 syntax_dump_thermopower_diffusion-opt
 peacock_run_tmp.i
@@ -27,6 +38,10 @@ peacock_run_tmp_out.e-s004
 peacock_run_tmp_out.e-s005
 peacock_run_tmp_out.e-s006
 peacock_run_tmp_out.e-s007
+peacock_run_tmp_out.e-s008
+peacock_run_tmp_out.e-s009
+peacock_run_tmp_out.e-s0010
+peacock_run_tmp_out.e-s0011
 out.txt
 yaml_dump_thermopower_diffusion-opt
 yaml_dump_thermopower_diffusion-opt_raw
