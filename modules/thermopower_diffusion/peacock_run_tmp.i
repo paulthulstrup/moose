@@ -1,27 +1,51 @@
-# [Adaptivity]
-# marker = errorfrac
-# steps = 6
-# [./Indicators]
-# [./error]
-# type = GradientJumpIndicator
+# [DiracKernels]
+# [./example_point_source1]
+# type = ExampleDirac
 # variable = T
-# outputs = none
+# value =1
+# point = '0 0 0'
 # [../]
+# 
+# [./example_point_source2]
+# type = ExampleDirac
+# variable = T
+# value =1
+# point = '0.1 0 0'
 # [../]
-# [./Markers]
-# [./errorfrac]
-# type = ErrorFractionMarker
-# refine = 0.5
-# coarsen = 0
-# indicator = error
-# outputs = none
+# 
+# [./example_point_source3]
+# type = ExampleDirac
+# variable = T
+# value =1
+# point = '0.2 0 0'
 # [../]
+# 
+# [./example_point_source4]
+# type = ExampleDirac
+# variable = T
+# value =1
+# point = '0.3 0 0'
 # [../]
+# 
+# [./example_point_source5]
+# type = ExampleDirac
+# variable = T
+# value =1
+# point = '0.4 0 0'
+# [../]
+# 
+# [./example_point_source6]
+# type = ExampleDirac
+# variable = T
+# value =1
+# point = '0.5 0 0'
+# [../]
+# 
 # []
 
 [Mesh]
   type = FileMesh
-  file = ./mesh/billiald2.msh
+  file = ./mesh/normal_L.msh
 []
 
 [Variables]
@@ -49,7 +73,7 @@
     some_variable = V
     Alpha_n = sinking
     Beta_n = heating
-    fridge = 0.100
+    fridge = 0.002
   [../]
   [./ThermalDiffusion]
     type = Diffusion
@@ -62,20 +86,13 @@
     type = DirichletBC
     variable = T
     boundary = 3
-    value = 0.100
+    value = 0.002
   [../]
-  [./Vplus]
-    # value =2.309e-06
+  [./THot]
     type = DirichletBC
-    variable = V
-    boundary = 1
-    value = 0.1
-  [../]
-  [./Vminus]
-    type = DirichletBC
-    variable = V
+    variable = T
     boundary = 2
-    value = 0
+    value = 0.0025
   [../]
 []
 
@@ -83,8 +100,29 @@
   [./GaAs]
     type = SheetParam
     length_scale = 1e-4 # in 100um
-    Alpha = 1
-    Beta = 10000
+    Alpha = 0.38
+    Beta = 0
+  [../]
+[]
+
+[Adaptivity]
+  marker = errorfrac
+  steps = 6
+  [./Indicators]
+    [./error]
+      type = GradientJumpIndicator
+      variable = T
+      outputs = none
+    [../]
+  [../]
+  [./Markers]
+    [./errorfrac]
+      type = ErrorFractionMarker
+      refine = 0.5
+      coarsen = 0
+      indicator = error
+      outputs = none
+    [../]
   [../]
 []
 
