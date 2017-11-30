@@ -1,88 +1,109 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib as mpl  # this actually imports matplotlib
-import matplotlib.cm as cm  # allows us easy access to colormaps
-import matplotlib.pyplot as plt  # sets up plotting under plt
 import pandas as pd
 
+
+def computeSquareError(y_pred, y):
+    y_pred_array = np.asarray(y_pred)
+    y_array = np.asarray(y)
+    return np.mean((y_array - y_pred_array)**2)
+
+
 # sets up pandas table display
-
-
-
-df4 = pd.read_csv("./data/T_4_alpha-0.05-4.95-step0.1_beta-81967213.1148.csv", header=None,
+df4 = pd.read_csv("./data/T_4_lowV_alpha-0.02-1.98-step0.04_beta-81967213.1148.csv", header=None,
                   names=["alpha", "beta", "100nA", "200nA", "300nA", "400nA", "500nA", "600nA", "700nA", "800nA",
-                         "900nA"])
-df5 = pd.read_csv("./data/T_5_alpha-3.0-14.9-step0.1_beta-81967213.1148.csv", header=None,
+                         "900nA", "1000nA"])
+df5 = pd.read_csv("./data/T_5_lowV_alpha-3.7-5.65-step0.05_beta-81967213.1148.csv", header=None,
                   names=["alpha", "beta", "100nA", "200nA", "300nA", "400nA", "500nA", "600nA", "700nA", "800nA",
-                         "900nA"])
+                         "900nA", "1000nA"])
 
-df6 = pd.read_csv("./data/T_6_alpha-28.0-34.9-step0.1_beta-81967213.1148.csv", header=None,
+df6 = pd.read_csv("./data/T_6_alpha-28.0-29.9-step0.1_beta-81967213.1148.csv", header=None,
                   names=["alpha", "beta", "100nA", "200nA", "300nA", "400nA", "500nA", "600nA", "700nA", "800nA",
-                         "900nA"])
+                         "900nA", "1000nA"])
 
 # Choose the index here:
-index3 = 1
-index4 = 1
-index5 = 1
-index6 = 1
-
-## Power of 3 REQUIRES SIM TO WORK
-#l3=df3.iloc[:,:].values
-#Temp = l3[index3].flatten()[2:]
-#
-#I3 = np.arange(100,1000,100)*1E-9
-#T3 = [x-0.170 for x in Temp]
-#trend = [np.power(i,1.6)*(3E-3/np.power((100E-9),1.6)) for i in I3]
+index3 = index4 = index5 = index6 = 0
+err_min = 0
+I = np.arange(100,1100,100)*1E-9
+trend = [np.power(i,1.6) * (3E-3 / np.power(100E-9, 1.6)) for i in I]
 
 # Power of 4
 l4=df4.iloc[:,:].values
-Temp4 = l4[index4].flatten()[2:]
 
-I4 = np.arange(100,1000,100)*1E-9
-T4 = [x-0.170 for x in Temp4]
-trend = [np.power(i,1.6)*(3E-3/np.power((100E-9),1.6)) for i in I4]
+for idx4 in range(l4.shape[0]):
+    Temp4 = l4[idx4].flatten()[2:]
+    T4 = [x - 0.170 for x in Temp4]
+    error = computeSquareError(trend, T4)
+    if idx4 == 0:
+        index4 = idx4
+        err_min = error
+
+    elif error < err_min:
+        index4 = idx4
+        err_min = error
 
 
 # Power of 5
 l5=df5.iloc[:,:].values
-Temp5 = l5[index5].flatten()[2:]
+for idx5 in range(l5.shape[0]):
+    Temp5 = l5[idx5].flatten()[2:]
+    T5 = [x - 0.170 for x in Temp5]
+    error = computeSquareError(trend, T5)
+    if idx5 == 0:
+        index5 = idx5
+        err_min = error
 
-I5 = np.arange(100,1000,100)*1E-9
-T5 = [x-0.170 for x in Temp5]
-trend = [np.power(i,1.6)*(3E-3/np.power((100E-9),1.6)) for i in I5]
+    elif error < err_min:
+        index5 = idx5
+        err_min = error
 
 # Power of 6
 l6=df6.iloc[:,:].values
-Temp6 = l6[index6].flatten()[2:]
 
-I6 = np.arange(100,1000,100)*1E-9
-T6 = [x-0.170 for x in Temp6]
-trend = [np.power(i,1.6)*(3E-3/np.power((100E-9),1.6)) for i in I6]
+for idx6 in range(l6.shape[0]):
+    Temp6 = l6[idx6].flatten()[2:]
+    T6 = [x - 0.170 for x in Temp6]
+    error = computeSquareError(trend, T6)
+    if idx6 == 0:
+        index6 = idx6
+        err_min = error
+
+    elif error < err_min:
+        index6 = idx6
+        err_min = error
+
+
+
+Temp4 = l4[index4].flatten()[2:]
+T4 = [x - 0.170 for x in Temp4]
+Temp5 = l5[index5].flatten()[2:]
+T5 = [x - 0.170 for x in Temp5]
+Temp6 = l6[index6].flatten()[2:]
+T6 = [x - 0.170 for x in Temp6]
 
 
 ## PLOTING ##
 plt.close('all')
 f, axarr = plt.subplots(2, 2)
-#axarr[0, 0].loglog(I, T,"o", basex=10)
-#axarr[0, 0].loglog(I,trend)
+axarr[0, 0].loglog(I,trend)
 axarr[0, 0].set_title('Power of 3')
 
-axarr[0, 1].loglog(I4, T4,"o", basex=10)
-axarr[0, 1].loglog(I4,trend)
+axarr[0, 1].loglog(I, T4,"o", basex=10)
+axarr[0, 1].loglog(I,trend)
 axarr[0, 1].set_title('Power of 4')
 
-axarr[1, 0].loglog(I5, T5,"o", basex=10)
-axarr[1, 0].loglog(I5,trend)
+axarr[1, 0].loglog(I, T5,"o", basex=10)
+axarr[1, 0].loglog(I,trend)
 axarr[1, 0].set_title('Power of 5')
 
-axarr[1, 1].loglog(I6, T6,"o", basex=10)
-axarr[1, 1].loglog(I6,trend)
+axarr[1, 1].loglog(I, T6,"o", basex=10)
+axarr[1, 1].loglog(I,trend)
 axarr[1, 1].set_title('Power of 6')
 
 # Fine-tune figure; hide x ticks for top plots and y ticks for right plots
 plt.setp([a.get_xticklabels() for a in axarr[0, :]], visible=False)
 plt.setp([a.get_yticklabels() for a in axarr[:, 1]], visible=False)
-
+plt.show()
 
 # Print the values of the alphas
 #print "Alpha T^3 = " + str(l3[index3])
