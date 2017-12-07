@@ -85,20 +85,24 @@ T6 = [x - 0.170 for x in Temp6]
 ## PLOTING ##
 plt.close('all')
 f, axarr = plt.subplots(2, 2)
-axarr[0, 0].loglog(I,trend)
-axarr[0, 0].set_title('Power of 3')
 
 axarr[0, 1].loglog(I, T4,"o", basex=10)
 axarr[0, 1].loglog(I,trend)
-axarr[0, 1].set_title('Power of 4')
+axarr[0, 1].set_title('(b) Power of 4')
+axarr[0, 1].set_xlabel("Current (in nA)")
+axarr[0, 1].set_ylabel("$T_{e}-T_{p}$ (in mK)")
 
 axarr[1, 0].loglog(I, T5,"o", basex=10)
 axarr[1, 0].loglog(I,trend)
-axarr[1, 0].set_title('Power of 5')
+axarr[1, 0].set_title('(c) Power of 5')
+axarr[1, 0].set_xlabel("Current (in nA)")
+axarr[1, 0].set_ylabel("$T_{e}-T_{p}$ (in mK)")
 
 axarr[1, 1].loglog(I, T6,"o", basex=10)
 axarr[1, 1].loglog(I,trend)
-axarr[1, 1].set_title('Power of 6')
+axarr[1, 1].set_title('(d) Power of 6')
+axarr[1, 1].set_xlabel("Current (in nA)")
+axarr[1, 1].set_ylabel("$T_{e}-T_{p}$ (in mK)")
 
 # Fine-tune figure; hide x ticks for top plots and y ticks for right plots
 plt.setp([a.get_xticklabels() for a in axarr[0, :]], visible=False)

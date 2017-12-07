@@ -1,5 +1,5 @@
 [Mesh]
-  file = './mesh/billiald2.msh'
+  file = './mesh/normal_L.msh'
 []
 
 [Variables]
@@ -29,7 +29,7 @@
     some_variable = V
     Alpha_n = sinking
     Beta_n = heating
-    fridge =0.0289
+    fridge =
   [../]
 
   [./ThermalDiffusion]
@@ -43,46 +43,27 @@
     type = DirichletBC
     variable = T
     boundary = 3
-    value =0.0289
+    value =
   [../]
 
-  #[./T2]
-  #  type = DirichletBC
-  #  variable = T
-  #  boundary = 1
-  #  value =0.0289
-  #[../]
-  #
-  #
-  #[./T1]
-  #  type = DirichletBC
-  #  variable = T
-  #  boundary = 2
-  #  value =0.0289
-  #[../]
 
-  [./Vplus]
-    type = DirichletBC
-    variable = V
-    boundary = 1
-    value =0.0002309
+ [./THot]
+   type = DirichletBC
+   variable = T
+   boundary = 2
+   value =
   [../]
 
-  [./Vminus]
-    type = DirichletBC
-    variable = V
-    boundary = 2
-    value = 0
-  [../]
 []
+
 
 [Materials]
 
   [./GaAs]
     type = SheetParam
     length_scale = 1e-4 # in 100um
-    Alpha =3.8
-    Beta =81967213.1148
+    Alpha =0.38
+    Beta =0
   [../]
 
 []
